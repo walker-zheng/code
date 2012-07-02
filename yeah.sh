@@ -55,7 +55,6 @@ pick_card(){
 
     echo -n "${denomination[$((RANDOM%num_denominations))]} of " 
     echo ${suite[$((RANDOM%num_suites))]} 
-
     
     
 }
