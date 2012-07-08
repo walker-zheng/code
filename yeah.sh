@@ -16,11 +16,66 @@ char_test(){
 
 }
 
+PrintBases () {
+             # 决定数值的数制 
+    for i      # ==> 省略 [list]... 
+    do         # ==> 所以是对命令行参数进行操作. 
+        case "$i" in 
+            0b*) 
+                ibase=2;; # 2 进制 
+            0x*|[a-f]*|[A-F]*) 
+                ibase=16;; # 16 进制 
+            0*)  
+                ibase=8;; # 8 进制 
+            [1-9]*)  
+                ibase=10;; # 10 进制 
+            *) 
+                Msg "illegal number $i - ignored" 
+                continue;; 
+        esac
+
+# 去掉前缀, 将 16 进制数字转换为大写(bc 需要大写) 
+        number=`echo "$i" | sed -e 's:^0[bBxX]::' | tr '[a-f]' '[A-F]'` 
+
+# ==>使用":" 作为 sed 分隔符, 而不使用"/". # 将数字转换为 10 进制 
+        dec=`echo "ibase=$ibase; $number" | bc`  # ==> 'bc' 是个计算工具. 
+        echo $dec
+        case "$dec" in 
+            [0-9]*) ;; 
+ # 数字没问题 
+            *)  
+            continue;; 
+        esac 
+# 在一行上打印所有的转换后的数字. 
+# ==> 'here document' 提供命令列表给'bc'. 
+        echo `bc <<EOF
+    obase=16; "hex="; $dec 
+    obase=10; "dec="; $dec 
+    obase=8;  "oct="; $dec 
+    obase=2;  "bin="; $dec
+EOF
+    `|sed -e 's: :	:g'
+        
+    done
+    
+}
+cmd_test(){
+    # PrintBases 0xabef 0b011101 0234 123124
+    echo "bc:"
+    echo -n '15+8*(5-2)='
+    echo '15+8*(5-2)'|bc
+    echo "dc:"
+    echo -n '15+8*(5-2)='
+    echo  "15 8 5 2 - * + p"|dc
+
+    
+}
+
 math_test(){
      n=1; let --n && echo "True" || echo "False"  # False 
      n=1; let n-- && echo "True" || echo "False"  # False 
      (( t = a<45?7:11 )) && echo $t  # C 风格的 3 元操作. 
-
+     
 }
 
 pick_card(){
@@ -122,7 +177,8 @@ main()
     # char_test
     # math_test
     # pick_card
-    loops_test
+    # loops_test
+    cmd_test
 
 }
 
