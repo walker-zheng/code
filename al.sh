@@ -31,7 +31,8 @@ case $1 in
         ;;
 esac
 
-List=$(ls -l $(which al)|awk '{print $1}'|sed 's#[^/]*$#al.lst#')
+List=$(ls -l $(which al)|awk '{print $11}'|sed 's#[^/]*$#al.lst#')
+echo $List
 [[ -f $List ]] || :>$List
 
 IS_DIGIT=$(echo $1|sed 's/[[:digit:]]*//g')
