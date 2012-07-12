@@ -374,4 +374,5 @@ foo
 (delq 'a foo)
 foo
 ;;;;; 用作map
+(make-vector 10 0)
 
