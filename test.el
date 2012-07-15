@@ -1,4 +1,5 @@
-;;; var define
+
+
 (message "hello,elisp")
 (setq foo "I'm foo")
 
@@ -375,4 +376,267 @@ foo
 foo
 ;;;;; 用作map
 (make-vector 10 0)
+
+;;;; lips func
+;; func,primitvie func,lambda form,special form,macro,command-execute
+(defun foo (var1 var2 &optional opt1 opt2 &rest rest)
+  (list var1 var2 opt1 opt2 rest))
+(foo 1 2)
+(foo 1 2 3 4 5 6)
+(funcall 'list 'x '(y) '(z))
+(apply 'list 'x '(y) '(z))
+
+
+(defmacro foo (arg)                     ;macro expand
+  (list 'message "%d %d" arg arg))
+(defun bar (arg)
+  (message "%d %d" arg arg))
+(let ((i 1))
+  (bar (incf i)))
+(let ((i 1))
+  (foo (incf i)))
+(macroexpand '(foo (incf i)))
+
+(defmacro when (cond &rest body)
+  (declare (indent 1) (debug t))
+  (list 'if cond (cons 'progn body)))
+(symbol-plist 'when)
+`(a list of ,(+ 2 4) elements)          ;backquote
+(setq some-list '(3 4))
+`(1 ,some-list 4 ,@some-list)           ;,引用
+(defmacro when (cond &rest body)
+  `(if ,cond
+       (progn ,@body)))
+
+
+(defun hello (name time)
+  (interactive "sSo,what's your name?\nnWhat's the time?")
+                                        ;can called through M-x
+  (message "Good %s, %s" 
+           (cond ((< time 13) "morning")
+                 ((< time 19) "afternoon")
+                 (t "evening"))
+           name))
+(hello "google")
+(read-string "Name?" user-full-name)
+(defun tree-mapcar (func tree)
+  "遍历树"
+  (if (consp tree)
+      (mapcar (lambda (child)
+                (tree-mapcar func child))
+              tree)
+    (funcall func tree)))
+;;; regexp
+(regexp-quote "\(?:foo\(?:ba[rz]\)?\)")
+(regexp-opt '("foobar" "foobaz" "foo"))
+;;;;;; buffer
+(set-buffer "*Messages*")
+(message (buffer-name))
+(progn
+  (set-buffer "*Messages*")
+  (message (buffer-name)))
+
+(save-current-buffer                    ;保存了当前缓冲区
+  (set-buffer "*scratch*")
+  (goto-char (point-min))
+  (set-buffer "*Messages*"))
+(save-excursion
+;保存了当前缓冲区，还保存了当前位置和mark
+  (set-buffer "*scratch*")
+  (goto-char (point-min))
+  (set-buffer "*Messages*"))
+(save-buffers-kill-emacs)
+;;; create & close
+;; get-buffer-create 有则返回，无则创建
+;; generate-new-buffer 有也创建，名字+N
+;; kill-buffer
+;; (kill-buffer-ask)                       ;comfirmed?
+;; (buffer-live-p)
+;; (buffer-list)
+;;(with-temp-buffer)                      ;临时buffer
+;;; move: position & mark
+;; (point-min) < (point) < (point-max) < narrow size < (buffer-size) 
+(setq foo (mark-marker))
+(set-marker foo (point))
+(point-marker)
+(copy-marker 20)
+(copy-marker foo)
+(marker-position foo)
+(marker-buffer foo)
+(transient-mark-mode)                   ;激活mark
+;; (set-mark)                              ;设置mark值，并激活mark
+;; 每个buffer有一个mark-ring，当前mark被修改，旧值被放到mark-ring，
+;; push-mark & pop-mark
+;; (region-beginning) (region-end)返回point和mark中较小和较大的值
+(goto-char (point-min))
+(forward-char 10)
+(backward-char 10)
+(beginning-of-buffer)                   ;除了移动，还做了其他事，如设置mark等
+(end-of-buffer)                         ;
+;; (forward-word) & (backward-word)		; word，看语法表格的定义
+(forward-line)                          ;移动到下行行首
+(forward-line 0)                        ;移动到本行行首
+(line-beginning-position)               ;不移动，得到位置
+(line-end-position)
+(line-number-at-pos)                    ;获得当前行行号
+;;(narrow-to-region START END)
+;; (widen)
+;; point 测试
+(bobp)                                  ;begin of buffer predicate
+(eobp)
+(bolp)                                  ;begin of line predicate
+(eolp)
+;;; 内容
+(buffer-string)                         ;whole buffer
+(buffer-substring)                      ;
+;; inset insert-char insert-buffer-substring
+;; delete-char delete-backward-char delete-region delete-and-extract-region
+;; re-search-forward re-search-backward
+;; (re-search-forward REGEXP &optional BOUND NOERROR COUNT)
+;; replace-match 查找之后进行，不需要指定替换对象
+;; 替换后bound可能会发生变化：
+;; 1.使用mark记住bound位置；2.narrow-to-region & widen; 3.save-restriction
+;;;; window
+;; 任何时候都有一个选中的frame,而其中又有一个selected window
+(selected-window)                       ;获得激活window
+(split-window)
+(window-tree)
+;; ((nil (0 0 168 44)
+;;       #<window 8 on test.el>
+;;       (t (84 0 168 44)
+;;          #<window 4 on *Help*>
+;;          #<window 6 on *scratch*>))
+;;  #<window 2 on  *Minibuf-0*>)
+(setq foo (selected-window))
+(delete-other-window)
+(delete-window)
+(windowp foo)
+(window-live-p foo)
+;;; window configuration:窗口大小，显示的buffer，缓冲区中光标位置和mark，fringe，滚动条等
+(setq foo (current-window-configuration))
+(set-window-configuration foo)
+;;; 选择窗口
+(progn
+  (setq foo (selected-window))
+  (message "Original window: %S" foo)
+  (other-window 1)
+  (message "Current window: %S" (selected-window))
+  (select-window foo)
+  (message "Back to original window: %S" foo))
+;;; save-selected-window & with-selected-window
+(save-selected-window
+  (select-window (next-window))
+  (goto-char (point-min)))
+
+(selected-window)
+(window-list)
+(next-window)
+(next-window (next-window))
+(next-window (next-window (next-window)))
+;;; walk-windows (traverse) == (mapc proc (window-list))
+;; get-window-with-predicate查找符合的窗口
+;;; 窗口大小
+(window-height)
+(window-body-height)
+(window-width)
+(window-edges)   ;各定点坐标，包括滚动条，fringe,mode line,header line
+(window-inside-edges)                   ;文本区位置
+(window-pixel-edges)                    ;像素表示
+(window-inside-pixel-edges)             ;像素表示
+;;; 窗口中的buffer
+(window-buffer)
+(window-buffer (next-window))
+;buffer对应的窗口，返回一个
+(get-buffer-window (get-buffer "*scratch*"))
+(get-buffer-window-list (get-buffer "*scratch*"))
+;; set-window-buffer设置某窗口显示某buffer，或switch-to-buffer(少用)
+;; set-buffer 激活buffer
+(set-buffer "*scratch*")
+(display-buffer "*scratch*")            ;是buffer可见
+;;; window-start获得起点位置
+;; set-window-start 改变显示起点，但不会改变point位置，而调用redisplay后point会跳转
+;; (with-selected-window window (goto-char pos))替代set-window-start
+;;;;; file
+buffer-file-name                        ;buffer-local
+;; set-visited-file-name修改文件名
+(find-file "./file.txt")
+(with-current-buffer
+    (find-file-noselect "./file.txt")
+  (buffer-file-name))
+(find-buffer-visiting "./file.txt")
+(get-file-buffer "./file.txt")
+
+(save-buffer)
+(write-buffer "./file.el")
+;; 底层的文件读写函数
+;; (insert-file-contents filename &optional visit beg end replace)
+;; (write-region start end filename &optional append visit lockname mustbenew)
+;; 文件信息
+(file-exists-p "./file.txt")
+(file-readable-p "./file.txt")
+(file-writable-p "./file.txt")
+(file-executable-p "./file.txt")
+(format "%o" (file-modes "./file.txt"))
+;; file-regular-p file-directory-p file-symlink-p
+;; file-truename链接的真实文件
+(file-attributes "./file.txt")
+;; 'rename-file 'copy-file 'delete-file 'make-directory
+;; 'set-file-times 'set-file-modes 'set-file-name-coding-system
+;;; file name 操作
+(file-name-directory "./file.txt")
+(file-name-nondirectory "./file.txt")
+(file-name-sans-extension "./file.txt")
+(file-name-extension "./file.txt")
+(file-name-sans-versions "./file.txt.~1~")
+(file-name-absolute-p "./file.txt")
+(file-name-absolute-p "~/file.txt")
+(expand-file-name "file.txt")
+(expand-file-name "file.txt" "~")
+(file-relative-name "/foo/bar" "/shit")
+(file-relative-name "/foo/bar" "/foo")
+(file-name-as-directory "/foo/bar")     ;显示目录名
+(directory-file-name "/foo/bar/")       ;显示为文件名
+(convert-standard-filename "c:/windows")
+;;; 临时文件
+(make-temp-file "foo")
+(make-temp-name "foo")
+;;; 获得目录中的文件
+(directory-files "./")
+(directory-files "./" t)
+(directory-files "./" nil "^test\\..*$")
+(directory-files-and-attributes "./")   ;返回包括file-attributes信息
+(file-expand-wildcards "*test[.cehls]*")
+
+;;; 决定何种类型的文件名使用什么方式操作是在file-name-handler-alist定义的
+;;; 它是形如(REGEXP . HANDLER)的列表
+(defvar header-regexp-list 
+  '(("^\\(?:\\(?:G_CONST_RETURN\\|extern\\|const\\)\\s-+\\)?[a-zA-Z][_a-zA-Z0-9]*\\\(?:\\s-*[*]*[ \t\n]+\\|\\s-+[*]*\\)\\([a-zA-Z][_a-zA-Z0-9]*\\)\\s-*(" . 1)
+    ("^\\s-*#\\s-*define\\s-+\\([a-zA-Z][_a-zA-Z0-9]*\\)" . 1)))
+;;;; text process
+(setq foo (concat "abc"
+                  (propertize "foo" 'face 'bold
+                              'pointer 'hand)))
+(get-text-property 3 'face foo)
+(save-excursion
+  (goto-char (point-min))
+  (insert foo))
+(get-text-property 4 'face)             ;查找某个属性的值
+(text-properties-at 4 foo)              ;得到某位置上文本的所有属性
+(let ((str "abc"))
+  (put-text-property 0 3 'face 'bold str)
+  str)
+;; (set-text-properties START END nil)  可直接设置属性，如去掉属性
+;; remove-text-properties & remove-list-of-text-properties 去掉区域的指定文本属性
+;; 查找文本属性
+(next-property-change 1 foo)
+(next-single-property-change 1 'pointer foo)
+(next-property-change 1 foo)
+(previous-property-change 6 foo)
+(previous-single-property-change 6 'face foo)
+(text-property-any 0 6 'face 'bold foo)
+(text-property-not-all 2 6 'face 'underline foo)
+
+
+
+
 
