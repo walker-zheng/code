@@ -4,7 +4,7 @@ use strict;
 
 sub get_test{
     my ($what, @array)=@_;
-    printf "".("%D\t" x @array),@array;
+    printf "".("%D\t" x @array)."\n",@array;
 }
 
 
