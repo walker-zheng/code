@@ -1,5 +1,3 @@
-
-
 (message "hello,elisp")
 (setq foo "I'm foo")
 
