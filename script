@@ -1,0 +1,42 @@
+;;; ahk script
+;;; hide task bar for win7
+
+    WinHide ahk_class Button   
+    WinHide ahk_class Shell_TrayWnd
+    WinShow ahk_class NotifyIconOverflowWindow
+    WinHide ahk_class NotifyIconOverflowWindow
+
+#c::
+if taskbarToggle := !taskbarToggle
+{   
+    WinHide ahk_class Button   
+    WinHide ahk_class Shell_TrayWnd
+}
+else
+{   
+    WinShow ahk_class Button   
+    WinShow ahk_class Shell_TrayWnd
+}
+return
+#v::
+if trayToggle := !trayToggle
+{   
+    WinShow ahk_class NotifyIconOverflowWindow
+}
+else
+{   
+    WinHide ahk_class Shell_TrayWnd
+    WinHide ahk_class NotifyIconOverflowWindow
+}
+return
+
+
+;;; bat script
+;;; virtualbox headless init opensuse & fedora
+
+@echo off
+:: by oicu
+cd /d "D:\Program Files\Oracle\VirtualBox"
+:: VBoxHeadless --startvm "opensuse"
+VBoxManage startvm "opensuse" --type headless
+VBoxManage startvm "fedora" --type headless
