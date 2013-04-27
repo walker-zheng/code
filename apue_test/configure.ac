@@ -13,10 +13,10 @@ AC_INIT([apue_test],
         [0.0.1],
         [walker mykulou@gmail.com],
         [apue_test])
+AM_INIT_AUTOMAKE([1.12.5 foreign no-define])
 # AC_CONFIG_AUX_DIR(config)
-AC_CONFIG_SRCDIR([src/apue_test.h])
-AM_CONFIG_HEADER(config.h)
-AM_INIT_AUTOMAKE([dist-bzip2])
+AC_CONFIG_SRCDIR([config.h.in])
+AC_CONFIG_HEADERS([config.h])
 
 
 # Checks for programs.
