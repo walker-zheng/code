@@ -15,7 +15,7 @@ AC_INIT([apue_test],
         [apue_test])
 AM_INIT_AUTOMAKE([1.12.5 foreign no-define])
 # AC_CONFIG_AUX_DIR(config)
-AC_CONFIG_SRCDIR([config.h.in])
+AC_CONFIG_SRCDIR([src/apue_test.c])
 AC_CONFIG_HEADERS([config.h])
 
 
