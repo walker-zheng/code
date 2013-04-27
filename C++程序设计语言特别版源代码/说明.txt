@@ -1,0 +1,2 @@
+注意：
+	这是《c++程序设计语言》，原名《the c++ pragramming language》书中的事例源代码，不是课后习题的。
