@@ -70,7 +70,7 @@ void print_test(){
 }
 int main(){
     //print_cp();
-    //print_limits();
+    print_limits();
     //print_decl();
     print_test();
 
