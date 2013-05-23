@@ -1,0 +1,12 @@
+# 2013/05/23-周四-21:18:04
+** DLNA/uPnP，流媒体播放，raspi上安装minidlna(server)，android上安装BubbleUPnP(client)，可以实现点播，http也可播放
+** linux上使用rtorrent下载BT，支持magnet，rc文件需要下载
+** 甜咖啡MTV4:to survive，匪首伪装成警，另个警知道，在最后为vip挡了子弹。。
+** sumatrapdf不支持添加标签，因为要钱；支持epub，但没有目录
+** 斯特林发电机，通过气体在冷热环境转换时的热胀冷缩做功，外燃机
+** vbox磁盘选择自动分配空间，磁盘会自动增长
+** 开源库：网络(ACE、libevent)，数据库(Oracle、mysql、sqlite)
+** C10k问题，高负荷并发，一般使用事件驱动I/O解决，如libevent
+** android的cm，界面不错，比较流畅，只是相机有些卡；要google服务，则要下载刷入gapps(http://goo.im/gapps)
+** gh-pages是静态页面，没有留言功能，一般要用外部数据库，或用jekyll
+** Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，类似环境：Twisted于Python，Perl Object Environment于Perl，libevent于C，和EventMachine于Ruby
