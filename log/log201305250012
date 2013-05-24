@@ -1,0 +1,4 @@
+# 2013/05/25-周六-00:05:46
+** raspi没有键盘用，倒是白买了个显示器，之后才发现raspi-config里面可以开ssh，但还是得插网线，还是得安装chroot，方便挂载在debian上用，vbox不支持raspi，貌似qemu倒是可以
+** upgrade时提示网卡驱动可能不能用，没注意，杯具了。重新找个8188eu.ko，明天安进去
+** buy list:笔记本键盘，移动硬盘(配raspi的minidlna)
