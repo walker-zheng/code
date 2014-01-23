@@ -1,0 +1,101 @@
+(cd ../git/wiki/;git st)
+. .bash_aliases
+. .vim_runtime/install_awesome_vimrc.sh
+./configure --without-ssl
+./sdgo
+./ssh.ept 0159b ssh -qTfnN -D 7070 lovessh@173.252.213.247 -p 80
+./VBoxManage.exe controlvm
+./VBoxManage.exe controlvm pippo savestate
+./VBoxManage.exe --help|less
+./VBoxManage.exe list vms
+./VBoxManage.exe -nologo list vms
+./VBoxManage.exe showvminfo
+./VBoxManage.exe showvminfo -a
+./VBoxManage.exe showvminfo --details
+./vlc.exe -vvv "/cygdrive/e/download/BT/Life\ of\ Pi\ \(2012\)\ \[1080p\]/Life.of.Pi.2012.1080p.BRrip.x264.GAZ.YIFY.mp4" --sout "#transcode{vcodec=h264,vb=0,scale=0,acodec=mpga,ab=128,channels=2,samplerate=44100}:rtp{sdp=rtsp://:8554/test}"
+./vlc.exe -vvv "/cygdrive/e/download/BT/pi.mp4" --sout "#transcode{vcodec=h264,vb=0,scale=0,acodec=mpga,ab=128,channels=2,samplerate=44100}:rtp{sdp=rtsp://:8554/test}"
+./vlc.exe -vvv "E:\backup\.pic\nicest_blow_ever.wmv" --sout "#transcode{vcodec=h264,vb=0,scale=0,acodec=mpga,ab=128,channels=2,samplerate=44100}:rtp{sdp=rtsp://127.0.0.1:8554/test}"
+./vlc.exe -vvv "E:\backup\.pic\nicest_blow_ever.wmv" --sout "#transcode{vcodec=h264,vb=800,scale=1,acodec=mpga,ab=128,channels=2,samplerate=44100}:rtp{sdp=rtsp://127.0.0.1:8554/test}" --sout-keep
+./vlc.exe -vvv "e:\download\BT\pi.mp4" --sout "#transcode{vcodec=h264,vb=0,scale=0,acodec=mpga,ab=128,channels=2,samplerate=44100}:rtp{sdp=rtsp://:8554/test}"
+./vlc.exe -vvv "e:\download\BT\pi.mp4" --sout "#transcode{vcodec=h264,vb=0,scale=0,acodec=mpga,ab=128,channels=2,samplerate=44100}:rtp{sdp=rtsp://127.0.0.1:8554/test}"
+./vlc.exe -vvv /cygdrive/e/download/BT/pi.mp4 --sout "#transcode{vcodec=h264,vb=0,scale=0,acodec=mpga,ab=128,channels=2,samplerate=44100}:rtp{sdp=rtsp://:8554/test}"
+./winpcap-nmap-4.12.exe
+.~/.bash_alias
+/bin/mkpasswd -l –u root >> /etc/passwd
+apt-cyg install libjpeg -f /e/download/cygwin/cygwin.com/pub/cygwin/release/jpeg/libjpeg8/libjpeg8-8b-1.tar.bz2
+automake --add-missing
+autoreconf
+autoscan
+cat .git/MERGE_HEAD|cut -b5-15|xargs.exe git cat-file -t
+cygcheck.exe -f hello
+cygcheck.exe -l top
+cygcheck.exe -l tree
+cygpath -S
+cygpath -W
+cygpath -m /home/
+cygrunsrv -E cygserver
+cygrunsrv -h
+cygrunsrv -S sshd
+cygrunsrv –E sshd
+cygwin-console-helper.exe stop
+date +%Y/%m/%d-%a-%H:%M:%S >> log$(date +%Y%m%d)
+echo $(ls|sed 's/\(.*\)\.jpg\*$/\1/'|awk '{print "mv {"$0","100+NR"}.jpg"}')
+echo '<div class="successbox">SSH密码：<strong><font color="red">5aa2d</font></strong></div>'|awk -F\> '{ print $4 }'|awk -F\< '{ print $1 }'
+echo -e "\n\n" 'date +%Y/%m/%d-%a-%H:%M:%S > log$(date +%Y%m%d)' >>log20130509
+find . -maxdepth 1 -type f -print0 | xargs -0 rm
+find . -name "*.el" |xargs.exe -i grep -l "color-theme-sanityinc-solarized--define-theme" {}
+for ((i=0;i<10;i++));do echo "$i $(($i+1))";done
+for ((i=0;i<10;i++));do echo "$i \$$(($i+1))";done
+for ((i=10;i<14;i++));do eval "mv The.Walking.Dead.S02E0$i{.DVDRip.XviD-PFa,.720p.HDTV.x264-IMMERSE}.avi";done
+git add *;git commit -a -m "push update index";git push
+git bisect good
+git cat-file -p FETCH_HEAD | head -n 1 | cut -b6-15 | xargs git cat-file -p
+git checkout --
+git ci -p -m 'change configure.ac subdir'
+git clone git clone git://github.com/isaacs/npm.git
+git clone git://busybox.net/busybox.git
+git clone git://git.netfilter.org/iptables.git
+git clone git://github.com/lewang/command-log-mode.git
+git config --global user.email mykulou@gmail.com
+git config --global user.name "waler-zheng"
+git diff "@{yesterday}"
+git diff 30f3bc..70f722
+git diff --cached
+git diff --stat
+git log --graph --simplify-by-decoration --decorate --pretty=format:'%cd%Cgreen%d %Cblue%h %Creset%s' --date=short
+git merge --squash gh-pages master
+git mergetool --tool=vimdiff
+git push origin gh-pages
+git push -u origin --all
+history|awk '{$1="";print $0}' |sort |uniq.exe
+ld /lib/libffi.la
+ldconfig
+ldd $(which bc)
+locale -a | grep 'zh_CN'
+localedef -i zh_CN -f UTF-8 zh_CN.UTF-8
+ls |sed 's#\(.*\)\*$#mv \1 1\1#'|xargs.exe -i eval {}
+make && make install
+make --add-missing
+make all
+make --enable-profile
+netstat -ano |grep 7070
+nohup.exe while [ 1 ];do date;sleep 1;done &
+python -c setup.py
+python -m SimpleHTTPServer -p 80 &>/dev/null
+python setup.py install
+scp ~/.bash_aliases pi@raspi:/home/pi
+screen -ls
+screen.exe -dmS d
+screen.exe -xr d
+sdfjiew
+sed = out | sed 'N;s/\n/\t/'
+seq 101 137|sort -r|awk '{print "{"$0","$0+55"}.jpg"}'|while read line ;do mv $line ;done
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+ssh -qTfnN -D 7070 onlybird@ssh2012.unssh.com -p 9999
+ssh root@192.168.56.101 init 0
+tar zxvf doxygen-1.8.2.src.tar.gz -C /usr/share/
+twistd web --resource-script=dynimg.py --path=. --port 8000
+updatedb
+uptime
+vim +xdd .netrwhist
+wget -m -H -nd -l 1 -t 1 -A=html,jpg,png -e robots=off --load-cookies=cookie.onlybird --keep-session-cookies
