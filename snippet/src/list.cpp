@@ -11,6 +11,7 @@
 #include <getopt.h>
 #include <iostream>
 #include "list.h"
+#include "util.h"
 
 
 using namespace std;

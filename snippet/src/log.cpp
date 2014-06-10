@@ -1,0 +1,102 @@
+/* 日志记录 */
+struct log_level_desc{
+    enum LOG_LEVEL  level;
+    char*           endesc;
+    wchar_t*        cndesc;
+};
+
+static struct log_level_desc log_level_descs[] = {
+    { LOG_LEVEL_EMERG,  "Emergency",    L"致命" },
+    { LOG_LEVEL_ALERT,  "Alert",        L"危急" },
+    { LOG_LEVEL_CRIT,   "Critical",     L"紧急" },
+    { LOG_LEVEL_ERROR,  "Error",        L"错误" },
+    { LOG_LEVEL_WARNING,"Warning",      L"警告" },
+    { LOG_LEVEL_NOTICE, "Notice",       L"注意" },
+    { LOG_LEVEL_INFO,   "Info",         L"消息" },
+    { LOG_LEVEL_DEBUG,  "Debug",        L"调试" },
+};
+
+static FILE* log_files[MAX_LOGS+1];
+static spin_lock_t log_locks[MAX_LOGS+1];
+
+/* 打开用户日志文件 */
+int log_open(const char *path, const char* mode)
+{
+    int i;
+
+    for (i = LOG_USER; i < MAX_LOGS; i++)
+    {
+        if (log_files[i] == NULL)
+        {
+            log_files[i] = fopen(path, mode);
+
+            if (!log_files[i])
+                return LOG_INVALID;
+
+            spin_init(&log_locks[i], NULL);
+            return i;
+        }
+    }
+
+    return LOG_INVALID;
+}
+
+/* 打开系统日志文件 */
+int log_open_sys(const char *path, const char* mode)
+{
+    if (log_files[LOG_SYSTEM])
+        return LOG_SYSTEM;
+
+    log_files[LOG_SYSTEM] = fopen(path, mode);
+    if (!log_files[LOG_SYSTEM])
+        return LOG_INVALID;
+
+    spin_init(&log_locks[LOG_SYSTEM], NULL);
+    return LOG_SYSTEM;
+}
+
+/* 写入日志文件 */
+void log_printf0(int log_id, int log_level, const char *fmt, ...)
+{
+    FILE *fp;
+    time_t t;
+    char tmbuf[30];
+    const char *p;
+    va_list args;
+    int level;
+
+    if (log_id < 0 || log_id >= MAX_LOGS)
+        return;
+    else if (!(fp = log_files[log_id]))
+        return;
+
+    spin_lock(&log_locks[log_id]);
+
+    if (log_level > LOG_LEVEL_DEBUG)
+        level = LOG_LEVEL_DEBUG;
+    else if (log_level < LOG_LEVEL_EMERG)
+        level = LOG_LEVEL_EMERG;
+    else
+        level = log_level;
+
+    //时间信息
+    t = time(NULL);
+    memset(tmbuf, 0, sizeof(tmbuf));
+    strftime(tmbuf, sizeof(tmbuf), "%d/%b/%Y %H:%M:%S", localtime(&t));
+    fprintf (fp, "%s ", tmbuf);
+
+    //等级信息
+    fprintf(fp, "[%s] ", log_level_descs[level].endesc);
+
+    //正文信息
+    va_start(args, fmt);
+    vfprintf(fp, fmt, args);
+    va_end(args);
+
+    //换行符
+    p = fmt + strlen(fmt) - 1;
+    if (*p != '\n')
+        fputc('\n', fp);
+
+    spin_unlock(&log_locks[log_id]);
+}

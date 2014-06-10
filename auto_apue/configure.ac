@@ -1,9 +1,9 @@
 # Copyright (C) 2012 walker <mykulou@gmail.com>
-#  
+#
 # This file is free software; as a special exception the author gives
-# unlimited permission to copy and/or distribute it, with or without 
+# unlimited permission to copy and/or distribute it, with or without
 # modifications, as long as this notice is preserved.
-# 
+#
 # This program is distributed in the hope that it will be useful, but
 # WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -13,7 +13,7 @@ AC_INIT([apue_test],
         [0.0.1],
         [walker mykulou@gmail.com],
         [apue_test])
-AM_INIT_AUTOMAKE([1.12.5 foreign no-define])
+AM_INIT_AUTOMAKE(apue_test, 0.1)
 # AC_CONFIG_AUX_DIR(config)
 AC_CONFIG_SRCDIR([src/apue_test.c])
 AC_CONFIG_HEADERS([config.h])
@@ -40,8 +40,6 @@ AC_PROG_RANLIB
 AC_CONFIG_FILES([
    Makefile
    README
-   doc/Makefile
-   m4/Makefile
    src/Makefile
 ])
 
