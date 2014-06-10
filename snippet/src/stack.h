@@ -6,9 +6,10 @@ class Stack{
     T* v;
     int max_size;
     int top;
-public:
+    public:
     class Overflow{};
     class Underflow{};
+    class Bad_size{};
 
     Stack(int s);
     ~Stack();

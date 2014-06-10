@@ -11,6 +11,7 @@
 #include <getopt.h>
 #include <iostream>
 #include "list.h"
+#include "utils.h"
 
 
 using namespace std;
@@ -23,8 +24,8 @@ int main(int argc, char * argv[])
     int longindex = 0;
     const char optstring[] = ":h";
     const option longopts[] =
-        {{"help", no_argument, NULL, 'h'},
-         {NULL  , no_argument, NULL, 0}};
+    {{"help", no_argument, NULL, 'h'},
+        {NULL  , no_argument, NULL, 0}};
 
     std::string arg;
 
@@ -32,20 +33,20 @@ int main(int argc, char * argv[])
     {
         switch(opt)
         {
-        case 'h':
-            usage(0);
-            break;
+            case 'h':
+                usage(0);
+                break;
 
-        case ':':
-            arg = argv[optind-1];
-            std::cerr << "Option `" << arg << "' need argument.\n";
-            usage();
-            break;
+            case ':':
+                arg = argv[optind-1];
+                std::cerr << "Option `" << arg << "' need argument.\n";
+                usage();
+                break;
 
-        case '?':
-            std::cerr << "Invalid option `" << argv[optind-1] << "'.\n";
-            usage();
-            break;
+            case '?':
+                std::cerr << "Invalid option `" << argv[optind-1] << "'.\n";
+                usage();
+                break;
         }
     }
 
