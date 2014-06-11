@@ -1,0 +1,10 @@
+linux广播测试代码
+
+发送端：
+         gb_svr.c或gb_sk.c
+
+接收端：
+         gb_recv.c
+
+编译：
+         gcc -o 可执行文件名 源文件名

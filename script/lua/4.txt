@@ -1,0 +1,8 @@
+3=txt
+bsearch=lua
+complex=lua
+data
+data_struct=lua
+io=lua
+socket_test=lua
+tmp=lua
