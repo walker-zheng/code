@@ -1,0 +1,10 @@
+
+** ipc调试
+*** 打开文件
+    lsof fuser ls file stat
+*** 查看数据
+    wc strings xxd hexdump od
+*** 进程管理
+    ps pgrep pmap mmap kill
+*** 监控统计
+    fstat pstat sockstat systat netstat procstat iostat vmstat
