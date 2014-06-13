@@ -1,3 +1,0 @@
-# 2013/05/24-周五-22:52:30
-** autoproxy在firefox21中失效，需要设置network.proxy.socks_remote_dns=true，修改network.proxy.type=5或更新autoproxy
-** firefox崩溃后，在about:support中可以打开配置文件夹profile或初始化firefox，更新extensions中的扩展

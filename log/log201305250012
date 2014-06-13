@@ -2,3 +2,6 @@
 ** raspi没有键盘用，倒是白买了个显示器，之后才发现raspi-config里面可以开ssh，但还是得插网线，还是得安装chroot，方便挂载在debian上用，vbox不支持raspi，貌似qemu倒是可以
 ** upgrade时提示网卡驱动可能不能用，没注意，杯具了。重新找个8188eu.ko，明天安进去
 ** buy list:笔记本键盘，移动硬盘(配raspi的minidlna)
+** 驱动编译：pacman -S linux-headers;git clone https://github.com/Red54/linux-shumeipai2--depth 1;cd linux-shumeipai2/drivers/net/wireless/rtl8188eu;make && make install
+** 驱动模块安装：sudo install -c -m 0644 ./rtl8188eu.ko /lib/modules/3.2.27+/kernel/drivers/net/wireless;sudo depmod -a;sudo modprobe 8188eu
+** 交叉编译raspi：git clone git://github.com/raspberrypi/tools.git;cp -r tools/arm-bcm2708 /opt;export PATH=/opt/arm-bcm2708/arm-bcm2708hardfp-linux-gnueabi/bin:$PATH;export CFLAGS="-O2 -pipe -mcpu=arm1176jzf-s -mfpu=vfp -mfloat-abi=hard -w";make参数为CROSS_COMPILE=arm-bcm2708hardfp-linux-gnueabi-;编译内核则为ARCH=arm
