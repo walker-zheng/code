@@ -1,7 +1,0 @@
-##  2013/05/09-周四-00:35:19
-* 一般default.prop不允许编辑，可以先用串口登陆，修改根文件系统属性： mount -o remount,rw ubi0:rootfs / 用vi 编辑default.prop, 修改ro.secure=0。 
-* date +%Y/%m/%d-%a-%H:%M:%S > log$(date +%Y%m%d)
-* cm nightly build site:    http://10.1.cmxlog.com/?device=i9103
-
-## 2013/05/09-周四-21:27:38
-* run a crontab in Cygwin: cygrunsrv -I cron -p /usr/sbin/cron -a -D; cron-config

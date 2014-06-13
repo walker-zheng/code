@@ -1,5 +1,0 @@
-# 2013年 5月17日 星期五 23时35分33秒 CST
-* vbox升级后，从cygwin启动，报错。意外删掉opensuse磁盘，  各种恢复工具致使无法恢复，重装debian和freebsd，基本配置完成  修改启动脚本，致能够启动。
-* freebsd中locate的更新在crontab里，而没有updatedb；git的completion需要source；alias ls='ls -FG';使用ports pkg portupgrade等管理软件包；sysinstall配置网卡；在vbox中安装freebsd时芯片组改为ICH
-* debian中apt-get管理软件包
-* ubuntu安装失败，提示权限不够
