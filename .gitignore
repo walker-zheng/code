@@ -5,9 +5,7 @@
 .deps/
 bin/
 autom4te.cache/
-config.h
+config/
 config.h.in
-config.log
-config.status
 libtool
 stamp-h1
