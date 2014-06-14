@@ -25,8 +25,10 @@ DEPS=$(patsubst $(OBJ_DIR)/%.o, $(DEPS_DIR)/%.d, $(OBJS))
 INCLUDE=\
 		-I$(INCLUDE_DIR) -I$(BOOST_DIR)
 LIBS=\
-	 	-L$(LIB_DIR) -L$(BOOST_LIB)
-		## -lboost_regex
+		-lboost_regex\
+	 	-L$(LIB_DIR) -L$(BOOST_LIB)\
+		-Wl,-rpath,$(BOOST_LIB)
+
 
 ###################lib文件及路径######################################
 
