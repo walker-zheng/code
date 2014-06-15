@@ -5,6 +5,7 @@
 .deps/
 bin/
 autom4te.cache/
+apue.2e/fig*
 config/
 config.h.in
 libtool
