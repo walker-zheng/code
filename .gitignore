@@ -1,12 +1,12 @@
-*.[oa]
+*.[oad]
 *~
 *.exe
 *.swp
 .deps/
 bin/
 autom4te.cache/
-apue.2e/fig*
 config/
 config.h.in
+COPYING
 libtool
 stamp-h1
