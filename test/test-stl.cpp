@@ -11,32 +11,6 @@
 using namespace std;
 
 
-int args_sort();
-int erase_list();
-int trans_case();
-int str_trim();
-int erase_char();
-int replace_str();
-int read_line();
-int out_iter();
-
-
-int main(int argc, char const *argv[])
-{
-    erase_list();
-    trans_case();
-    str_trim();
-    erase_char();
-    replace_str();
-    out_iter();
-    // read_line();
-    // args_sort();
-
-    char a;
-    cin >> a;
-    return 0;
-}
-
 int args_sort() {
     vector<string> v;
     string tmp;
@@ -129,5 +103,22 @@ int out_iter() {
         cout << *out_it++ << endl;
     }
 
+    return 0;
+}
+
+
+int main(int argc, char const *argv[])
+{
+    erase_list();
+    trans_case();
+    str_trim();
+    erase_char();
+    replace_str();
+    out_iter();
+    // read_line();
+    // args_sort();
+
+    char a;
+    cin >> a;
     return 0;
 }
