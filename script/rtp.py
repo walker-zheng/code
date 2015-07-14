@@ -5,7 +5,7 @@ import socket
 # Build a socket to receive data from RTP server.
 # Here we use SOCK_DGRAM, because RTP is on UDP.
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(("localhost", 6666))
+sock.bind(("localhost", 5001))
 
 for i in range(5):
         # We just get 16 bytes to analyze the RTP Header.

@@ -1,0 +1,5 @@
+F:\zmy\code\InterviewQuestions\Singleton\bin\Debug\Singleton.exe
+F:\zmy\code\InterviewQuestions\Singleton\bin\Debug\Singleton.pdb
+F:\zmy\code\InterviewQuestions\Singleton\obj\Debug\02_Singleton.csprojResolveAssemblyReference.cache
+F:\zmy\code\InterviewQuestions\Singleton\obj\Debug\Singleton.exe
+F:\zmy\code\InterviewQuestions\Singleton\obj\Debug\Singleton.pdb

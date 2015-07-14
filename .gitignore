@@ -10,3 +10,4 @@ config.h.in
 COPYING
 libtool
 stamp-h1
+Debug/

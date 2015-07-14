@@ -520,6 +520,23 @@ int test_func()
   // std::cout << b(x_1) << std::endl;
   std::cout << c(x_1) << std::endl;
   std::cout << d(x_1) << std::endl;
+
+
+
+  std::function<int(int)> lfib = [&lfib](int n) {return n < 2 ? 1 : lfib(n-1) + lfib(n-2);};
+  std::cout << lfib(10) << std::endl;
+
+  int x = 4;
+  // capture list can now be initialized with =
+  auto y = [&r = x, x = x+1]()->int {
+      r += 2;
+      return x+2;
+  }();  // Updates ::x to 6, and initializes y to 7.
+  std::cout << "x = " << x << std::endl << "y = " << y << std::endl;
+
+  // auto ptr = std::make_unique<int>(10); // See below for std::make_unique
+  // auto lambda = [ptr = std::move(ptr)] {return *ptr;};
+
   return 0;
 
 }
@@ -629,6 +646,11 @@ int test_cref()
 
   std::vector<std::reference_wrapper<int>> v2(v.begin(), v.end());
   std::partition(v2.begin(), v2.end(), [](int n){return n<0;});
+  int tmp_count = 0;
+  for (int &i : v_i)
+  {
+    i = ++tmp_count;
+  }
 
   std::cout << "Contents of the list: ";
   for(int n: l) {
@@ -702,8 +724,18 @@ int test_partition()
   std::cout << '\n';
   return 0;
 }
-
-
+typedef struct t_test_a
+{
+  int a;
+  int b;
+  /* data */
+}test_a;
+typedef struct t_test_b
+{
+  int b;
+  int a;
+  /* data */
+}test_b;
 int main () {
   // test_func_obj();
 
@@ -717,11 +749,13 @@ int main () {
   // test_reverse();
   // test_atomic();
   // test_thread();
-  // test_func();
+  test_func();
   // test_bind();
   // test_mem_fn();
-  test_cref();
+  // test_cref();
   // test_partition();
+test_a aa = {1, 2};
+
 
   return 0;
 }
