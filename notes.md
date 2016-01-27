@@ -1,8 +1,8 @@
-### c++/cli (managed c++)
+*** c++/cli (managed c++)
 
-## 动态编程和refelection
-## gc
-## bcl (.net基础库)
+** 动态编程和refelection
+** gc
+** bcl (.net基础库)
 
     SomeManagedClass^ handle = gcnew SomeManagedClass( ... );
     handle->someMethod();
@@ -16,9 +16,9 @@
     };
 
 
-## ref class底层的对象模型和Native世界的对象模型根本就不一致
-### T*，pin_ptr，interior_ptr是C++/CLI中三种最为重要的指针形式
-### pin_ptr——它告诉GC：在压缩堆的时候请不要移动该对象; Native&Managed数据传递
+** ref class底层的对象模型和Native世界的对象模型根本就不一致
+*** T*，pin_ptr，interior_ptr是C++/CLI中三种最为重要的指针形式
+*** pin_ptr——它告诉GC：在压缩堆的时候请不要移动该对象; Native&Managed数据传递
     array<char>^ arr = gcnew array<char>(3); //托管类
     arr[0] = 'C';
     arr[1] = '+';
@@ -28,7 +28,7 @@
     std::sort(pbegin,pbegin+3); //复用Native的算法！
     std::cout<<pbegin[0]<<pbegin[1]<<pbegin[2]; //输出 “++C”
 
-### interior_ptr指向托管堆，在GC时interior_ptr能够得到更新，除此之外，interior_ptr允许你进行指针运算，允许你解 引用，一切和Native指针并无二致
+*** interior_ptr指向托管堆，在GC时interior_ptr能够得到更新，除此之外，interior_ptr允许你进行指针运算，允许你解 引用，一切和Native指针并无二致
     template<typename T>
     void sort2(interior_ptr<T> begin,interior_ptr<T> end)
     {
@@ -47,7 +47,7 @@
     }
 
 
-## 显式override
+** 显式override
     class B
     {
     public:
@@ -63,5 +63,5 @@
            virtual void k() = B::i ; //“命名式”重写！
     }
 
-##　值类型&封箱和拆箱
-### 原则是：要修改栈上的值类型实例，优先使用“%”，而不是“^”。这样你将获得最好的效率和程序的正确性
+**　值类型&封箱和拆箱
+*** 原则是：要修改栈上的值类型实例，优先使用“%”，而不是“^”。这样你将获得最好的效率和程序的正确性
