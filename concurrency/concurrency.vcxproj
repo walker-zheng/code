@@ -20,8 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F0E4C013-B661-4608-A6DB-5464B8EC1A4F}</ProjectGuid>
-    <RootNamespace>telnetcpp</RootNamespace>
+    <RootNamespace>concurrency</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>concurrency</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -120,6 +121,9 @@
     <ClCompile Include="atm.h" />
     <ClCompile Include="bank_machine.h" />
     <ClCompile Include="interface_machine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VATaskScheculeServerInterface.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
