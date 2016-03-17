@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 
-
 #include "sender.h"
 
 struct withdraw
@@ -9,10 +8,10 @@ struct withdraw
     std::string account;
     unsigned int amount;
     mutable messaging::sender atm_queue;
-    withdraw(std::string const& account_,
-            unsigned amount_,
-            messaging::sender atm_queue_):
-        account(account_),amount(amount_),
+    withdraw(std::string const & account_,
+             unsigned amount_,
+             messaging::sender atm_queue_) :
+        account(account_), amount(amount_),
         atm_queue(atm_queue_)
     {}
 };
@@ -24,31 +23,31 @@ struct cancel_withdrawal
 {
     std::string account;
     unsigned amount;
-    cancel_withdrawal(std::string const& account_,
-            unsigned amount_):
-        account(account_),amount(amount_)
+    cancel_withdrawal(std::string const & account_,
+                      unsigned amount_) :
+        account(account_), amount(amount_)
     {}
 };
 struct withdrawal_processed
 {
     std::string account;
     unsigned amount;
-    withdrawal_processed(std::string const& account_,
-            unsigned amount_):
-        account(account_),amount(amount_)
+    withdrawal_processed(std::string const & account_,
+                         unsigned amount_) :
+        account(account_), amount(amount_)
     {}
 };
 struct card_inserted
 {
     std::string account;
-    explicit card_inserted(std::string const& account_):
+    explicit card_inserted(std::string const & account_) :
         account(account_)
     {}
 };
 struct digit_pressed
 {
     char digit;
-    explicit digit_pressed(char digit_):
+    explicit digit_pressed(char digit_) :
         digit(digit_)
     {}
 };
@@ -59,7 +58,7 @@ struct eject_card
 struct withdraw_pressed
 {
     unsigned amount;
-    explicit withdraw_pressed(unsigned amount_):
+    explicit withdraw_pressed(unsigned amount_) :
         amount(amount_)
     {}
 };
@@ -68,7 +67,7 @@ struct cancel_pressed
 struct issue_money
 {
     unsigned amount;
-    issue_money(unsigned amount_):
+    issue_money(unsigned amount_) :
         amount(amount_)
     {}
 };
@@ -77,9 +76,9 @@ struct verify_pin
     std::string account;
     std::string pin;
     mutable messaging::sender atm_queue;
-    verify_pin(std::string const& account_,std::string const& pin_,
-            messaging::sender atm_queue_):
-        account(account_),pin(pin_),atm_queue(atm_queue_)
+    verify_pin(std::string const & account_, std::string const & pin_,
+               messaging::sender atm_queue_) :
+        account(account_), pin(pin_), atm_queue(atm_queue_)
     {}
 };
 struct pin_verified
@@ -102,21 +101,21 @@ struct get_balance
 {
     std::string account;
     mutable messaging::sender atm_queue;
-    get_balance(std::string const& account_,messaging::sender atm_queue_):
-        account(account_),atm_queue(atm_queue_)
+    get_balance(std::string const & account_, messaging::sender atm_queue_) :
+        account(account_), atm_queue(atm_queue_)
     {}
 };
 struct balance
 {
     unsigned amount;
-    explicit balance(unsigned amount_):
+    explicit balance(unsigned amount_) :
         amount(amount_)
     {}
 };
 struct display_balance
 {
     unsigned amount;
-    explicit display_balance(unsigned amount_):
+    explicit display_balance(unsigned amount_) :
         amount(amount_)
     {}
 };
