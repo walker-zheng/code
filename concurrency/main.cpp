@@ -10,6 +10,29 @@
 #include "TemplateDispatcher.h"
 #include "type.h"
 
+//int main()
+//{
+//    std::cout << "code ? shit !";
+//    std::thread worker(
+//        [&]()
+//    {
+//        std::vector<int> vec;
+//
+//        for (int i = 0; i < 10; i++)
+//        {
+//            vec.push_back(i);
+//        }
+//
+//        for (auto i : vec)
+//        {
+//            std::cout << i << " ";
+//        }
+//    }
+//    );
+//    worker.join();
+//    return 0;
+//}
+//void main_t()
 void main()
 {
     bank_machine bank;
