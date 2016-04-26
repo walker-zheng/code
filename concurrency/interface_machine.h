@@ -25,7 +25,7 @@ public:
                     {
                         std::lock_guard<std::mutex> lk(iom);
                         std::cout << "Issuing "
-                                  << msg.amount << std::endl;
+                                  << msg.amount;
                     }
                 }
                 )
@@ -34,7 +34,7 @@ public:
                 {
                     {
                         std::lock_guard<std::mutex> lk(iom);
-                        std::cout << "Insufficient funds" << std::endl;
+                        std::cout << "Insufficient funds";
                     }
                 }
                 )
@@ -45,7 +45,7 @@ public:
                         std::lock_guard<std::mutex> lk(iom);
                         std::cout
                                 << "Please enter your PIN (0-9)"
-                                << std::endl;
+                               ;
                     }
                 }
                 )
@@ -55,7 +55,7 @@ public:
                     {
                         std::lock_guard<std::mutex> lk(iom);
                         std::cout << "Please enter your card (I)"
-                                  << std::endl;
+                                 ;
                     }
                 }
                 )
@@ -66,7 +66,7 @@ public:
                         std::lock_guard<std::mutex> lk(iom);
                         std::cout
                                 << "The balance of your account is "
-                                << msg.amount << std::endl;
+                                << msg.amount;
                     }
                 }
                 )
@@ -75,10 +75,10 @@ public:
                 {
                     {
                         std::lock_guard<std::mutex> lk(iom);
-                        std::cout << "Withdraw 50? (w)" << std::endl;
+                        std::cout << "Withdraw 50? (w)";
                         std::cout << "Display Balance? (b)"
-                                  << std::endl;
-                        std::cout << "Cancel? (c)" << std::endl;
+                                 ;
+                        std::cout << "Cancel? (c)";
                     }
                 }
                 )
@@ -88,7 +88,7 @@ public:
                     {
                         std::lock_guard<std::mutex> lk(iom);
                         std::cout << "Withdrawal cancelled"
-                                  << std::endl;
+                                 ;
                     }
                 }
                 )
@@ -97,7 +97,7 @@ public:
                 {
                     {
                         std::lock_guard<std::mutex> lk(iom);
-                        std::cout << "PIN incorrect" << std::endl;
+                        std::cout << "PIN incorrect";
                     }
                 }
                 )
@@ -106,7 +106,7 @@ public:
                 {
                     {
                         std::lock_guard<std::mutex> lk(iom);
-                        std::cout << "Ejecting card" << std::endl;
+                        std::cout << "Ejecting card";
                     }
                 }
                 );
