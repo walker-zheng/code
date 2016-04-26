@@ -1,0 +1,748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AB3DB9E4-827D-436A-B602-DD2279247BC4}</ProjectGuid>
+    <RootNamespace>code</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\git\recipes\algorithm\combination.cc" />
+    <ClCompile Include="..\git\recipes\algorithm\iprange.cc" />
+    <ClCompile Include="..\git\recipes\algorithm\mergeN.cc" />
+    <ClCompile Include="..\git\recipes\algorithm\partition.cc" />
+    <ClCompile Include="..\git\recipes\algorithm\permutation.cc" />
+    <ClCompile Include="..\git\recipes\algorithm\permutation2.cc" />
+    <ClCompile Include="..\git\recipes\algorithm\removeContinuousSpaces.cc" />
+    <ClCompile Include="..\git\recipes\algorithm\select.cc" />
+    <ClCompile Include="..\git\recipes\basic\bench.cc" />
+    <ClCompile Include="..\git\recipes\basic\combination.cc" />
+    <ClCompile Include="..\git\recipes\basic\counted_ptr_test.cc" />
+    <ClCompile Include="..\git\recipes\basic\factorial.cc" />
+    <ClCompile Include="..\git\recipes\basic\fibonacci.cc" />
+    <ClCompile Include="..\git\recipes\basic\partitions.cc" />
+    <ClCompile Include="..\git\recipes\basic\test.cc" />
+    <ClCompile Include="..\git\recipes\basic\tutorial\factorial.cc" />
+    <ClCompile Include="..\git\recipes\basic\tutorial\sieve.cc" />
+    <ClCompile Include="..\git\recipes\basic\uint.cc" />
+    <ClCompile Include="..\git\recipes\datetime\Date.cc" />
+    <ClCompile Include="..\git\recipes\datetime\Date_test.cc" />
+    <ClCompile Include="..\git\recipes\datetime\Date_unittest.cc" />
+    <ClCompile Include="..\git\recipes\datetime\Timestamp.cc" />
+    <ClCompile Include="..\git\recipes\datetime\Timestamp_unittest.cc" />
+    <ClCompile Include="..\git\recipes\datetime\TimeZone.cc" />
+    <ClCompile Include="..\git\recipes\datetime\TimeZone_dump.cc" />
+    <ClCompile Include="..\git\recipes\datetime\TimeZone_unittest.cc" />
+    <ClCompile Include="..\git\recipes\datetime\time_benchmark.c" />
+    <ClCompile Include="..\git\recipes\esort\sort00.cc" />
+    <ClCompile Include="..\git\recipes\esort\sort01.cc" />
+    <ClCompile Include="..\git\recipes\esort\sort02.cc" />
+    <ClCompile Include="..\git\recipes\esort\sort03.cc" />
+    <ClCompile Include="..\git\recipes\esort\sort04.cc" />
+    <ClCompile Include="..\git\recipes\esort\sort10.cc" />
+    <ClCompile Include="..\git\recipes\esort\sort11.cc" />
+    <ClCompile Include="..\git\recipes\esort\sort12.cc" />
+    <ClCompile Include="..\git\recipes\faketcp\acceptall.cc" />
+    <ClCompile Include="..\git\recipes\faketcp\connectmany.cc" />
+    <ClCompile Include="..\git\recipes\faketcp\discardall.cc" />
+    <ClCompile Include="..\git\recipes\faketcp\discardall2.cc" />
+    <ClCompile Include="..\git\recipes\faketcp\echoall.cc" />
+    <ClCompile Include="..\git\recipes\faketcp\echoall2.cc" />
+    <ClCompile Include="..\git\recipes\faketcp\faketcp.cc" />
+    <ClCompile Include="..\git\recipes\faketcp\icmpecho.cc" />
+    <ClCompile Include="..\git\recipes\faketcp\rejectall.cc" />
+    <ClCompile Include="..\git\recipes\logging\AsyncLogging_test.cc" />
+    <ClCompile Include="..\git\recipes\logging\LogFile.cc" />
+    <ClCompile Include="..\git\recipes\logging\LogFile_test.cc" />
+    <ClCompile Include="..\git\recipes\logging\Logging.cc" />
+    <ClCompile Include="..\git\recipes\logging\Logging_test.cc" />
+    <ClCompile Include="..\git\recipes\logging\LogStream.cc" />
+    <ClCompile Include="..\git\recipes\logging\LogStream_bench.cc" />
+    <ClCompile Include="..\git\recipes\logging\LogStream_test.cc" />
+    <ClCompile Include="..\git\recipes\pingpong\asio\client.cpp" />
+    <ClCompile Include="..\git\recipes\pingpong\asio\server.cpp" />
+    <ClCompile Include="..\git\recipes\pingpong\libevent\bench.c" />
+    <ClCompile Include="..\git\recipes\pingpong\libevent\client.c" />
+    <ClCompile Include="..\git\recipes\pingpong\libevent\server-half-close.c" />
+    <ClCompile Include="..\git\recipes\pingpong\libevent\server-line-echo.c" />
+    <ClCompile Include="..\git\recipes\pingpong\libevent\server.c" />
+    <ClCompile Include="..\git\recipes\protobuf\codec_test.cc" />
+    <ClCompile Include="..\git\recipes\protobuf\descriptor_test.cc" />
+    <ClCompile Include="..\git\recipes\protobuf\dispatcher.cc" />
+    <ClCompile Include="..\git\recipes\protobuf\dispatcher_lite.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\buysell.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\dance.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\huarong.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\latin_square.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\nbody.c" />
+    <ClCompile Include="..\git\recipes\puzzle\nbody.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\nqueens.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\nqueens_mt.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\nqueens_opt.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\nqueens_opt_mt.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\poker\poker.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\query_freq.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\typoglycemia.cc" />
+    <ClCompile Include="..\git\recipes\puzzle\waterpour.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s00\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s00\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s00\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s01\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s01\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s01\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s01\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s01\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s01\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s02\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s02\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s02\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s02\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s02\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s02\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s02\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s02\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s02\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s03\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s04\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\TcpConnection.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\TcpServer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\test8.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s05\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\TcpConnection.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\TcpServer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\test8.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s06\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\Buffer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\TcpConnection.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\TcpServer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\test8.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s07\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\Buffer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\TcpConnection.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\TcpServer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test10.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test8.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\test9.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s08\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\Buffer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\TcpConnection.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\TcpServer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test10.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test11.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test8.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\test9.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s09\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\Buffer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\EventLoopThreadPool.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\TcpConnection.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\TcpServer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test10.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test11.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test8.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\test9.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s10\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\Buffer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\Connector.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\EventLoopThreadPool.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\TcpConnection.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\TcpServer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test10.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test11.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test12.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test8.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\test9.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s11\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\Buffer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\Connector.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\EventLoopThreadPool.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\TcpClient.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\TcpConnection.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\TcpServer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test10.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test11.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test12.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test13.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test8.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\test9.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s12\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\Buffer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\Channel.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\Connector.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\EPoller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\EventLoop.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\EventLoopThread.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\EventLoopThreadPool.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\Poller.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\Socket.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\SocketsOps.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\TcpClient.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\TcpConnection.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\TcpServer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test1.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test10.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test11.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test12.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test13.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test2.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test3.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test4.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test5.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test6.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test7.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test8.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\test9.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\Timer.cc" />
+    <ClCompile Include="..\git\recipes\reactor\s13\TimerQueue.cc" />
+    <ClCompile Include="..\git\recipes\ssl\benchmark-openssl.cc" />
+    <ClCompile Include="..\git\recipes\ssl\benchmark-polarssl.cc" />
+    <ClCompile Include="..\git\recipes\ssl\loop-polarssl.cc" />
+    <ClCompile Include="..\git\recipes\string\main.cc" />
+    <ClCompile Include="..\git\recipes\string\StringEager.cc" />
+    <ClCompile Include="..\git\recipes\string\StringTrivialTest.cc" />
+    <ClCompile Include="..\git\recipes\string\test.cc" />
+    <ClCompile Include="..\git\recipes\sudoku\main.cc" />
+    <ClCompile Include="..\git\recipes\sudoku\neighbor.cc" />
+    <ClCompile Include="..\git\recipes\sudoku\sudoku_basic.cc" />
+    <ClCompile Include="..\git\recipes\sudoku\sudoku_dancing_links.cc" />
+    <ClCompile Include="..\git\recipes\sudoku\sudoku_min_arity.cc" />
+    <ClCompile Include="..\git\recipes\sudoku\sudoku_min_arity_cache.cc" />
+    <ClCompile Include="..\git\recipes\thread\Exception.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Atomic_unittest.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\BlockingQueue_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\BoundedBlockingQueue_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\CopyOnWrite_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Counter.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Customer.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\destruct.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Exception_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\ExitDeadLock.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Factory.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Fork_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\MutualDeadLock.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\NonRecursiveMutex_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Observer.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Observer_safe.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\RequestInventory_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\RequestInventory_test2.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\SelfDeadLock.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\SignalSlot_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\SingletonThreadLocal_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Singleton_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\ThreadLocalSingleton_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\ThreadLocal_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\ThreadPool_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Thread_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\Waiter_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\test\WeakCallback_test.cc" />
+    <ClCompile Include="..\git\recipes\thread\Thread.cc" />
+    <ClCompile Include="..\git\recipes\thread\ThreadPool.cc" />
+    <ClCompile Include="..\git\recipes\topk\merger.cc" />
+    <ClCompile Include="..\git\recipes\topk\sender.cc" />
+    <ClCompile Include="..\git\recipes\tpc\Acceptor.cc" />
+    <ClCompile Include="..\git\recipes\tpc\chargen.cc" />
+    <ClCompile Include="..\git\recipes\tpc\discard.cc" />
+    <ClCompile Include="..\git\recipes\tpc\echo.cc" />
+    <ClCompile Include="..\git\recipes\tpc\echo_client.cc" />
+    <ClCompile Include="..\git\recipes\tpc\InetAddress.cc" />
+    <ClCompile Include="..\git\recipes\tpc\netcat.cc" />
+    <ClCompile Include="..\git\recipes\tpc\nodelay.cc" />
+    <ClCompile Include="..\git\recipes\tpc\nodelay_server.cc" />
+    <ClCompile Include="..\git\recipes\tpc\roundtrip_udp.cc" />
+    <ClCompile Include="..\git\recipes\tpc\sender.cc" />
+    <ClCompile Include="..\git\recipes\tpc\Socket.cc" />
+    <ClCompile Include="..\git\recipes\tpc\sudoku_stress.cc" />
+    <ClCompile Include="..\git\recipes\tpc\TcpStream.cc" />
+    <ClCompile Include="..\git\recipes\tpc\ttcp.cc" />
+    <ClCompile Include="..\git\recipes\utility\cwc.cc" />
+    <ClCompile Include="blocking_queue.cpp" />
+    <ClCompile Include="lambda.cpp" />
+    <ClCompile Include="ref.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="thread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\git\recipes\basic\counted_ptr.h" />
+    <ClInclude Include="..\git\recipes\basic\int128.h" />
+    <ClInclude Include="..\git\recipes\basic\uint.h" />
+    <ClInclude Include="..\git\recipes\datetime\copyable.h" />
+    <ClInclude Include="..\git\recipes\datetime\Date.h" />
+    <ClInclude Include="..\git\recipes\datetime\Timestamp.h" />
+    <ClInclude Include="..\git\recipes\datetime\TimeZone.h" />
+    <ClInclude Include="..\git\recipes\faketcp\faketcp.h" />
+    <ClInclude Include="..\git\recipes\logging\AsyncLoggingDoubleBuffering.h" />
+    <ClInclude Include="..\git\recipes\logging\AsyncLoggingQueue.h" />
+    <ClInclude Include="..\git\recipes\logging\LogFile.h" />
+    <ClInclude Include="..\git\recipes\logging\Logging.h" />
+    <ClInclude Include="..\git\recipes\logging\LogStream.h" />
+    <ClInclude Include="..\git\recipes\pingpong\asio\asio.hpp" />
+    <ClInclude Include="..\git\recipes\pingpong\asio\handler_allocator.hpp" />
+    <ClInclude Include="..\git\recipes\protobuf\codec.h" />
+    <ClInclude Include="..\git\recipes\reactor\s00\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s01\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s01\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s01\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s02\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s02\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s02\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s02\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s02\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s02\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s02\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s03\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s03\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s03\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s03\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s03\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s03\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s03\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s03\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s04\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\TcpConnection.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\TcpServer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s05\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\TcpConnection.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\TcpServer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s06\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\Buffer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\TcpConnection.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\TcpServer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s07\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\Buffer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\TcpConnection.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\TcpServer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s08\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\Buffer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\TcpConnection.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\TcpServer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s09\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\Buffer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\EventLoopThreadPool.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\TcpConnection.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\TcpServer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s10\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\Buffer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\Connector.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\EventLoopThreadPool.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\TcpConnection.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\TcpServer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s11\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\Buffer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\Connector.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\EventLoopThreadPool.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\TcpClient.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\TcpConnection.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\TcpServer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s12\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\Buffer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\Callbacks.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\Channel.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\Connector.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\EPoller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\EventLoop.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\EventLoopThread.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\EventLoopThreadPool.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\Poller.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\Socket.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\SocketsOps.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\TcpClient.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\TcpConnection.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\TcpServer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\Timer.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\TimerId.h" />
+    <ClInclude Include="..\git\recipes\reactor\s13\TimerQueue.h" />
+    <ClInclude Include="..\git\recipes\string\StringEager.h" />
+    <ClInclude Include="..\git\recipes\string\StringSso.h" />
+    <ClInclude Include="..\git\recipes\string\StringTrivial.h" />
+    <ClInclude Include="..\git\recipes\sudoku\sudoku.h" />
+    <ClInclude Include="..\git\recipes\thread\Atomic.h" />
+    <ClInclude Include="..\git\recipes\thread\BlockingQueue.h" />
+    <ClInclude Include="..\git\recipes\thread\BoundedBlockingQueue.h" />
+    <ClInclude Include="..\git\recipes\thread\Condition.h" />
+    <ClInclude Include="..\git\recipes\thread\CountDownLatch.h" />
+    <ClInclude Include="..\git\recipes\thread\Exception.h" />
+    <ClInclude Include="..\git\recipes\thread\Mutex.h" />
+    <ClInclude Include="..\git\recipes\thread\SignalSlot.h" />
+    <ClInclude Include="..\git\recipes\thread\SignalSlotTrivial.h" />
+    <ClInclude Include="..\git\recipes\thread\Singleton.h" />
+    <ClInclude Include="..\git\recipes\thread\Thread.h" />
+    <ClInclude Include="..\git\recipes\thread\ThreadLocal.h" />
+    <ClInclude Include="..\git\recipes\thread\ThreadLocalSingleton.h" />
+    <ClInclude Include="..\git\recipes\thread\ThreadPool.h" />
+    <ClInclude Include="..\git\recipes\thread\WeakCallback.h" />
+    <ClInclude Include="..\git\recipes\tpc\Acceptor.h" />
+    <ClInclude Include="..\git\recipes\tpc\Common.h" />
+    <ClInclude Include="..\git\recipes\tpc\InetAddress.h" />
+    <ClInclude Include="..\git\recipes\tpc\Socket.h" />
+    <ClInclude Include="..\git\recipes\tpc\TcpStream.h" />
+    <ClInclude Include="blocking_queue.h" />
+    <ClInclude Include="queue_s.h" />
+    <ClInclude Include="queue_s1.h" />
+    <ClInclude Include="rwlock.h" />
+    <ClInclude Include="xl_blocking_queue.h" />
+    <ClInclude Include="xl_thread_pool.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
