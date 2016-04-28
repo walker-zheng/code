@@ -1,65 +1,89 @@
-#include <iostream>
-#include <thread>
-#include <memory>
-#include <random>
-#include <chrono>
-#include <stdio.h>
-#include "queue_s.h"
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#include "catch.hpp"
 
+unsigned int Factorial( unsigned int number ) {
+	return number <= 1 ? number : Factorial(number-1)*number;
+}
 
-int main ()
-{
-	std::random_device rd;
-	std::mt19937 mt(rd());
-	threadsafe_queue<int> queue_int;
-	int sum_enq_1 = 0;
-	int sum_enq_2 = 0;
-	int sum_deq		= 0;
-	std::thread en_queue_1 = std::thread(
-		[&](threadsafe_queue<int>& queue, int & sum)
-	{
-		for (int i = 0; i < 20; i++)
-		{
-			queue.push(i);
-			printf("<<%d\n", i);
-			std::flush(std::cout);
-			sum++;
-			//std::cout << "<<" << i << std::endl; std::flush(std::cout);
-			//std::this_thread::sleep_for(std::chrono::microseconds(mt()));
+TEST_CASE( "Factorials are computed", "[factorial]" ) {
+	REQUIRE( Factorial(1) == 1 );
+	REQUIRE( Factorial(2) == 2 );
+	REQUIRE( Factorial(3) == 6 );
+	REQUIRE( Factorial(10) == 3628800 );
+}
+
+TEST_CASE( "vectors can be sized and resized", "[vector]" ) {
+
+	std::vector<int> v( 5 );
+
+	REQUIRE( v.size() == 5 );
+	REQUIRE( v.capacity() >= 5 );
+
+	SECTION( "resizing bigger changes size and capacity" ) {
+		v.resize( 10 );
+
+		REQUIRE( v.size() == 10 );
+		REQUIRE( v.capacity() >= 10 );
+	}
+	SECTION( "resizing smaller changes size but not capacity" ) {
+		v.resize( 0 );
+
+		REQUIRE( v.size() == 0 );
+		REQUIRE( v.capacity() >= 5 );
+	}
+	SECTION( "reserving bigger changes capacity but not size" ) {
+		v.reserve( 10 );
+
+		REQUIRE( v.size() == 5 );
+		REQUIRE( v.capacity() >= 10 );
+	}
+	SECTION( "reserving smaller does not change size or capacity" ) {
+		v.reserve( 0 );
+
+		REQUIRE( v.size() == 5 );
+		REQUIRE( v.capacity() >= 5 );
+	}
+}
+
+SCENARIO( "vectors can be sized and resized", "[vector]" ) {
+
+	GIVEN( "A vector with some items" ) {
+		std::vector<int> v( 5 );
+
+		REQUIRE( v.size() == 5 );
+		REQUIRE( v.capacity() >= 5 );
+
+		WHEN( "the size is increased" ) {
+			v.resize( 10 );
+
+			THEN( "the size and capacity change" ) {
+				REQUIRE( v.size() == 10 );
+				REQUIRE( v.capacity() >= 10 );
+			}
+		}
+		WHEN( "the size is reduced" ) {
+			v.resize( 0 );
+
+			THEN( "the size changes but not capacity" ) {
+				REQUIRE( v.size() == 0 );
+				REQUIRE( v.capacity() >= 5 );
+			}
+		}
+		WHEN( "more capacity is reserved" ) {
+			v.reserve( 10 );
+
+			THEN( "the capacity changes but not the size" ) {
+				REQUIRE( v.size() == 5 );
+				REQUIRE( v.capacity() >= 10 );
+			}
+		}
+		WHEN( "less capacity is reserved" ) {
+			v.reserve( 0 );
+
+			THEN( "neither size nor capacity are changed" ) {
+				REQUIRE( v.size() == 5 );
+				REQUIRE( v.capacity() >= 5 );
+			}
 		}
 	}
-		, std::ref(queue_int), std::ref(sum_enq_1));
-	std::thread de_queue = std::thread(
-		[&](threadsafe_queue<int> & queue, int & sum)
-	{
-		while (true)
-		{
-			std::shared_ptr<int> tmp = queue.wait_and_pop();
-			printf(">>%d\n", *tmp);
-			std::flush(std::cout);
-			sum++;
-			//std::cout << ">>" << *tmp << std::endl; std::flush(std::cout);
-			//std::this_thread::sleep_for(std::chrono::microseconds(mt()));
-		}
-	}
-	, std::ref(queue_int), std::ref(sum_deq));
-	std::thread en_queue_2 = std::thread(
-		[&](threadsafe_queue<int>& queue, int & sum)
-	{
-		for (int i = 0; i < 20; i++)
-		{
-			queue.push(i);
-			printf("<<=%d\n", i);
-			std::flush(std::cout);
-			sum++;
-			//std::cout << "<<" << i << std::endl; std::flush(std::cout);
-			//std::this_thread::sleep_for(std::chrono::microseconds(mt()));
-		}
-	}
-	, std::ref(queue_int), std::ref(sum_enq_2));
-	en_queue_1.join();
-	en_queue_2.join();
-	de_queue.join();
-	std::cout << "[" << sum_enq_2 << "," << sum_enq_2 << "," << sum_deq << "]" << std::endl;
-	return 0;
 }
