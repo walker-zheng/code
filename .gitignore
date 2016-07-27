@@ -11,3 +11,5 @@ COPYING
 libtool
 stamp-h1
 Debug/
+concurrency/Release/
+concurrency/x64/

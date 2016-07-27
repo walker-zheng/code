@@ -1,0 +1,6 @@
+[package]
+name = "hello"
+version = "0.1.0"
+authors = ["walker.zheng <walker.zheng@inforun.net>"]
+
+[dependencies]
