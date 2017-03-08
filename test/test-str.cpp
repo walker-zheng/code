@@ -27,14 +27,14 @@ int erase_list() {
     std::list<int> lst(arr, arr + 10);
 
     for ( std::list<int>::iterator iter = lst.begin();
-          iter != lst.end(); )
+            iter != lst.end(); )
         if ( *iter % 2 == 0 )
             lst.erase(iter++);
         else
             ++iter;
 
     std::copy(lst.begin(), lst.end(),
-        std::ostream_iterator<int>(std::cout, " "));
+            std::ostream_iterator<int>(std::cout, " "));
     cout << endl;
 
     return 0;
@@ -67,8 +67,8 @@ int erase_char() {
     string s("   hello, world. say bye   ");
     cout << s << endl;
     s.erase(remove_if(s.begin(),s.end(),
-        bind2nd(equal_to<char>(), ' ')),
-    s.end());
+                bind2nd(equal_to<char>(), ' ')),
+            s.end());
     cout << s << endl;
 
     return 0;
@@ -107,6 +107,22 @@ int out_iter() {
     return 0;
 }
 
+char replaceStringtoEqual(char c)
+{
+    if (c == '"')
+    {
+        return '=';
+    }
+
+    return c;
+}
+int trans_replace() {
+    string s("\"\"    shi\"\"the  \"LLo");
+    transform(s.begin(), s.end(), s.begin(), replaceStringtoEqual);
+    cout << s << endl;
+
+    return 0;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -118,6 +134,7 @@ int main(int argc, char const *argv[])
     out_iter();
     // read_line();
     // args_sort();
+    trans_replace();
 
     char a;
     cin >> a;
