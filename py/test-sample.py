@@ -1,7 +1,8 @@
 #!  /bin/python
+from os import path
+from os import getcwd
 
-
-def f(x):
-    return x%3==0 or x%5==0
-
-filter(f, range(2, 25))
+dir_path = path.dirname(path.realpath(__file__))
+cwd = getcwd()
+path_prefix = cwd if path.exists(path.join(cwd, 'fonts')) else dir_path
+print(path_prefix + "\\fonts")
