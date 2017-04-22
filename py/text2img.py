@@ -58,7 +58,7 @@ def AAfilledRoundedRect(surface,rect,color,radius=0.4):
     return surface.blit(rectangle,pos)
 def splitByLen(string, width):
     return [string[x:x+width] for x in range(0, len(string), width)]
-def generate_pic(hasBackgroud):
+def generate_pic(hasBackgroud, frontColor):
     #   import os.path
     #   try:
     #       dir_path = os.path.dirname(os.path.abspath(__file__))
@@ -91,7 +91,7 @@ def generate_pic(hasBackgroud):
     isSmoooth = True
     if hasBackgroud:
         color_bg = color_gray
-        color_fg = color_white
+        color_fg = frontColor
         image_bg = "-bg"
     else:
         color_bg = None
@@ -176,5 +176,5 @@ def generate_pic(hasBackgroud):
 __DEBUG__ = True
 def Print(string):
     print(string) if __DEBUG__ else None
-generate_pic(True)
-generate_pic(False)
+generate_pic(True, (0, 0, 0, 0))
+generate_pic(False, (0, 0, 0, 0))

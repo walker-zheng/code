@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Text-Rendering-Pygame/.idea/Text-Rendering-Pygame.iml" filepath="$PROJECT_DIR$/Text-Rendering-Pygame/.idea/Text-Rendering-Pygame.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/py.iml" filepath="$PROJECT_DIR$/.idea/py.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rounded-rects-pygame/.idea/rounded-rects-pygame.iml" filepath="$PROJECT_DIR$/rounded-rects-pygame/.idea/rounded-rects-pygame.iml" />
     </modules>
   </component>
 </project>

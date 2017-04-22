@@ -13,3 +13,6 @@ stamp-h1
 Debug/
 concurrency/Release/
 concurrency/x64/
+py/build
+py/images
+py/dist
