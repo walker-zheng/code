@@ -46,6 +46,13 @@
         "tuple": "cpp",
         "vector": "cpp",
         "xfunctional": "cpp",
-        "xmemory": "cpp"
+        "xmemory": "cpp",
+        "future": "cpp",
+        "deque": "cpp",
+        "mutex": "cpp",
+        "algorithm": "cpp",
+        "atomic": "cpp",
+        "condition_variable": "cpp",
+        "queue": "cpp"
     }
 }
