@@ -28,12 +28,13 @@ int main ()
     std::cout << "sub\t" << to_string<_sub>() << std::endl;
     std::cout << "mut\t" << to_string<_mut>() << std::endl;
     std::cout << "div\t" << to_string<_div>() << std::endl;
-    std::cout << "eq \t" << to_string(_eq::value) << std::endl;
-    std::cout << "neq\t" << to_string(_neq::value) << std::endl;
-    std::cout << "gt \t" << to_string(_gt::value) << std::endl;
-    std::cout << "ge \t" << to_string(_ge::value) << std::endl;
-    std::cout << "lt \t" << to_string(_lt::value) << std::endl;
-    std::cout << "le \t" << to_string(_le::value) << std::endl;
+	std::cout << std::boolalpha;
+    std::cout << "eq \t" << _eq::value << std::endl;
+    std::cout << "neq\t" << _neq::value << std::endl;
+    std::cout << "gt \t" << _gt::value << std::endl;
+    std::cout << "ge \t" << _ge::value << std::endl;
+    std::cout << "lt \t" << _lt::value << std::endl;
+    std::cout << "le \t" << _le::value << std::endl;
     return 0;
 }
 
