@@ -3,6 +3,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <map>
 using namespace std;
 
 
@@ -34,10 +35,6 @@ typedef struct tagScreenTourPlan
     int screenIndex;    ///< 单屏幕 索引
     TTsect      stSect[SDK_N_WEEKS][SDK_N_REC_TSECT];       //NSP
 } TScreenTourPlan;
-
-
-
-
 
 
 #include <stdio.h>
@@ -106,6 +103,8 @@ int main(int argc, char const *argv[])
     1 || printf("%s\n", "haha");
     0 || printf("%s\n", "world");
 
+    static std::map<int, int> m_test;
+    cout << "?? " << std::is_pod<std::map<int, int>>::value <<std::endl;
 
     return 0;
 }

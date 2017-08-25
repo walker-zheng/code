@@ -2,269 +2,221 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7617573a-3b85-4851-ab3f-59f57ffc849a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/STHeiti-Light.ttc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fzlk.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fzmw.ttf" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig1.10" afterPath="$PROJECT_DIR$/../apue.2e/fig1.10" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig1.3" afterPath="$PROJECT_DIR$/../apue.2e/fig1.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig1.4" afterPath="$PROJECT_DIR$/../apue.2e/fig1.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig1.5" afterPath="$PROJECT_DIR$/../apue.2e/fig1.5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig1.6" afterPath="$PROJECT_DIR$/../apue.2e/fig1.6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig1.7" afterPath="$PROJECT_DIR$/../apue.2e/fig1.7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig1.8" afterPath="$PROJECT_DIR$/../apue.2e/fig1.8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig1.9" afterPath="$PROJECT_DIR$/../apue.2e/fig1.9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.10" afterPath="$PROJECT_DIR$/../apue.2e/fig10.10" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.11" afterPath="$PROJECT_DIR$/../apue.2e/fig10.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.12" afterPath="$PROJECT_DIR$/../apue.2e/fig10.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.14" afterPath="$PROJECT_DIR$/../apue.2e/fig10.14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.15" afterPath="$PROJECT_DIR$/../apue.2e/fig10.15" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.18" afterPath="$PROJECT_DIR$/../apue.2e/fig10.18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.19" afterPath="$PROJECT_DIR$/../apue.2e/fig10.19" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.2" afterPath="$PROJECT_DIR$/../apue.2e/fig10.2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.20" afterPath="$PROJECT_DIR$/../apue.2e/fig10.20" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.22" afterPath="$PROJECT_DIR$/../apue.2e/fig10.22" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.23" afterPath="$PROJECT_DIR$/../apue.2e/fig10.23" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.24" afterPath="$PROJECT_DIR$/../apue.2e/fig10.24" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.25" afterPath="$PROJECT_DIR$/../apue.2e/fig10.25" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.26" afterPath="$PROJECT_DIR$/../apue.2e/fig10.26" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.28" afterPath="$PROJECT_DIR$/../apue.2e/fig10.28" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.29" afterPath="$PROJECT_DIR$/../apue.2e/fig10.29" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.30" afterPath="$PROJECT_DIR$/../apue.2e/fig10.30" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.5" afterPath="$PROJECT_DIR$/../apue.2e/fig10.5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.6" afterPath="$PROJECT_DIR$/../apue.2e/fig10.6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.7" afterPath="$PROJECT_DIR$/../apue.2e/fig10.7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.8" afterPath="$PROJECT_DIR$/../apue.2e/fig10.8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig10.9" afterPath="$PROJECT_DIR$/../apue.2e/fig10.9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig11.10" afterPath="$PROJECT_DIR$/../apue.2e/fig11.10" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig11.11" afterPath="$PROJECT_DIR$/../apue.2e/fig11.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig11.12" afterPath="$PROJECT_DIR$/../apue.2e/fig11.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig11.13" afterPath="$PROJECT_DIR$/../apue.2e/fig11.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig11.14" afterPath="$PROJECT_DIR$/../apue.2e/fig11.14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig11.2" afterPath="$PROJECT_DIR$/../apue.2e/fig11.2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig11.3" afterPath="$PROJECT_DIR$/../apue.2e/fig11.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig11.4" afterPath="$PROJECT_DIR$/../apue.2e/fig11.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig11.5" afterPath="$PROJECT_DIR$/../apue.2e/fig11.5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig12.11" afterPath="$PROJECT_DIR$/../apue.2e/fig12.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig12.12" afterPath="$PROJECT_DIR$/../apue.2e/fig12.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig12.13" afterPath="$PROJECT_DIR$/../apue.2e/fig12.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig12.16" afterPath="$PROJECT_DIR$/../apue.2e/fig12.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig12.17" afterPath="$PROJECT_DIR$/../apue.2e/fig12.17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig12.4" afterPath="$PROJECT_DIR$/../apue.2e/fig12.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig12.8" afterPath="$PROJECT_DIR$/../apue.2e/fig12.8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig13.1" afterPath="$PROJECT_DIR$/../apue.2e/fig13.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig13.6" afterPath="$PROJECT_DIR$/../apue.2e/fig13.6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig13.7" afterPath="$PROJECT_DIR$/../apue.2e/fig13.7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig13.8" afterPath="$PROJECT_DIR$/../apue.2e/fig13.8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.1" afterPath="$PROJECT_DIR$/../apue.2e/fig14.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.12" afterPath="$PROJECT_DIR$/../apue.2e/fig14.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.16" afterPath="$PROJECT_DIR$/../apue.2e/fig14.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.17" afterPath="$PROJECT_DIR$/../apue.2e/fig14.17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.18" afterPath="$PROJECT_DIR$/../apue.2e/fig14.18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.19" afterPath="$PROJECT_DIR$/../apue.2e/fig14.19" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.29a" afterPath="$PROJECT_DIR$/../apue.2e/fig14.29a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.29b" afterPath="$PROJECT_DIR$/../apue.2e/fig14.29b" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.32" afterPath="$PROJECT_DIR$/../apue.2e/fig14.32" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.5" afterPath="$PROJECT_DIR$/../apue.2e/fig14.5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.6" afterPath="$PROJECT_DIR$/../apue.2e/fig14.6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.7" afterPath="$PROJECT_DIR$/../apue.2e/fig14.7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig14.9" afterPath="$PROJECT_DIR$/../apue.2e/fig14.9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.11" afterPath="$PROJECT_DIR$/../apue.2e/fig15.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.12" afterPath="$PROJECT_DIR$/../apue.2e/fig15.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.14" afterPath="$PROJECT_DIR$/../apue.2e/fig15.14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.15" afterPath="$PROJECT_DIR$/../apue.2e/fig15.15" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.17" afterPath="$PROJECT_DIR$/../apue.2e/fig15.17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.18" afterPath="$PROJECT_DIR$/../apue.2e/fig15.18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.19" afterPath="$PROJECT_DIR$/../apue.2e/fig15.19" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.31" afterPath="$PROJECT_DIR$/../apue.2e/fig15.31" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.33" afterPath="$PROJECT_DIR$/../apue.2e/fig15.33" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.5" afterPath="$PROJECT_DIR$/../apue.2e/fig15.5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.6" afterPath="$PROJECT_DIR$/../apue.2e/fig15.6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig15.7" afterPath="$PROJECT_DIR$/../apue.2e/fig15.7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig16.10" afterPath="$PROJECT_DIR$/../apue.2e/fig16.10" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig16.14" afterPath="$PROJECT_DIR$/../apue.2e/fig16.14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig16.15" afterPath="$PROJECT_DIR$/../apue.2e/fig16.15" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig16.16" afterPath="$PROJECT_DIR$/../apue.2e/fig16.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig16.17" afterPath="$PROJECT_DIR$/../apue.2e/fig16.17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig16.18" afterPath="$PROJECT_DIR$/../apue.2e/fig16.18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig16.20" afterPath="$PROJECT_DIR$/../apue.2e/fig16.20" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig16.8" afterPath="$PROJECT_DIR$/../apue.2e/fig16.8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig16.9" afterPath="$PROJECT_DIR$/../apue.2e/fig16.9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.10" afterPath="$PROJECT_DIR$/../apue.2e/fig17.10" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.11" afterPath="$PROJECT_DIR$/../apue.2e/fig17.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.12" afterPath="$PROJECT_DIR$/../apue.2e/fig17.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.13" afterPath="$PROJECT_DIR$/../apue.2e/fig17.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.14" afterPath="$PROJECT_DIR$/../apue.2e/fig17.14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.15" afterPath="$PROJECT_DIR$/../apue.2e/fig17.15" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.16" afterPath="$PROJECT_DIR$/../apue.2e/fig17.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.17" afterPath="$PROJECT_DIR$/../apue.2e/fig17.17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.19" afterPath="$PROJECT_DIR$/../apue.2e/fig17.19" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.20" afterPath="$PROJECT_DIR$/../apue.2e/fig17.20" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.21" afterPath="$PROJECT_DIR$/../apue.2e/fig17.21" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.22" afterPath="$PROJECT_DIR$/../apue.2e/fig17.22" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.23" afterPath="$PROJECT_DIR$/../apue.2e/fig17.23" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.24" afterPath="$PROJECT_DIR$/../apue.2e/fig17.24" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.25" afterPath="$PROJECT_DIR$/../apue.2e/fig17.25" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.26" afterPath="$PROJECT_DIR$/../apue.2e/fig17.26" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.27" afterPath="$PROJECT_DIR$/../apue.2e/fig17.27" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.28" afterPath="$PROJECT_DIR$/../apue.2e/fig17.28" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.29" afterPath="$PROJECT_DIR$/../apue.2e/fig17.29" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.30" afterPath="$PROJECT_DIR$/../apue.2e/fig17.30" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.31" afterPath="$PROJECT_DIR$/../apue.2e/fig17.31" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.32" afterPath="$PROJECT_DIR$/../apue.2e/fig17.32" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.33" afterPath="$PROJECT_DIR$/../apue.2e/fig17.33" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.34" afterPath="$PROJECT_DIR$/../apue.2e/fig17.34" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.35" afterPath="$PROJECT_DIR$/../apue.2e/fig17.35" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.36" afterPath="$PROJECT_DIR$/../apue.2e/fig17.36" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.37" afterPath="$PROJECT_DIR$/../apue.2e/fig17.37" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.38" afterPath="$PROJECT_DIR$/../apue.2e/fig17.38" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.39" afterPath="$PROJECT_DIR$/../apue.2e/fig17.39" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.4" afterPath="$PROJECT_DIR$/../apue.2e/fig17.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.40" afterPath="$PROJECT_DIR$/../apue.2e/fig17.40" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig17.6" afterPath="$PROJECT_DIR$/../apue.2e/fig17.6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.10" afterPath="$PROJECT_DIR$/../apue.2e/fig18.10" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.11" afterPath="$PROJECT_DIR$/../apue.2e/fig18.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.12" afterPath="$PROJECT_DIR$/../apue.2e/fig18.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.13" afterPath="$PROJECT_DIR$/../apue.2e/fig18.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.14" afterPath="$PROJECT_DIR$/../apue.2e/fig18.14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.15" afterPath="$PROJECT_DIR$/../apue.2e/fig18.15" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.16" afterPath="$PROJECT_DIR$/../apue.2e/fig18.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.17" afterPath="$PROJECT_DIR$/../apue.2e/fig18.17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.18" afterPath="$PROJECT_DIR$/../apue.2e/fig18.18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.20" afterPath="$PROJECT_DIR$/../apue.2e/fig18.20" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.21" afterPath="$PROJECT_DIR$/../apue.2e/fig18.21" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig18.22" afterPath="$PROJECT_DIR$/../apue.2e/fig18.22" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig19.10" afterPath="$PROJECT_DIR$/../apue.2e/fig19.10" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig19.11" afterPath="$PROJECT_DIR$/../apue.2e/fig19.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig19.12" afterPath="$PROJECT_DIR$/../apue.2e/fig19.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig19.13" afterPath="$PROJECT_DIR$/../apue.2e/fig19.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig19.17" afterPath="$PROJECT_DIR$/../apue.2e/fig19.17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig19.8" afterPath="$PROJECT_DIR$/../apue.2e/fig19.8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig19.9" afterPath="$PROJECT_DIR$/../apue.2e/fig19.9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig2.12" afterPath="$PROJECT_DIR$/../apue.2e/fig2.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig2.13" afterPath="$PROJECT_DIR$/../apue.2e/fig2.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig2.15" afterPath="$PROJECT_DIR$/../apue.2e/fig2.15" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig2.16" afterPath="$PROJECT_DIR$/../apue.2e/fig2.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig20.3" afterPath="$PROJECT_DIR$/../apue.2e/fig20.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig3.1" afterPath="$PROJECT_DIR$/../apue.2e/fig3.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig3.10" afterPath="$PROJECT_DIR$/../apue.2e/fig3.10" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig3.11" afterPath="$PROJECT_DIR$/../apue.2e/fig3.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig3.2" afterPath="$PROJECT_DIR$/../apue.2e/fig3.2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig3.4" afterPath="$PROJECT_DIR$/../apue.2e/fig3.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.12" afterPath="$PROJECT_DIR$/../apue.2e/fig4.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.16" afterPath="$PROJECT_DIR$/../apue.2e/fig4.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.21" afterPath="$PROJECT_DIR$/../apue.2e/fig4.21" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.22" afterPath="$PROJECT_DIR$/../apue.2e/fig4.22" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.23" afterPath="$PROJECT_DIR$/../apue.2e/fig4.23" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.24" afterPath="$PROJECT_DIR$/../apue.2e/fig4.24" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.25" afterPath="$PROJECT_DIR$/../apue.2e/fig4.25" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.3" afterPath="$PROJECT_DIR$/../apue.2e/fig4.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.8" afterPath="$PROJECT_DIR$/../apue.2e/fig4.8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig4.9" afterPath="$PROJECT_DIR$/../apue.2e/fig4.9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig5.11" afterPath="$PROJECT_DIR$/../apue.2e/fig5.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig5.12" afterPath="$PROJECT_DIR$/../apue.2e/fig5.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig5.13" afterPath="$PROJECT_DIR$/../apue.2e/fig5.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig5.4" afterPath="$PROJECT_DIR$/../apue.2e/fig5.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig5.5" afterPath="$PROJECT_DIR$/../apue.2e/fig5.5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig6.2" afterPath="$PROJECT_DIR$/../apue.2e/fig6.2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig7.1" afterPath="$PROJECT_DIR$/../apue.2e/fig7.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig7.11" afterPath="$PROJECT_DIR$/../apue.2e/fig7.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig7.13" afterPath="$PROJECT_DIR$/../apue.2e/fig7.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig7.14" afterPath="$PROJECT_DIR$/../apue.2e/fig7.14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig7.16" afterPath="$PROJECT_DIR$/../apue.2e/fig7.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig7.3" afterPath="$PROJECT_DIR$/../apue.2e/fig7.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig7.4" afterPath="$PROJECT_DIR$/../apue.2e/fig7.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig7.9" afterPath="$PROJECT_DIR$/../apue.2e/fig7.9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.1" afterPath="$PROJECT_DIR$/../apue.2e/fig8.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.12" afterPath="$PROJECT_DIR$/../apue.2e/fig8.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.13" afterPath="$PROJECT_DIR$/../apue.2e/fig8.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.16" afterPath="$PROJECT_DIR$/../apue.2e/fig8.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.17" afterPath="$PROJECT_DIR$/../apue.2e/fig8.17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.20" afterPath="$PROJECT_DIR$/../apue.2e/fig8.20" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.21" afterPath="$PROJECT_DIR$/../apue.2e/fig8.21" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.22" afterPath="$PROJECT_DIR$/../apue.2e/fig8.22" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.23" afterPath="$PROJECT_DIR$/../apue.2e/fig8.23" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.24" afterPath="$PROJECT_DIR$/../apue.2e/fig8.24" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.25" afterPath="$PROJECT_DIR$/../apue.2e/fig8.25" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.28" afterPath="$PROJECT_DIR$/../apue.2e/fig8.28" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.29" afterPath="$PROJECT_DIR$/../apue.2e/fig8.29" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.3" afterPath="$PROJECT_DIR$/../apue.2e/fig8.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.30" afterPath="$PROJECT_DIR$/../apue.2e/fig8.30" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.5" afterPath="$PROJECT_DIR$/../apue.2e/fig8.5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.6" afterPath="$PROJECT_DIR$/../apue.2e/fig8.6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig8.8" afterPath="$PROJECT_DIR$/../apue.2e/fig8.8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/fig9.11" afterPath="$PROJECT_DIR$/../apue.2e/fig9.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figB.1" afterPath="$PROJECT_DIR$/../apue.2e/figB.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figB.3" afterPath="$PROJECT_DIR$/../apue.2e/figB.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figB.4" afterPath="$PROJECT_DIR$/../apue.2e/figB.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.1" afterPath="$PROJECT_DIR$/../apue.2e/figC.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.11" afterPath="$PROJECT_DIR$/../apue.2e/figC.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.12" afterPath="$PROJECT_DIR$/../apue.2e/figC.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.13" afterPath="$PROJECT_DIR$/../apue.2e/figC.13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.14" afterPath="$PROJECT_DIR$/../apue.2e/figC.14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.15" afterPath="$PROJECT_DIR$/../apue.2e/figC.15" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.16" afterPath="$PROJECT_DIR$/../apue.2e/figC.16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.17" afterPath="$PROJECT_DIR$/../apue.2e/figC.17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.18" afterPath="$PROJECT_DIR$/../apue.2e/figC.18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.20" afterPath="$PROJECT_DIR$/../apue.2e/figC.20" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.21" afterPath="$PROJECT_DIR$/../apue.2e/figC.21" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.3" afterPath="$PROJECT_DIR$/../apue.2e/figC.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.4" afterPath="$PROJECT_DIR$/../apue.2e/figC.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.5" afterPath="$PROJECT_DIR$/../apue.2e/figC.5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.6" afterPath="$PROJECT_DIR$/../apue.2e/figC.6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.7" afterPath="$PROJECT_DIR$/../apue.2e/figC.7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/figC.9" afterPath="$PROJECT_DIR$/../apue.2e/figC.9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auto_apue/COPYING" afterPath="$PROJECT_DIR$/../auto_apue/COPYING" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auto_apue/config/config.guess" afterPath="$PROJECT_DIR$/../auto_apue/config/config.guess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auto_apue/config/config.sub" afterPath="$PROJECT_DIR$/../auto_apue/config/config.sub" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auto_apue/config/install-sh" afterPath="$PROJECT_DIR$/../auto_apue/config/install-sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auto_apue/config/missing" afterPath="$PROJECT_DIR$/../auto_apue/config/missing" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../cpplang_src/Appendix C/arr.exe" afterPath="$PROJECT_DIR$/../cpplang_src/Appendix C/arr.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../cpplang_src/Appendix C/vec.exe" afterPath="$PROJECT_DIR$/../cpplang_src/Appendix C/vec.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../cpplang_src/Chapter 2/a.exe" afterPath="$PROJECT_DIR$/../cpplang_src/Chapter 2/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../trial/cyg.dll" afterPath="$PROJECT_DIR$/../trial/cyg.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../trial/cyg_foo.dll" afterPath="$PROJECT_DIR$/../trial/cyg_foo.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../trial/mydll.dll" afterPath="$PROJECT_DIR$/../trial/mydll.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/proc/awkexample" afterPath="$PROJECT_DIR$/../apue.2e/proc/awkexample" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apue.2e/systype.sh" afterPath="$PROJECT_DIR$/../apue.2e/systype.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auto_apue/configure" afterPath="$PROJECT_DIR$/../auto_apue/configure" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auto_apue/depcomp" afterPath="$PROJECT_DIR$/../auto_apue/depcomp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auto_apue/install-sh" afterPath="$PROJECT_DIR$/../auto_apue/install-sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auto_apue/missing" afterPath="$PROJECT_DIR$/../auto_apue/missing" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../cpplint.py" afterPath="$PROJECT_DIR$/../cpplint.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig1.10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig1.3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig1.4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig1.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig1.6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig1.7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig1.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig1.9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.14" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.15" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.18" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.19" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.20" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.22" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.23" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.24" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.25" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.26" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.28" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.29" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.30" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig10.9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig11.10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig11.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig11.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig11.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig11.14" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig11.2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig11.3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig11.4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig11.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig12.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig12.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig12.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig12.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig12.17" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig12.4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig12.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig13.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig13.6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig13.7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig13.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.17" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.18" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.19" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.29a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.29b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.32" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig14.9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.14" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.15" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.17" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.18" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.19" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.31" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.33" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig15.7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig16.10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig16.14" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig16.15" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig16.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig16.17" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig16.18" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig16.20" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig16.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig16.9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.14" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.15" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.17" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.19" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.20" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.21" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.22" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.23" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.24" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.25" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.26" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.27" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.28" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.29" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.30" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.31" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.32" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.33" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.34" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.35" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.36" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.37" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.38" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.39" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.40" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig17.6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.14" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.15" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.17" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.18" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.20" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.21" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig18.22" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig19.10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig19.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig19.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig19.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig19.17" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig19.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig19.9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig2.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig2.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig2.15" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig2.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig20.3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig3.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig3.10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig3.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig3.2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig3.4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.21" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.22" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.23" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.24" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.25" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig4.9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig5.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig5.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig5.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig5.4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig5.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig6.2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig7.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig7.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig7.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig7.14" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig7.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig7.3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig7.4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig7.9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.17" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.20" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.21" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.22" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.23" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.24" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.25" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.28" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.29" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.30" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig8.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/fig9.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figB.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figB.3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figB.4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.11" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.13" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.14" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.15" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.17" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.18" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.20" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.21" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../apue.2e/figC.9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../auto_apue/COPYING" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../auto_apue/config/config.guess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../auto_apue/config/config.sub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../auto_apue/config/install-sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../auto_apue/config/missing" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download-pic.py" afterPath="$PROJECT_DIR$/download-pic.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/httpserver.py" afterPath="$PROJECT_DIR$/httpserver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-sample.py" afterPath="$PROJECT_DIR$/test-sample.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/text2img.py" afterPath="$PROJECT_DIR$/text2img.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/al.sh" afterPath="$PROJECT_DIR$/../script/al.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/cmdline.sh" afterPath="$PROJECT_DIR$/../script/cmdline.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/go.sh" afterPath="$PROJECT_DIR$/../script/go.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/perf.sh" afterPath="$PROJECT_DIR$/../script/perf.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/proc.sh" afterPath="$PROJECT_DIR$/../script/proc.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/rename-id.sh" afterPath="$PROJECT_DIR$/../script/rename-id.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/rtp.py" afterPath="$PROJECT_DIR$/../script/rtp.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/test.cgi" afterPath="$PROJECT_DIR$/../script/test.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/test.pl" afterPath="$PROJECT_DIR$/../script/test.pl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/test.sh" afterPath="$PROJECT_DIR$/../script/test.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../script/yeah.sh" afterPath="$PROJECT_DIR$/../script/yeah.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/command.py" afterPath="$PROJECT_DIR$/../snippet/py/command.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/first.py" afterPath="$PROJECT_DIR$/../snippet/py/first.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/func.py" afterPath="$PROJECT_DIR$/../snippet/py/func.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/innerfunc.py" afterPath="$PROJECT_DIR$/../snippet/py/innerfunc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/list.py" afterPath="$PROJECT_DIR$/../snippet/py/list.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/pkgtest/testmodule.py" afterPath="$PROJECT_DIR$/../snippet/py/pkgtest/testmodule.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/recu.py" afterPath="$PROJECT_DIR$/../snippet/py/recu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/sdgo" afterPath="$PROJECT_DIR$/../snippet/py/sdgo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/sort_merge.py" afterPath="$PROJECT_DIR$/../snippet/py/sort_merge.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/ssh.ept" afterPath="$PROJECT_DIR$/../snippet/py/ssh.ept" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/string.py" afterPath="$PROJECT_DIR$/../snippet/py/string.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/testmodule.py" afterPath="$PROJECT_DIR$/../snippet/py/testmodule.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/ver_create.py" afterPath="$PROJECT_DIR$/../snippet/py/ver_create.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/ver_division.py" afterPath="$PROJECT_DIR$/../snippet/py/ver_division.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/ver_get.py" afterPath="$PROJECT_DIR$/../snippet/py/ver_get.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../snippet/py/ver_match.py" afterPath="$PROJECT_DIR$/../snippet/py/ver_match.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../socket/epoll.py" afterPath="$PROJECT_DIR$/../socket/epoll.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/test.cpp" afterPath="$PROJECT_DIR$/../test/test.cpp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -285,8 +237,8 @@
       <file leaf-file-name="text2img.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/text2img.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="117" column="69" lean-forward="true" selection-start-line="117" selection-start-column="69" selection-end-line="117" selection-end-column="69" />
+            <state relative-caret-position="326">
+              <caret line="119" column="9" lean-forward="true" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -327,14 +279,12 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -350,6 +300,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -364,7 +315,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -651,10 +601,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24627976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24604847" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3622951" sideWeight="0.50595236" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -691,6 +641,46 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/text2img.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text2img.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text2img.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text2img.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text2img.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/text2img.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -753,37 +743,25 @@
     <entry file="file://$PROJECT_DIR$/text2pic.py" />
     <entry file="file://$PROJECT_DIR$/text2pic.py" />
     <entry file="file://$PROJECT_DIR$/text2pic.py" />
-    <entry file="file://D:/tools/python/Lib/site-packages/pygame/__init__.py">
+    <entry file="file://D:/Tools/Python/Lib/site-packages/pygame/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2641">
           <caret line="139" column="19" lean-forward="false" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/148439878/pygame/surface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/148439878/pygame/surface.py" />
     <entry file="file://$PROJECT_DIR$/rounded-rects-pygame/example.py" />
     <entry file="file://$PROJECT_DIR$/Text-Rendering-Pygame/first.py" />
     <entry file="file://$PROJECT_DIR$/text2pic.py" />
-    <entry file="file://D:/tools/python/Lib/site-packages/pygame/__init__.py">
+    <entry file="file://D:/Tools/Python/Lib/site-packages/pygame/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2641">
           <caret line="139" column="19" lean-forward="true" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/148439878/pygame/surface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/148439878/pygame/surface.py" />
     <entry file="file://$PROJECT_DIR$/rounded-rects-pygame/example.py" />
     <entry file="file://$PROJECT_DIR$/Text-Rendering-Pygame/first.py" />
     <entry file="file://$PROJECT_DIR$/text2pic.py" />
@@ -791,15 +769,9 @@
     <entry file="file://$PROJECT_DIR$/roundrects/roundrects.py" />
     <entry file="file://$PROJECT_DIR$/roundedrects.py" />
     <entry file="file://$PROJECT_DIR$/rounded-rects-pygame/example.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/148439878/pygame/surface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/148439878/pygame/surface.py" />
     <entry file="file://$PROJECT_DIR$/Text-Rendering-Pygame/data0.json" />
-    <entry file="file://D:/tools/python/Lib/site-packages/pygame/__init__.py">
+    <entry file="file://D:/Tools/Python/Lib/site-packages/pygame/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2622">
           <caret line="139" column="19" lean-forward="false" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
@@ -810,13 +782,7 @@
     <entry file="file://$PROJECT_DIR$/t.jpg" />
     <entry file="file://$PROJECT_DIR$/2.jpg" />
     <entry file="file://$PROJECT_DIR$/1.jpg" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/148439878/nt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="326" column="4" lean-forward="false" selection-start-line="326" selection-start-column="4" selection-end-line="326" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/148439878/nt.py" />
     <entry file="file://$PROJECT_DIR$/1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -826,13 +792,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/text2pic.py" />
     <entry file="file://$USER_HOME$/Downloads/astatine.py" />
-    <entry file="file://D:/tools/python/Lib/site-packages/images2gif/images2gif.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-800">
-          <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/tools/python/Lib/site-packages/images2gif/images2gif.py" />
     <entry file="file://$PROJECT_DIR$/GIFImage.py" />
     <entry file="file://$PROJECT_DIR$/set_alpha.py" />
     <entry file="file://$PROJECT_DIR$/test-sample.py">
@@ -873,8 +833,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/text2img.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="117" column="69" lean-forward="true" selection-start-line="117" selection-start-column="69" selection-end-line="117" selection-end-column="69" />
+        <state relative-caret-position="326">
+          <caret line="119" column="9" lean-forward="true" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
           <folding />
         </state>
       </provider>
