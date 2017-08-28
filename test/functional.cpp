@@ -135,7 +135,7 @@ int test_bit_op()
 	int masks[] = {0xff,0xff,0xf,255};
 	std::vector<int> results;
 
-	std::cout << "test_bit_op:" << "\n\t";
+	std::cout << "test_bit_op[transform/accumulate]:" << "\n\t";
 	std::cout << "and:\t\t";
 	std::transform (values, std::end(values), masks, back_inserter(results), std::bit_and<int>());
 	for(auto const & el : results) std::cout << el << " ";
@@ -154,10 +154,10 @@ int test_arithmetic_op()
 	int first[]={10,40,90,40,10};
 	int second[]={2,3,5,7,11};
 	std::vector<int> results;
-	std::cout << "test_arithmetic_op:\t";
-	std::cout << "[";
+	std::cout << "test_arithmetic_op[transform/accumulate]:\n\t";
+	std::cout << "fisrt\t\t[";
 	for(auto const & el : first) std::cout << el << " ";
-	std::cout << "][";
+	std::cout << "]\n\tsecond\t\t[";
 	for(auto const & el : second) std::cout << el << " ";
 	std::cout << "]\n\t";
 	std::cout << "plus\t\t";
@@ -191,6 +191,17 @@ int test_arithmetic_op()
 	results.clear();
 
 }
+
+int test_logical_op()
+{
+	std::cout << "test_logical_op:\n\t";
+	std::cout << "\n";
+}
+int test_comparison_op()
+{
+	std::cout << "test_comparison_op[sort/merge/lower_bound]:\n\t";
+	std::cout << "\n";
+}
 int main () {
 	test_bind();
 	test_mem_fn();
@@ -198,6 +209,8 @@ int main () {
 	test_ref_wrapper();
 	test_bit_op();
 	test_arithmetic_op();
+	test_logical_op();
+	test_comparison_op();
 
 	return 0;
 }
