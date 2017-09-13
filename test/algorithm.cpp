@@ -139,7 +139,7 @@ int test_none_modify()
     //                  std::make_boyer_moore_searcher(
     //                      needle.begin(), needle.end())));
 
-    auto myvector={10,20,30,30,20,10,10,20};
+    auto myvector={10,30,10,20,30,30,20,10,10,20};
     std::cout << "\n\tDST VECTOR:\t"; 
     std::copy(myvector.begin(), myvector.end(), std::ostream_iterator<int>(std::cout, " "));
     std::cout << typeid(myvector).name() << "\t" ;
@@ -149,4 +149,5 @@ int test_none_modify()
 int main()
 {
     test_none_modify();
+    std::cout << std::endl;
 }
