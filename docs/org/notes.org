@@ -1,0 +1,88 @@
+# -*- org -*-
+# -*- coding:utf-8 -*-
+
+# Time-stamp: <2016-07-23 14:26:13 (mykulou@gmail.com)>
+#+SETUPFILE: theme-bigblow-local.setup
+
+* emacs
+*** basic     
+**** insert
+        
+        
+**** moving
+       |        | backward | forward | 
+       | char   |        |       | 
+       | word   | b      | f     | 
+       | line   |        |       | 
+       | lines  |        |       | 
+       | view   | v      |       | 
+       | buffer | <      | >     | 
+
+**** delete
+        |        | backward | forward |
+        | char   |        |       |
+        | word   | ?      | d     |
+        | line   | 0    |       |
+
+**** undo 
+        | C-/    |          |         |
+        |      | u        |         |
+        |      |          |         |
+
+**** C-h
+        | i | info    |
+        | a | apropos |
+        | k | keymap  |
+        | f | func    |
+        | v | var     |
+
+**** info
+        | = | char info |
+
+**** file & buffer
+         
+         f
+         
+         b
+
+**** args
+         M-2 0 C-n
+         C-u 20 C-p
+
+**** repeat cmnd
+          z C-v zzzzz
+**** mark
+        |      | word | sexp  | paragraph | defun | page    | buffer | -         | swap    |   |
+        | mark | M-@  | C-M-@ | M-h       | C-M-h | C-x C-p | C-x h  | C-<SPC>/@ | C-x C-x |   |
+        |      |      |       |           |       |         |        |           |         |   |
+ 
+*** minibuffer
+**** edit
+         C-j
+        C-M-v	scroll help buffer
+        <TAB>
+        <SPC>
+        <RET>
+        ?
+        v
+        <RET>
+        <Right>
+        <Left>
+        
+**** history
+        M-p
+        M-n
+        M-r REGEXP
+        M-s REGEXP
+**** repeat
+        C-x <Esc> <Esc>
+
+**** password
+        C-u
+        C-g
+        C-y
+        
+*** C-X prefix
+       file & buffer
+       
+* [[file:index.html][wiki]]

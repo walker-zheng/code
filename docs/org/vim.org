@@ -1,0 +1,82 @@
+# -*- org -*-
+# -*- coding:utf-8 -*-
+
+# Time-stamp: <2016-07-23 14:30:56 (mykulou@gmail.com)>
+#+SETUPFILE: theme-bigblow-local.setup
+
+* vim notes
+** 命令快捷键
+*** insert
+**** 其他    
+**** 补齐CTRL-X
+#+BEGIN_SRC emacs-lisp
+     - 定义、文件名、标识符、整行 =DFIL=
+     - 滚动选择 =EYPN=
+     - 字典、拼写、同义词、函数、命令行、tags =KSTUV ]=
+#+END_SRC
+*** normal
+**** 窗口window
+#+BEGIN_SRC emacs-lisp
+     - 大小 =+ - _ < > |=
+     - 移动 =HJKL=
+       - 旋转 =Rr=
+     - 切换 =whjkltbp=
+     - 打开关闭 =nco=
+       - 分割 =vs=
+       - 跳转 =idf]= 、g跳转 =C-] ] } f F=
+#+END_SRC
+**** 缓冲区buffer
+**** 标签tab
+**** 折叠z
+#+BEGIN_SRC emacs-lisp
+     - 重绘 =-+. btz=
+     - 建立、打开、关闭、切换、删除、清除 =f o c a d e= 大写为递归
+     - 设置
+       - 层级增减 =mr= 大写为最大最小，即折叠或打开所有
+       - warp滚动 左右始末 =hl se=
+#+END_SRC
+**** 跳转[ ]
+**** 特殊功能g
+*** visual
+**** 对象选择a i（i不带引用符号）
+#+BEGIN_SRC emacs-lisp
+     - 符号 =` \' " () <> [] {}=
+     - block =[(= Block =[{=
+     - 大写为带空格：paragraph、sentence、tag、word
+#+END_SRC
+*** ex-edit
+*** ex-cmd
+** 基本功能
+*** 移动
+*** 滚动
+*** 修改（插入模式）
+*** 撤销
+*** 重复
+*** visual&select模式
+** 特性
+*** tagsrch
+*** quickfix
+*** windows
+*** tabpage
+*** diff
+*** debugger
+*** autocmd    
+** vimscrpit
+*** Expressions
+*** eval
+*** 代码片段   
+   - sdcv
+#+BEGIN_SRC emacs-lisp
+fu Sdcv() range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+    let l:Command = substitute(@", "[\n$.,;]", "", "g")
+    execute "!sdcv '" . l:Command . "'"
+    let @" = l:saved_reg
+endfu
+map <leader>k :!sdcv <C-R>=substitute(expand("<cword>"), "[,.;\n$]", "", "g")<CR><CR>
+vnoremap <leader>k :call Sdcv()<CR>
+#+END_SRC
+     - 光标高亮 =cursorline= =cursorcolumn=
+
+* [[file:index.html][wiki]]

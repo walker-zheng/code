@@ -1,0 +1,30 @@
+# -*- org -*-
+# -*- coding:utf-8 -*-
+
+# Time-stamp: <2016-07-23 14:32:04 (mykulou@gmail.com)>
+#+SETUPFILE: theme-bigblow-local.setup
+
+* wow Skinning
+  - 杜洛塔 ::
+  [[file:./pic/wow/杜洛塔.jpg][file:./pic/wow/杜洛塔.jpg]]
+  - 北贫瘠之地 ::
+  [[file:./pic/wow/北贫瘠之地.jpg][file:./pic/wow/北贫瘠之地.jpg]]
+  - 灰谷 ::
+  [[file:./pic/wow/灰谷.jpg][file:./pic/wow/灰谷.jpg]]
+  - 尘泥沼泽 ::
+  [[file:./pic/wow/尘泥沼泽.jpg][file:./pic/wow/尘泥沼泽.jpg]]
+  - 千针石林 ::
+  [[file:./pic/wow/千针石林.jpg][file:./pic/wow/千针石林.jpg]]
+  - 安戈洛环型山 ::
+  [[file:./pic/wow/安戈洛环型山.jpg][file:./pic/wow/安戈洛环型山.jpg]]
+  - 地狱火半岛 ::
+  [[file:./pic/wow/地狱火半岛.jpg][file:./pic/wow/地狱火半岛.jpg]]
+  - 纳格兰 :: 
+  [[file:./pic/wow/纳格兰.jpg][file:./pic/wow/纳格兰.jpg]]
+  - 北风冻原 ::
+  [[file:./pic/wow/北风冻原.jpg][file:./pic/wow/北风冻原.jpg]]
+  - 休拉萨盆地 ::
+  [[file:./pic/wow/休拉萨盆地.jpg][file:./pic/wow/休拉萨盆地.jpg]]
+  - 海加尔山 ::
+  [[file:./pic/wow/海加尔山.jpg][file:./pic/wow/海加尔山.jpg]]
+* [[file:index.html][wiki]]

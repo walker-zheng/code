@@ -1,0 +1,219 @@
+# -*- org -*-
+# -*- coding:utf-8 -*-
+
+# Time-stamp: <2016-07-23 14:24:18 (mykulou@gmail.com)>
+#+SETUPFILE: theme-bigblow-local.setup
+
+
+
+#+TITLE: Git快速使用帮助
+#+AUTHOR: walker-zheng
+#+EMAIL: mykulou AT gmail DOT com
+#+DATE: 
+#+DESCRIPTION: List of all hooks, commands and options
+#+KEYWORDS: Org hooks, commands and options
+#+OPTIONS:    H:3 num:nil toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t TeX:t LaTeX:t skip:nil d:(HIDE) tags:not-in-toc
+#+BEGIN: timestamp :string "Last update: " :format "%Y-%m-%d @ %H:%M"
+
+#+END:
+#+BEGIN_HTML
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="002987994228320350715:z4glpcrritm" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+#+END_HTML
+
+* git wiki | note
+#- tips
+** git server:
+*** git repos server
+    =#code=
+#+BEGIN_SRC bash
+    useradd -G git walker -p pass -s /usr/local/bin/git-shell
+    add pub key in ~/.ssh/authorized_keys
+    remote bare init
+    mkdir project.git && cd !#:1
+    git init --bare
+    git add . && git commit -m "init repos"
+    push repos
+    git remote add origin ssh://opensuse/home/workspace/project.git
+    git push origin master
+#+END_SRC
+
+** git svn
+   - checkout
+     #+begin_src bash
+git svn clone http://svn.example.com/project -T trunk -b branches -t tags
+#或者
+git svn clone http://svn.example.com/project --stdlayout
+     #+end_src
+* gitweb
+:PROPERTIES:
+    :ID:       o2b:0cc0e1fe-63ad-443b-be47-011e75f6ba7c
+    :POST_DATE: [2012-08-16 Thu 21:31]
+    :POSTID:   2643089
+    :END:
+#- gitweb conf
+ - 在httpd的gitweb.conf中指明cgi脚本所在目录及位置
+ - 在/etc/gitweb.conf中设置git发布目录 our $projectroot =
+   "/home/workspace/git";
+
+** git config：
+#+BEGIN_SRC bash
+    git config --global user.name "Walker.M"
+    git config --global user.email "mykulou@gmail.com"
+    git config --global color.ui "auto"
+    git config --global format.pretty "oneline"
+
+    git config --global --list     (显示配置)
+    git config --global alias.ci "commit"    (设置操作别名)
+
+    # latest = for-each-ref --sort=-committerdate --format='%(committername)@%(refname:short) [%(committerdate:short)] %(contents')
+    # ls = log --graph --all --pretty=format:'%C(yellow)%h %C(blue)%ad %C(red)%d %C(reset)%s %C(green)[%cn]' --decorate --date=short
+    # hist = log --graph --all --pretty=format:'%C(yellow)%h %C(red)%d %C(reset)%s %C(green)[%an] %C(blue)%ad' --topo-order --graph --date=short
+
+    git config --global merge.tool opendiff    (设置本地默认合并工具)
+#+END_SRC
+
+ + .gitignore         (个人忽略文件)
+ + .git/info/exclude   (版本库忽略)
+
+** 创建版本库：
+#+BEGIN_SRC bash
+    git init
+    git add .
+    git commit -m "init repository"
+#+END_SRC
+
+** 查看
+#+BEGIN_SRC bash
+    git status
+    git log -l
+    git log --pretty=oneline
+#+END_SRC
+
+** 分支：
+#+BEGIN_SRC bash
+    git branch RB_1.0 master
+    git branch -d RB_1.0    (删除分支)
+#+END_SRC
+
+** 标签：
+#+BEGIN_SRC bash
+    git tag 1.0 RB_1.0
+    git tag        (察看当前)
+
+    git checkout master    (切换到主版本)
+    git rebase RB_1.0    (版本变基)
+#+END_SRC
+
+** 打包：
+#+BEGIN_SRC bash
+    git archive --format=tar \
+        --prefex=hello-1.0/ 1.0 \
+        | gzip > hello-1.0.tar.gz
+
+    git archive --format=zip \
+        --prefex=hello-1.0/ 1.0 \
+        > hello-1.0.zip
+#+END_SRC
+
+** 克隆远程库：
+ - git clone git://github.com/hello.git hello-remote
+
+** 日常用法：
+
+#+BEGIN_SRC bash
+    git add -i    (交互式操作)
+    git add -p    (补丁模式)
+    git commit -m "init repository" -a    (提交所有修改)
+    git commit -m "init repository" some-file    (提交文件或文件列表)
+
+    git status
+    git diff        (工作目录树与暂存区比较)
+    git diff --cached    (暂存区与版本库比较)
+    git diff HEAD        (工作目录树(包括暂存和未暂存的)与版本库比较)
+
+    git mv index.html hello.html
+#+END_SRC
+
+** 分支管理：
+*** 何时创建分支：
+ + 1.实验性更改
+ + 2.增加新功能
+ + 3.Bug修复
+#+BEGIN_SRC bash
+    git branch                       (查看当前分支)
+    git branch -m master mymaster    (分支改名)
+    git branch -d alternate        (删除分支)
+    git checkout -b alternate master(快速创建分支)
+#+END_SRC
+
+ + 合并前要先切换到主分支：
+#+BEGIN_SRC bash
+    git merge alternate        (直接合并到上层分支)
+    git merge --squash alternate    (全部提交压合成当前分支上的一个提交)
+    git cherry-pick 321d76f        (拣选单个修改合并)
+    git cherry-pick -n 321d76f    (拣选单个修改合并,no-commit)
+
+    git mergetool             (察看，并扫描本地合并工具)
+    git mergetool             (察看，并扫描本地合并工具)
+#+END_SRC
+
+** 恢复：
+ - git reset --hard HEAD        (删除最后一个提交)
+
+** 历史记录：
+#+BEGIN_SRC bash
+    git log 321d76f            (察看指定版本)
+    git log 321d76f..0bb3dfb
+    git log 321d76f..
+    git log --since="5 hours"
+    git log --before="5 hours" -1    (5小时前的最后一个提交)
+    git log --pretty=format:"%h %s" 1.0..HEAD
+#+END_SRC
+
+ + HEAD    代表当前版本库当前分支末梢的最新版本
+ + ^    一个脱字号相当于回溯一个版本，321d76f^即父节点，321d76f^^即祖父节点
+ + *~N    回溯N个版本，321d76f~2即祖父节点，HEAD^~1即祖父版本
+
+#+BEGIN_SRC bash
+    git diff 321d76f        (与最新版本HEAD比较)
+    git diff --stat    1.0        (使用标签察看统计)
+
+    git blame hello.html
+    git blame -L 12,13 hello.html
+    git blame -L 12,-3 hello.html
+    git blame -L "/<\/body>/",-3 321d76f^ -- hello.html    (查询指定文件)
+
+    git blame -M hello.html         (检测同文件内移动或复制的代码行)
+    git blame -C -C copy.txt     (查看文件之间的复制)
+    git log -C -C -l -p         (-p显示代码具体变动)
+#+END_SRC
+
+
+*** 增补提交只针对最后一个提交：
+ - git commit-C HEAD -a --amend    (-C复用指定的提交留言,--amend增补提交，-c打开编辑留言)
+
+** 反转提交：
+#+BEGIN_SRC bash
+ - git revert -n 321d76f
+ - git commit -m "revert to 321d76f"
+#+END_SRC
+
+** 复位：
+ - git reset --hard HEAD^    (复位head之前的那个版本)
+
+
+** 修改历史：
+ + 1.重新排序 pick
+ + 2.压合提交 squash
+ + 3.分解提交 edit    :reset,--continue
+ - git rebase -i HEAD~3    (交互式重排提交)
+
+* [[file:index.html][wiki]]

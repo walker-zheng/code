@@ -1,0 +1,29 @@
+# -*- org -*-
+# -*- coding:utf-8 -*-
+
+# Time-stamp: <2016-07-23 16:31:28 (mykulou@gmail.com)>
+#+SETUPFILE: theme-bigblow-local.setup
+
+* cocos2d-x游戏开发
+** 实施记录
+*** <2014-05-26 周一>
+- cocos2d-x环境搭建，eclipse&vs2012开发环境
+**** eclipse+ndk+adt+android sdk
+- 配置环境变量，设置依赖、引用等
+- win32下，编译生成cocos2d-x示例和库
+- 生成win32/android项目
+- 查询资料，准备学习cocos2d-x
+- Cocos2D-X游戏开发技术精解
+*** <2014-05-27 周二>
+- 学习精解
+- 提供的功能、项目结构和组成
+- 渲染框架的结构、功能、基本类，和游戏图形及引擎相关概念
+*** <2014-05-28 周三>
+- 看完渲染框架的介绍，了解相关类之间的关系，示例中了解其基本用法
+- 游戏开发周边工具：zwoptex、cocosbuilder、BMFont
+*** <2014-05-29 周四>
+- 学习lua基本语法
+- 编译Testlua.exe
+- 根据报错情况，添加依赖库和包含头目录；
+- 拷贝resources中文件到运行目录下，提供lua运行环境和资源
+* [[file:index.html][wiki]]

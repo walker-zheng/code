@@ -1,0 +1,10 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="3">
+            <File firstVisibleLine="7392" xOffset="0" scrollWidth="378" startPos="262119" endPos="262119" selMode="0" lang="Normal Text" encoding="-1" filename="E:\zmy\workspace\work\txt\1.txt" backupFilePath="" originalFileLastModifTimestamp="1503913010" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="7352" xOffset="0" scrollWidth="378" startPos="260702" endPos="260702" selMode="0" lang="Normal Text" encoding="-1" filename="E:\zmy\workspace\work\txt\2.txt" backupFilePath="" originalFileLastModifTimestamp="1503913018" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="637" startPos="1357" endPos="1357" selMode="0" lang="Normal Text" encoding="-1" filename="E:\zmy\workspace\work\txt\3.txt" backupFilePath="" originalFileLastModifTimestamp="1503913025" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

@@ -1,0 +1,71 @@
+# -*- org -*-
+# -*- coding:utf-8 -*-
+
+# Time-stamp: <2016-07-28 16:17:38 walker-zheng(mykulou@gmail.com)>
+#+SETUPFILE: theme-bigblow-local.setup
+
+#+TODO: TODO(t) | DONE(d)
+#+TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
+#+TODO: | CANCELED(c)
+* 个人计划
+** 早睡早起                                                          :在家:
+*** 拉屎
+*** 锻炼
+*** 洗澡
+** 出门                                                              :路上:
+*** 公交
+*** 自行车
+*** 早餐
+** 上班                                                             :办公室:
+** 下班                                                              :路上:
+*** 自行车
+*** 晚餐
+** 休息娱乐                                                          :在家:
+*** 电影、购物、直播、游戏
+*** 看书
+** 锻炼                                                              :在家:
+*** TODO [ ] 囚徒健身 [0%]
+1) [ ] 桥
+2) [ ] 深蹲
+3) [ ] 卷腹
+4) [ ] 俯卧撑
+5) [ ] 引体向上
+*** TODO [ ] 跑步[0%]
+1) [ ] 5公里
+** 洗澡睡觉                                                          :在家:
+* 项目计划
+** 每日例会（报告和计划）
+** 每周报告
+** 版本控制
+*** master[主版本]
+*** develop[开发版本]
+**** feature[特性版本]
+***** TODO [#B] telnet [66%]
+1) [X] telnet项目
+2) [X] 以模块方式合并到analyseServer中
+3) [ ] 调整打印和添加telnet函数
+***** [#A] telnet for vaServer [0%]
+1. [ ] telnet合并到项目中
+***** TODO 实时功能点合并和实时报警分拣
+1. 功能和风险点对应图表
+|          | 印章 | 钞票 | 票据 | 凭证 |
+|----------+------+------+------+------|
+| 营业时间 | A019 | A002 | A002 | A002 |
+| 午休时间 | A017 |      |      |      |
+| 下班时间 | A018 | A016 |      |      |
+
+*** release[发布版本]
+*** hotfix[修复版本]
+** analyseServer
+*** telnet功能::方便调测
+*** 业务逻辑功能
+*** bug修复
+** vaServer
+*** telnet功能(动态消息响应)
+* 其他
+** 练习org
+*** 注脚 [fn:1]
+*** 链接 [[http://orgmode.org/orgguide.pdf][orgguide.pdf]] [[file:/d:/log/log.rg.log][log.rg.log]]
+*** 图片 [[file:/e:/zmy/workspace/wiki/pic/pic/1.jpg]]
+[fn:1]参考http://orgmode.org/orgguide.pdf
+* [[file:index.html][wiki]]

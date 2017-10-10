@@ -16,3 +16,5 @@ concurrency/x64/
 py/build
 py/images
 py/dist
+docs/_book
+docs/node_modules

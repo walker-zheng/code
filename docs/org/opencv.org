@@ -1,0 +1,402 @@
+# -*- org -*-
+# -*- coding:utf-8 -*-
+
+# Time-stamp: <2016-07-23 16:48:51 (mykulou@gmail.com)>
+#+SETUPFILE: theme-bigblow-local.setup
+
+* opencv学习
+** 算法
+*** sift
+http://blog.csdn.net/xiaowei_cqu/article/details/8069548
+- 总体来说，Sift算子具有以下特性：
+  （1）Sift特征是图像的局部特征，对平移、旋转、尺度缩放、亮度变化、遮挡和噪声等具有良好的不变性，对视觉变化、仿射变换也保持一定程度的稳定性。
+  （2）独特性好，信息量丰富，适用于在海量特征数据库中进行快速、准确的匹配。
+  （3）多量性，即使少数的几个物体也可以产生大量Sift特征向量。
+  （4）速度相对较快，经优化的Sift匹配算法甚至可以达到实时的要求。
+  （5）可扩展性强，可以很方便的与其他形式的特征向量进行联合。
+- 数据结构
+  Mat
+  #+begin_src cpp
+class CV_EXPORTS Mat
+{
+public:
+...
+  int type; /* 数据头标号*/
+  int dims; /* 数组维数 */
+  int rows, cols;/*行列*/
+
+  uchar* data;/*像素数据*/
+int* refcount; /* 数据参考计数 */
+// ROI相关
+...
+
+MatAllocator* allocator;
+  MSize size;	//*(size.p) = rows;
+  MStep step;	//step.p = &(step.buf[0]); step.buf[1] = channel;step.buf[0] = step.buf[1]*cols;简单理解
+      //
+...
+}
+struct CV_EXPORTS MSize
+{
+    MSize(int* _p);
+    Size operator()() const;
+    const int& operator[](int i) const;
+    int& operator[](int i);
+    operator const int*() const;
+    bool operator == (const MSize& sz) const;
+    bool operator != (const MSize& sz) const;
+
+    int* p;
+};
+struct CV_EXPORTS MStep
+{
+    MStep();
+    MStep(size_t s);
+    const size_t& operator[](int i) const;
+    size_t& operator[](int i);
+    operator size_t() const;
+    MStep& operator = (size_t s);
+
+    size_t* p;
+    size_t buf[2];
+protected:
+    MStep& operator = (const MStep&);
+};
+
+  #+end_src
+  - SIFT
+    #+begin_src cpp
+SIFT::SIFT(int nfeatures=0, int nOctaveLayers=3, double contrastThreshold=0.04, double edgeThreshold=10, double sigma=1.6)
+分别对应：返回关键点个数，每组层数，相对阈值，边缘阈值，0层高斯系数
+
+//KeyPoint 关键点
+class KeyPoint{
+ Point2f pt; //!< coordinates of the keypoints
+//大小
+ float size; //!< diameter of the meaningful keypoint neighborhood
+//角度
+ float angle; //!< computed orientation of the keypoint (-1 if not applicable);
+              //!< it's in [0,360) degrees and measured relative to
+              //!< image coordinate system, ie in clockwise.
+//dog响应极值点
+ float response; //!< the response by which the most strong keypoints have been selected. Can be used for the further sorting or subsampling
+//组数
+ int octave; //!< octave (pyramid layer) from which the keypoint has been extracted
+ int class_id; //!< object class (if the keypoints need to be clustered by an object they belong to)
+}
+// Scalar vec[4] 存储像素点
+typedef Scalar_<double> Scalar;
+template<typename _Tp> class CV_EXPORTS Scalar_ : public Vec<_Tp, 4>
+
+//Range 范围
+class CV_EXPORTS Range{
+publi:c
+int start, end;
+}
+
+/*
+ * Detect keypoints in an image.
+ * image        The image.
+ * keypoints    The detected keypoints.
+ * mask         Mask specifying where to look for keypoints (optional). Must be a char
+ *              matrix with non-zero values in the region of interest.
+ */
+CV_WRAP void detect( const Mat& image, CV_OUT vector<KeyPoint>& keypoints, const Mat& mask=Mat() ) const;
+
+/*
+ * Compute the descriptors for a set of keypoints in an image.
+ * image        The image.
+ * keypoints    The input keypoints. Keypoints for which a descriptor cannot be computed are removed.
+ * descriptors  Copmputed descriptors. Row i is the descriptor for keypoint i.
+ */
+CV_WRAP void compute( const Mat& image, CV_OUT CV_IN_OUT vector<KeyPoint>& keypoints, CV_OUT Mat& descriptors ) const;
+
+// 
+class CV_EXPORTS_W BFMatcher : public DescriptorMatcher{
+int normType;	//
+bool crossCheck;
+}
+
+
+struct CV_EXPORTS_W_SIMPLE DMatch
+{    CV_PROP_RW int queryIdx; // query descriptor index
+CV_PROP_RW int trainIdx; // train descriptor index
+CV_PROP_RW int imgIdx;   // train image index
+
+CV_PROP_RW float distance;
+}
+    #+end_src
+*** surf
+
+*** 图像分割
+**** 基本步骤
+- cvtcolor
+- blur
+- canny
+- dilate
+- contour
+-
+**** 算法
+***** 图像分割
+****** 形状匹配
+- 图割（图论）       
+- SIFT点匹配
+- 交互分割
+  - grabcut
+  - 分水岭变换
+    - Vincent和Soille的模拟浸没算法
+      （1）将根据图像中每个像素的RGB值根据公式Gray=0.299R+0.587G+0.114B得到与之对应的灰度值。
+      （2）根据Sobel算子得到图像的梯度。（边缘像素的梯度为其邻域像素的梯度，梯度范围为0-255）
+      （3）对梯度进行从小到大的排序，相同的梯度为同一个梯度层级。
+      （4）处理第一个梯度层级所有的像素，如果其邻域已经被标识属于某一个区域，则将这个像素加入一个先进先出的队列。
+      （5）先进先出队列非空时，弹出第一个元素。扫描该像素的邻域像素，如果其邻域像素的梯度属于同一层（梯度相等），则根据邻域像素的标识来刷新该像素的标识。一直循环到队列为空。
+      （6）再次扫描当前梯度层级的像素，如果还有像素未被标识，说明它是一个新的极小区域，则当前区域的值（当前区域的值从0开始计数）加1后赋值给该为标识的像素。然后从该像素出发继续执行步骤5的泛洪直至没有新的极小区域。
+      （7）返回步骤4，处理下一个梯度层级的像素，直至所有梯度层级的像素都被处理。           
+- Meanshift     
+- adaboost
+- 聚类分析
+  - 
+
+***** 直线拟合
+- 最小二乘法
+***** 找到直线
+- HoughLines
+** 资料
+- opencv.org
+  http://docs.opencv.org/index.html docs
+  http://docs.opencv.org/doc/user_guide/user_guide.html guide
+  http://opencv.org/quickstart.html 
+  http://docs.opencv.org/doc/tutorials/tutorials.html Tutorials
+- OpenCV学习笔记
+  http://blog.csdn.net/column/details/opencv-manual.html
+
+- sourcecodebrowser.com
+  http://sourcecodebrowser.com/opencv/2.1.0/namespacecv.html#abc64346e9ba371bf91f12c50485cf129 2.1.0
+
+** 特点
+*** General description
+Open source computer vision library in C/C++.
+Optimized and intended for real-time applications.
+OS/hardware/window-manager independent.
+Generic image/video loading, saving, and acquisition.
+Both low and high level API.
+Provides interface to Intel's Integrated Performance Primitives (IPP) with processor specific optimization (Intel processors).
+*** Features:
+Image data manipulation (allocation, release, copying, setting, conversion).
+Image and video I/O (file and camera based input, image/video file output).
+Matrix and vector manipulation and linear algebra routines (products, solvers, eigenvalues, SVD).
+Various dynamic data structures (lists, queues, sets, trees, graphs).
+Basic image processing (filtering, edge detection, corner detection, sampling and interpolation, color conversion, morphological operations, histograms, image pyramids).
+Structural analysis (connected components, contour processing, distance transform, various moments, template matching, Hough transform, polygonal approximation, line fitting, ellipse fitting, Delaunay triangulation).
+Camera calibration (finding and tracking calibration patterns, calibration, fundamental matrix estimation, homography estimation, stereo correspondence).
+Motion analysis (optical flow, motion segmentation, tracking).
+Object recognition (eigen-methods, HMM).
+Basic GUI (display image/video, keyboard and mouse handling, scroll-bars).
+Image labeling (line, conic, polygon, text drawing)
+*** OpenCV modules:
+cv - Main OpenCV functions.
+cvaux - Auxiliary (experimental) OpenCV functions.
+cxcore - Data structures and linear algebra support.
+highgui - GUI functions.
+** 笔记
+*** 数据结构
+- Range用指定范围的数来填充矩阵
+  #+begin_src cpp
+  arr(i,j)=(end-start)*(i*cols(arr)+j)/(cols(arr)*rows(arr))
+  #+end_src
+*** 新版本模块结构（2.2）
+core――定义了基本数据结构，包括最重要的Mat和一些其他的模块
+imgproc――该模块包括了线性和非线性的图像滤波，图像的几何变换，颜色空间转换，直方图处理等等
+video――该模块包括运动估计，背景分离，对象跟踪
+calib3d――基本的多视角几何算法，单个立体摄像头标定，物体姿态估计，立体相似性算法，3D信息的重建
+features2d――显著特征检测，描述，特征匹配
+objdetect――物体检测和预定义好的分类器实例（比如人脸，眼睛，面部，人，车辆等等）
+highgui――视频捕捉、图像和视频的编码解码、图形交互界面的接口
+gpu――利用GPU对OpenCV模块进行加速算法
+ml――机器学习模块（SVM，决策树，Boosting等等）
+flann――Fast Library for Approximate Nearest Neighbors（FLANN）算法库
+legacy――一些已经废弃的代码库，保留下来作为向下兼容
+还有一些其他的模块，比如FLANN算法库、Google测试包、Python bingdings等等。
+*** 新版本的数据结构core
+2.0新版本对数据结构进行了大幅修改：
+定义了DataType类
+定义了Point_模板类，取代了之前版本的CvPoint、CvPoint2D32f
+定义了Point3_模板类，取代了之前版本的CvPoint2D32f
+定义了Size_模板类，取代了之前版本的CvSize和CvSize2D32f
+定义了Rect_模板类，取代了之前版本的CvRect
+RotatedRect模板类，
+    
+TermCriteria模板类，取代了之前的CvTermCriteria，这个类是作为迭代算
+法的终止条件的，这个类在参考手册里介绍的很简单，我查了些资料，这里
+介绍一下。该类变量需要3个参数，一个是类型，第二个参数为迭代的最大
+次数，最后一个是特定的阈值。类型有CV_TERMCRIT_ITER、
+CV_TERMCRIT_EPS、CV_TERMCRIT_ITER+CV_TERMCRIT_EPS，分别代表着迭代
+终止条件为达到最大迭代次数终止，迭代到阈值终止，或者两者都作为迭代
+终止条件。以上的宏对应的c++的版本分别为TermCriteria::COUNT、
+TermCriteria::EPS，这里的COUNT也可以写成MAX_ITER。
+    
+Matx模板类。Matx模板类是对Mat类的一个拓展，从Matx类有派生出Vec类，又Vec类又派生出Scalar_类，取代了CvScalar
+定义了Range类指定了一个序列的一个连续的子序列
+定义了Ptr类用来对老版本的数据结构进行指针操作，更安全有效，可以防止内存的不正常使用。
+最最重要的定义了Mat类来表示矩阵，取代了之前的CvMat和lplImage。Mat结构支持的操作有：
+构造析构函数Mat和~Mat
+对=、MatExpr、( )、CvMat、IplImage进行了运算符重载
+row、col函数
+rowRange、colRange
+类似matlab的运算操作diag、t、inv、mul、cross、dot、zeros、one、eye
+复制转换变形clone、copyTo、convertTo、assignTo、setTo、reshape、create、addref
+其中copyTo函数有个妙用，不但可以复制Mat，还可以通过mask提取出感兴趣的部分
+数据的操作release、resize、reserve、push_back、pop_back、locateROI、adjustROI
+Mat的信息total、isContinuous、elemSize、elemSize1、type、depth、channes、step1、size、empty
+其中step1函数返回Mat结构每一行的字节数=列数*通道数，更方便用指针定位特定元素
+定位ptr、at、begin、end
+还做了几个扩展类Mat_、NAryMatlterator、SparseMat、SparseMat_取代了之前的CvSparseMat。这些类的操作运算与Mat大同小异，类声明参考core的具体头文件
+
+当然，新版本对老版本的数据结构和函数依然支持。
+新版本还在这些结构里支持dft、dct变换，我这里讲一下我的新发现PCA类、SVD类
+PCA类有构造函数PCA，运算符重载()，project，backProject。SVD类有构造函数SVD，运算符重载()，compute，solveZ，backSubst
+
+这里介绍几个我使用过的实用函数：
+inRange函数可以检查Matsrc的内容是否在Matlower、Matupper之间，输出结果是一个uchar型矩阵，1表示在两者之间，否则为0，值得注意的是，Matlower，Matupper也可以用Scalar的格式
+bitwise_xxx函数对两个矩阵进行位运算，结果保存在第三个矩阵当中
+mixChannels函数可以实现矩阵的指定通道复制到新矩阵的指定通道
+    
+总之，新版本支持更多的数学运算，还支持一些画图操作
+*** 2.0以上版本和以下版本的数据兼容 
+都知道，2.0版本对之前的OpenCV数据结构进行了大幅度的修改。但对之前版本的兼容是一个很重要的事情。这节就主要讨论这个问题
+首先来看一下2.0版本对之前版本的进行了哪些修改
+1.采用了新的数据结构Mat作为图像的容器，取代了之前的CvMat和lplImage，这个改动不是太复杂，只需适应一下新东西，而且可以自由转换
+#+begin_src cpp
+    Mat I;  
+    IplImage pI = I;  
+    CvMat mI = I;  
+#+end_src
+    
+对于指针的操作要相对复杂一些，而且还要注意内存的释放，我这里不推荐用老版本的数据结构，例如：
+#+begin_src cpp
+    Mat I;  
+    IplImage* pI = &I.operator IplImage();  
+    CvMat* mI = &I.operator CvMat();  
+#+end_src
+2.对library进行了重组，将原来的一个大库根据功能结构分成具体小库，这样包含头文件的时候只需要加入你需要的库，只是原来库的子集
+3.使用了cv 这个namespace来防止和其他的library 结构冲突。所以在使用的时候也要预先加上cv::关键字，这也是新版本的函数，数据都省略了cv前缀的原因，一般放在include之后，格式为：
+using namespace cv; // The new C++ interface API is inside this namespace. Import it.  
+*** 对XML和YAML文件实现I/O操作
+1. XML、YAML文件的打开和关闭
+   XML\YAML文件在OpenCV中的数据结构为FileStorage，打开操作例如：
+   #+begin_src cpp
+   string filename = "I.xml";  
+   FileStorage fs(filename, FileStorage::WRITE);  
+   \\...  
+   fs.open(filename, FileStorage::READ);  
+   #+end_src
+
+   文件关闭操作会在FileStorage结构销毁时自动进行，但也可调用如下函数实现
+   fs.release();  
+   2.文本和数字的输入和输出
+   写入文件使用  <<  运算符，例如：
+   fs << "iterationNr" << 100;  
+   读取文件，使用 >> 运算符，例如
+   #+begin_src cpp
+   int itNr;  
+   fs["iterationNr"] >> itNr;  
+   itNr = (int) fs["iterationNr"];  
+   #+end_src
+
+   3. OpenCV数据结构的输入和输出，和基本的C++形式相同
+      #+begin_src cpp
+      Mat R = Mat_<uchar >::eye (3, 3),  
+      T = Mat_<double>::zeros(3, 1);  
+      fs << "R" << R; // Write cv::Mat  
+      fs << "T" << T;  
+      fs["R"] >> R; // Read cv::Mat  
+      fs["T"] >> T;  
+      #+end_src
+
+   4. vector（arrays） 和 maps的输入和输出
+      vector要注意在第一个元素前加上“[”，在最后一个元素前加上"]"。
+      例如：
+      #+begin_src cpp
+                fs << "strings" << "["; // text - string sequence  
+                fs << "image1.jpg" << "Awesomeness" << "baboon.jpg";  
+                fs << "]"; // close sequence
+      #+end_src
+      对于map结构的操作使用的符号是"{"和"}"，例如：
+      #+begin_src cpp
+         fs << "Mapping"; // text - mapping  
+         fs << "{" << "One" << 1;  
+         fs << "Two" << 2 << "}";  
+      #+end_src
+
+      读取这些结构的时候，会用到FileNode和FileNodeIterator数据结构。对FileStorage类的[]操作符会返回FileNode数据类型，对于一连串的node，可以使用FileNodeIterator结构，例如：
+      #+begin_src cpp
+         FileNode n = fs["strings"]; // Read string sequence - Get node  
+         if (n.type() != FileNode::SEQ)  
+         {  
+         cerr << "strings is not a sequence! FAIL" << endl;  
+         return 1;  
+         }  
+         FileNodeIterator it = n.begin(), it_end = n.end(); // Go through the node  
+         for (; it != it_end; ++it)  
+         cout << (string)*it << endl;  
+      #+end_src
+
+   5. 读写自己的数据结构
+      这部分比较复杂，参考最后的实例中的MyData结构自己领悟吧
+      最后，我这里上一个实例，供大家参考。mydata.cpp
+*** core模块
+**** Mat
+***** 记住
+- Output image allocation for OpenCV functions is automatic (unless specified otherwise).
+- You do not need to think about memory management with OpenCVs C++ interface.
+- The assignment operator and the copy constructor only copies the header.
+- The underlying matrix of an image may be copied using the clone() and copyTo() functions.
+***** 说明
+自从版本2.0，OpenCV采用了新的数据结构，用Mat类结构取代了之前用
+extended C写的cvMat和lplImage，更加好用啦，最大的好处就是更加方便
+的进行内存管理，对写更大的程序是很好的消息。
+     
+需要注意的几点：
+     
+1. Mat的拷贝只是复制了Mat的信息头，数据的指针也指向了被拷贝的数
+   据地址，而没有真正新建一块内存来存放新的矩阵内容。这样带来的
+   一个问题就是对其中一个Mat的数据操作就会对其他指向同一块数据的
+   Mat产生灾难性的影响。
+
+   2.建立多维数组的格式是这样的
+   #+begin_src cpp
+    int sz[3] = {2, 2, 2};  
+    Mat L(3, sz, CV_8UC(1), Scalar::all(0));  
+   #+end_src
+   3.传统的lplImage格式也可直接转换为Mat格式
+   #+begin_src cpp
+         IplImage* img = cvLoadImage("greatwave.png", 1);  
+         Mat mtx(img); // convert IplImage* -> Mat  
+   #+end_src
+   如果想将新版本的Mat格式转换为老版本，则需要如下调用：
+   #+begin_src cpp
+         Mat I;  
+         IplImage* pI = &I.operator IplImage();  
+         CvMat* mI = &I.operator CvMat();  
+   #+end_src
+   不过更安全的调用格式为：
+   #+begin_src cpp
+         Ptr<IplImage> piI = &I.operator IplImage();  
+   #+end_src
+   4.Mat结构更加友好，很多操作更接近matlab的风格
+   5.也有Point2f，Point3f，vector等数据结构可以使用
+   6.RNG类可以产生随机数
+   7.实现颜色通道的分离使用函数split
+**** 扫描、查表、计时
+1. 扫描
+   | Efficient Way | 79.4717 ms | c的下标操作    |
+   | Iterator      | 83.7201 ms | cpp迭代器      |
+   | On-The-Fly RA | 93.7878 ms | at()           |
+   | LUT function  | 32.5759 ms | opencv内置函数LUT |
+2. 计时
+   - getTickCount()和getTickFrequency()
+3. 颜色空间缩减，使用查表法
+**** 矩阵掩码(核)
+1. 像素访问
+2. filter2D
+* [[file:index.html][wiki]]

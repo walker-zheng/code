@@ -1,0 +1,21 @@
+# -*- org -*-
+# -*- coding:utf-8 -*-
+
+# Time-stamp: <2016-07-23 14:36:19 (mykulou@gmail.com)>
+#+SETUPFILE: theme-bigblow-local.setup
+
+* APUE
+   POSIX.1和XPG3的组成部分
+   - <stdio.h>提供对 unbuffered I/O函数的带缓存界面，
+   - 进程控制fork、exec和waitpid
+   - 限制<limits.h>
+   - ANSI C使用void *作为类属指针替换char *
+     #+BEGIN_SRC c
+      float data(100);
+	write(fd, data, sizeof(data));
+     #+END_SRC
+   - 提供运行时间的函数sysconf/pathconf/fpathconf（如_SC_ARG_MAX/_PC_PATH_MAX）
+   - UNIX shell文件描述符惯例
+   - <sys/types.h>定义与实现有关的数据类型，即基本系统数据类型(如clock_t)
+** unbuffered I/O
+* [[file:index.html][wiki]]

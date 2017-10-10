@@ -1,0 +1,24 @@
+# -*- org -*-
+# -*- coding:utf-8 -*-
+
+# Time-stamp: <2016-07-23 16:07:25 (mykulou@gmail.com)>
+#+SETUPFILE: theme-bigblow-local.setup
+
+* 收藏页面
+** [[file:lost/abs_guide.html][abs_guide]]
+** [[file:lost/binutils.html][binutils]]
+** [[file:lost/Bzr速成.html][Bzr速成]]
+** [[file:lost/cmdline.html][cmdline]]
+** [[file:lost/coreutils.html][coreutils]]
+** [[file:lost/diffutils.html][diffutils]]
+** [[file:lost/dll.html][dll]]
+** [[file:lost/EmacsFAQ-win.html][EmacsFAQ-win]]
+** [[file:lost/EmacsTip2.html][EmacsTip2]]
+** [[file:lost/find.html][find]]
+** [[file:lost/git-guide.html][git-guide]]
+** [[file:lost/inetutils.html][inetutils]]
+** [[file:lost/linux_commands.html][linux_commands]]
+** [[file:lost/org-mode-guide.html][org-mode-guide]]
+** [[file:lost/unixtoolbox_zh_CN.html][unixtoolbox_zh_CN]]
+** [[file:lost/writing-a-thesis-in-latex.html][writing-a-thesis-in-latex]]
+* [[file:index.html][wiki]]
