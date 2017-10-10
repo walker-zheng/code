@@ -1,5 +1,5 @@
 * [code](code.md)
-* [FAQ](FAQ.md)
+* [faq](faq.md)
 * [Gif图](Gif图.md)
 * [git](git.md)
 * [iptv](iptv.md)
