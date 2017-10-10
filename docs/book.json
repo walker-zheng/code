@@ -3,7 +3,7 @@
     "description": "记录工作",
     "author": "walker.zheng<mykulou@gmail.com>",
     "output.name": "site",
-    "language": "zh-hans",
+    "language": "zh-cn",
     "links": {
         "sidebar": {
             "walker's日志": "http://walker-zheng.github.io/wiki"
