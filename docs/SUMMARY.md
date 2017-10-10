@@ -6,7 +6,6 @@
 * [markdown](markdown.md)
 * [python速查](python速查.md)
 * [sourcetree](sourcetree.md)
-* [todo](todo.md)
 * [work](work.md)
 * [工具](工具.md)
 * [工作截图](工作截图.md)
