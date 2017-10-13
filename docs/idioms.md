@@ -1,3 +1,5 @@
+# c++ idioms
+
 _if you want to see a bunch of people complaining about my rules regarding
 _auto_, have a look at
 [HackerNews](https://news.ycombinator.com/item?id=8193157) and [Reddit](http:/
