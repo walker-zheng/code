@@ -447,7 +447,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><em>if you want to see a bunch of people complaining about my rules regarding
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#c-idioms"><b>1.7.1. </b>c++ idioms</a></li><ul><li><span class="title-icon "></span><a href="#more-concise-coding"><b>1.7.1.1. </b>More concise coding</a></li><ul><li><span class="title-icon "></span><a href="#use-the-auto-keyword-where-possible"><b>1.7.1.1.1. </b>use the auto keyword where possible</a></li><li><span class="title-icon "></span><a href="#other-uses-for-lambdas"><b>1.7.1.1.2. </b>other uses for lambdas</a></li><li><span class="title-icon "></span><a href="#range-based-for-loops"><b>1.7.1.1.3. </b>range-based for loops</a></li><li><span class="title-icon "></span><a href="#many-new-basic-stl-utilities"><b>1.7.1.1.4. </b>Many new basic STL utilities</a></li></ul><li><span class="title-icon "></span><a href="#clearer-declarations"><b>1.7.1.2. </b>Clearer declarations</a></li><ul><li><span class="title-icon "></span><a href="#initialisation-is-much-simpler"><b>1.7.1.2.1. </b>Initialisation is much simpler</a></li><li><span class="title-icon "></span><a href="#construction-is-much-more-flexible"><b>1.7.1.2.2. </b>Construction is much more flexible</a></li><li><span class="title-icon "></span><a href="#more-explicit-inheritance"><b>1.7.1.2.3. </b>More explicit inheritance</a></li></ul><li><span class="title-icon "></span><a href="#far-fewer-boost-dependencies"><b>1.7.1.3. </b>Far fewer Boost dependencies</a></li><li><span class="title-icon "></span><a href="#hope-for-the-future"><b>1.7.1.4. </b>Hope for the future</a></li></ul></ul></div><a href="#c-idioms" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="c-idioms"><a name="c-idioms" class="anchor-navigation-ex-anchor" href="#c-idioms"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1. c++ idioms</h1>
+<p><em>if you want to see a bunch of people complaining about my rules regarding
 _auto</em>, have a look at
 <a href="https://news.ycombinator.com/item?id=8193157" target="_blank">HackerNews</a> and <a href="http:/
 /www.reddit.com/r/cpp/comments/2dvirt/new_c_idioms_i_use_every_day/" target="_blank">Reddit</a>_</p>
@@ -486,12 +487,12 @@ they benefit you <em>straight away</em> and confer very little risk of being lea
 wrong.</p>
 <p>At the very end I also mention a few upcoming features that I&#x2019;m really excited
 about as they will be game-changers.</p>
-<h2 id="more-concise-coding"><a name="more-concise-coding" class="anchor-navigation-ex-anchor" href="#more-concise-coding"><i class="fa fa-link" aria-hidden="true"></i></a>More concise coding</h2>
+<h2 id="more-concise-coding"><a name="more-concise-coding" class="anchor-navigation-ex-anchor" href="#more-concise-coding"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.1. More concise coding</h2>
 <p>These are the most obvious every-day enhancements, mostly focusing on making
 code easier to write and to read. Some of the most pleasing languages to use
 (like F#) are so because the ratio between language constructs and code
 relating to logic is very low.</p>
-<h3 id="use-the-auto-keyword-where-possible"><a name="use-the-auto-keyword-where-possible" class="anchor-navigation-ex-anchor" href="#use-the-auto-keyword-where-possible"><i class="fa fa-link" aria-hidden="true"></i></a>use the auto keyword where possible</h3>
+<h3 id="use-the-auto-keyword-where-possible"><a name="use-the-auto-keyword-where-possible" class="anchor-navigation-ex-anchor" href="#use-the-auto-keyword-where-possible"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.1.1. use the auto keyword where possible</h3>
 <p>The <code>auto</code> keyword should be used wherever possible. Functions should be short
 and readable, so don&#x2019;t pollute your code with unneccessary type declarations!
 Curmudgeons often claim they prefer to see the type written with the
@@ -523,7 +524,7 @@ style-almost-always-auto/" target="_blank">third article</a> explores this topic
 gurus out there, then perhaps it would be well worth exploring why &#x2013; if you
 know something they don&#x2019;t you&#x2019;re probably able to make a lucrative living
 lecturing!</p>
-<h3 id="other-uses-for-lambdas"><a name="other-uses-for-lambdas" class="anchor-navigation-ex-anchor" href="#other-uses-for-lambdas"><i class="fa fa-link" aria-hidden="true"></i></a>other uses for lambdas</h3>
+<h3 id="other-uses-for-lambdas"><a name="other-uses-for-lambdas" class="anchor-navigation-ex-anchor" href="#other-uses-for-lambdas"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.1.2. other uses for lambdas</h3>
 <p>Lambdas are of course a fantastic feature that helps us all out in so many
 ways. But I tend to use it in general day-to-day stuff for what I call
 <strong>inline builder functions</strong>. This is when you want to perform some
@@ -542,7 +543,7 @@ const int calculated = [&amp;] {
 </code></pre><p>Of course you could put this functionality in a function somewhere but this
 means you don&#x2019;t pollute your class namespace, and the functionality is
 localised to the place you use it.</p>
-<h3 id="range-based-for-loops"><a name="range-based-for-loops" class="anchor-navigation-ex-anchor" href="#range-based-for-loops"><i class="fa fa-link" aria-hidden="true"></i></a>range-based for loops</h3>
+<h3 id="range-based-for-loops"><a name="range-based-for-loops" class="anchor-navigation-ex-anchor" href="#range-based-for-loops"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.1.3. range-based for loops</h3>
 <p>The range-based for loop is also a no-brainer. It is not as useful as it could
 be &#x2013; for example you often want to maintain some index as you iterate over
 something, and the standard library (and even boost range) don&#x2019;t provide a
@@ -575,7 +576,7 @@ int main() {
 probably buggy) and it doesn&#x2019;t cover reverse ranges for starters. Plus there
 are some cool libraries out there, like <a href="https://github.com/ryan
 haining/cppitertools/blob/master/README.md" target="_blank">CPPItertools</a> perhaps?</p>
-<h3 id="many-new-basic-stl-utilities"><a name="many-new-basic-stl-utilities" class="anchor-navigation-ex-anchor" href="#many-new-basic-stl-utilities"><i class="fa fa-link" aria-hidden="true"></i></a>Many new basic STL utilities</h3>
+<h3 id="many-new-basic-stl-utilities"><a name="many-new-basic-stl-utilities" class="anchor-navigation-ex-anchor" href="#many-new-basic-stl-utilities"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.1.4. Many new basic STL utilities</h3>
 <p>But one thing people dont mention much is that the standard library now
 includes a bunch of small helper functions for basic string conversions!
 Previously one might use boost <code>lexical_cast&lt;&gt;()</code> for this sort of thing, but
@@ -589,12 +590,12 @@ yourself for reimplementing include <code>all_of()</code>/<code>any_of()</code>/
 functions) and <code>shuffle</code>. See this well-known <a href="http://channel9.msdn.com/Events/GoingNative/2013/Cpp-Seasoning" target="_blank">Sean Parent&#x2019;s talk on C++
 Seasoning</a> for
 some great discussion on using C++ algorithms to their fullest.</p>
-<h2 id="clearer-declarations"><a name="clearer-declarations" class="anchor-navigation-ex-anchor" href="#clearer-declarations"><i class="fa fa-link" aria-hidden="true"></i></a>Clearer declarations</h2>
+<h2 id="clearer-declarations"><a name="clearer-declarations" class="anchor-navigation-ex-anchor" href="#clearer-declarations"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.2. Clearer declarations</h2>
 <p>Initialisation is the backbone of C++ &#x2013; typically all resources should be
 allocated and initialised in constructors and released deterministically in
 destructors according to very specific rules, ensuring exception safety and
 preventing resource leaks.</p>
-<h3 id="initialisation-is-much-simpler"><a name="initialisation-is-much-simpler" class="anchor-navigation-ex-anchor" href="#initialisation-is-much-simpler"><i class="fa fa-link" aria-hidden="true"></i></a>Initialisation is much simpler</h3>
+<h3 id="initialisation-is-much-simpler"><a name="initialisation-is-much-simpler" class="anchor-navigation-ex-anchor" href="#initialisation-is-much-simpler"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.2.1. Initialisation is much simpler</h3>
 <p>C++11 allows us to focus on our intents more than focusing on our types. For
 example, the <code>auto</code> keyword and uniform initialisation both make code far
 clearer:</p>
@@ -613,7 +614,7 @@ clearer:</p>
 
 // this works in C++03 as well
 TcpHeader hdr = {10012, 8088, 0x01, 0x01, /* ... */ };
-</code></pre><h3 id="construction-is-much-more-flexible"><a name="construction-is-much-more-flexible" class="anchor-navigation-ex-anchor" href="#construction-is-much-more-flexible"><i class="fa fa-link" aria-hidden="true"></i></a>Construction is much more flexible</h3>
+</code></pre><h3 id="construction-is-much-more-flexible"><a name="construction-is-much-more-flexible" class="anchor-navigation-ex-anchor" href="#construction-is-much-more-flexible"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.2.2. Construction is much more flexible</h3>
 <p>Now for trivial types you sometimes don&#x2019;t need a constructor:</p>
 <pre><code>// no constructor needed!
 struct counter {
@@ -634,7 +635,7 @@ init() function:</p>
 
    int next() { last_ += step_; return last_; }
 };
-</code></pre><h3 id="more-explicit-inheritance"><a name="more-explicit-inheritance" class="anchor-navigation-ex-anchor" href="#more-explicit-inheritance"><i class="fa fa-link" aria-hidden="true"></i></a>More explicit inheritance</h3>
+</code></pre><h3 id="more-explicit-inheritance"><a name="more-explicit-inheritance" class="anchor-navigation-ex-anchor" href="#more-explicit-inheritance"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.2.3. More explicit inheritance</h3>
 <p>I have always been jealous of languages that have the <code>override</code> keyword,
 because a common trap when refactoring is to rename a virtual base method &#x2013;
 the compiler cannot warn you that you forgot to replace the overridden methods
@@ -677,7 +678,7 @@ actually maintaining it as we update the class in future:</p>
 };
 </code></pre><p>I also use this to ensure my base class destructors are virtual, a simple
 <code>virtual ~MyType() = default;</code> makes my intentions clear.</p>
-<h2 id="far-fewer-boost-dependencies"><a name="far-fewer-boost-dependencies" class="anchor-navigation-ex-anchor" href="#far-fewer-boost-dependencies"><i class="fa fa-link" aria-hidden="true"></i></a>Far fewer Boost dependencies</h2>
+<h2 id="far-fewer-boost-dependencies"><a name="far-fewer-boost-dependencies" class="anchor-navigation-ex-anchor" href="#far-fewer-boost-dependencies"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.3. Far fewer Boost dependencies</h2>
 <p>Boost is fantastic, but it&#x2019;s a beast and can really slow down compile times.
 C++11 and onward have made it so I no longer feel it necessary to include
 boost when starting out with a new project &#x2013; I will often add it at a much
@@ -707,7 +708,7 @@ they didn&#x2019;t make the list because I don&#x2019;t use them as often.</p>
 </ul>
 <p>I will generally end up including boost in my apps because I really like these
 libraries.</p>
-<h2 id="hope-for-the-future"><a name="hope-for-the-future" class="anchor-navigation-ex-anchor" href="#hope-for-the-future"><i class="fa fa-link" aria-hidden="true"></i></a>Hope for the future</h2>
+<h2 id="hope-for-the-future"><a name="hope-for-the-future" class="anchor-navigation-ex-anchor" href="#hope-for-the-future"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1.4. Hope for the future</h2>
 <p>The C++ language committee is known for being <em>very</em> conservative, with the
 explicit objective of only adding to the language features they think will
 still be relevant in the distant future. Created in 1983, the first standard
@@ -753,7 +754,7 @@ will find such goodies as:</p>
 <li>stable C++ ABI allowing portable libraries (compilation units from different compilers or even platforms), would mean header-only types can be used in library interfaces/boundaries (e.g., currently cant have boost::any&lt;&gt; in an exported header because it would turn into different code on client and library.) This is already proposed by Herb Sutter <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4028.pdf" target="_blank">here</a></li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; walker.zheng 2017 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4FEE;&#x6539;:
-2017-10-13 15:37:55
+2017-10-13 15:47:12
 </span></footer>
                                 
                                 </section>
@@ -797,7 +798,7 @@ will find such goodies as:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"idioms","level":"1.7","depth":1,"next":{"title":"iptv","level":"1.8","depth":1,"path":"iptv.md","ref":"iptv.md","articles":[]},"previous":{"title":"git","level":"1.6","depth":1,"path":"git.md","ref":"git.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","-highlight","search-plus","fontsettings","tbfed-pagefooter","splitter","advanced-emoji","emphasize","anchor-navigation-ex","favicon","todo"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy walker.zheng 2017","modify_label":"最近修改:","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"favicon":{"shortcut":"img/favicon.ico","bookmark":"img/favicon.ico","appleTouch":"img/icon.png","appleTouchMore":{"120x120":"img/120.png","180x180":"img/180.png"}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"walker.zheng<mykulou@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人日志","language":"zh-cn","output.name":"site","links":{"sidebar":{"walker's日志":"http://walker-zheng.github.io/wiki"}},"gitbook":"*","description":"记录工作"},"file":{"path":"idioms.md","mtime":"2017-10-13T06:37:55.736Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-13T06:46:05.240Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"idioms","level":"1.7","depth":1,"next":{"title":"iptv","level":"1.8","depth":1,"path":"iptv.md","ref":"iptv.md","articles":[]},"previous":{"title":"git","level":"1.6","depth":1,"path":"git.md","ref":"git.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","-highlight","search-plus","fontsettings","tbfed-pagefooter","splitter","advanced-emoji","emphasize","anchor-navigation-ex","favicon","todo"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy walker.zheng 2017","modify_label":"最近修改:","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"favicon":{"shortcut":"img/favicon.ico","bookmark":"img/favicon.ico","appleTouch":"img/icon.png","appleTouchMore":{"120x120":"img/120.png","180x180":"img/180.png"}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"walker.zheng<mykulou@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人日志","language":"zh-cn","output.name":"site","links":{"sidebar":{"walker's日志":"http://walker-zheng.github.io/wiki"}},"gitbook":"*","description":"记录工作"},"file":{"path":"idioms.md","mtime":"2017-10-13T06:47:12.504Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-13T06:47:25.476Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
