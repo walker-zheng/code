@@ -17,7 +17,7 @@ EOF
 }
 function gen_summary()
 {
-    (echo '# SUMMARY';echo '* [简介](README.md)';echo '* [目录](SUMMARY.md)';ls *.md|grep -vE 'SUMMARY|README'|sed 's,\(.*\)\.md,* [\1](\1.md),') > SUMMARY.md
+    (echo '# SUMMARY';echo '* [简介](README.md)';echo '* [目录](SUMMARY.md)';find . -maxdepth 2 -type f -name '*\.md'|sed 's,^./,,'|grep -vE 'SUMMARY|README'|sed 's,\(.*\)\.md,* [\1](\1.md),') > SUMMARY.md
 }
 function init()
 {
@@ -45,27 +45,15 @@ function init()
 EOF
     git add .
     git commit -m 'init git repo'
-    git branch gh-pages
-    (echo '_book'; echo 'node_modules'; echo 'gitbook') > .gitignore
+    (echo '_book'; echo 'node_modules'; ) > .gitignore
     git add .gitignore
     git commit -m 'init gitbook ignore'
-    git checkout gh-pages
-    (echo '_book'; echo 'node_modules') > .gitignore
-    git add .gitignore
-    git commit -m 'init gitbook ignore'
-
-    git checkout master
     gitbook install > /dev/null
     gen_summary
     gitbook init
     gitbook build > /dev/null
     git add .
     git commit -m 'init gitbook repo'
-    git checkout gh-pages
-    cp -R _book/* .
-    git add .
-    git commit -m 'init gitbook gh-pages'
-    git checkout master
 }
 function publish()
 {
@@ -87,6 +75,7 @@ VERSION='1.0.0 by walker.zheng'
 until [ -z "$1" ]
 do
     [ "$1" == "init" ] && init
+    [ "$1" == "summary" ] && gen_summary
     [ "$1" == "help" ] &&  usage
     [ "$1" == "version" ] && (echo -e 'publish ' $VERSION | GREP_COLOR='01;36' grep --color=always .)
     [ "$1" == "-i" ] && init
