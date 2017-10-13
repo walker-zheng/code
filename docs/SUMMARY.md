@@ -5,6 +5,7 @@
 * [faq](faq.md)
 * [Gif图](Gif图.md)
 * [git](git.md)
+* [idioms](idioms.md)
 * [iptv](iptv.md)
 * [markdown](markdown.md)
 * [python速查](python速查.md)
