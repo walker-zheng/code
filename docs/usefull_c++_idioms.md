@@ -20,78 +20,43 @@ me](mailto:bob@bobarcher.org)
 ## Call a function with each element in a sequence with no additional
 arguments
 
-    
-    
     for( std::vector< T >::iterator i( begin( v_T ) ); i != end( v_T ); ++i )
     {
         f_T( *i );
     }
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), f_T );
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), []( T const& i ) 
     { 
         f_T( i ); 
     } );
-    
-    
-    
     adobe::for_each( v_T, f_T );
-    
-    
-    
     adobe::for_each( v_T, []( T const& i ) 
     { 
         f_T( i ); 
     } );
-    
-    
-    
     for( T const& i : v_T )
     {
         f_T( i );
     }
-    
 
 * * *
 
 ## Call a function with each element in a sequence with additional arguments
 
-    
-    
     for( std::vector< T >::iterator i( begin( v_T ) ); i != end( v_T ); ++i )
     {
         f_T_int( *i, 10 );
     }
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), std::bind( f_T_int, _1, 10 ) );
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), []( T const& i ) 
     { 
         f_T_int( i, 10 ); 
     } );
-    
-    
-    
     adobe::for_each( v_T, std::bind( f_T_int, _1, 10 ) );
-    
-    
-    
     adobe::for_each( v_T, []( T const& i ) 
     { 
         f_T_int( i, 10 ); 
     } );
-    
-    
-    
     for( T const& i : v_T )
     {
         f_T_int( i, 10 );
@@ -102,140 +67,78 @@ arguments
 
 ## Call a function on each element in a sequence with no arguments
 
-    
-    
     for( std::vector< T >::iterator i( begin( v_T ) ); i != end( v_T ); ++i )
     {
         i->mf_void();
     }
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), std::bind( &T::mf_void, _1 ) );
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), []( T const& i ) 
     { 
         i.mf_void(); 
     } );
-    
-    
-    
     adobe::for_each( v_T, std::bind( &T::mf_void, _1 ) );
-    
-    
-    
     adobe::for_each( v_T, []( T const& i ) 
     { 
         i.mf_void(); 
     } );
-    
-    
-    
     for( T const& i : v_T )
     {
         i.mf_void();
     }
-    
 
 * * *
 
 ## Call a function on each element in a sequence with additional arguments
 
-    
-    
     int j( 7 );
     for( std::vector< T >::iterator i( begin( v_T ) ); i != end( v_T ); ++i )
     {
         i->mf_int( j );
     }
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), std::bind( &T::mf_int, _1, j ) );
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), std::bind2nd( std::mem_fun_ref( &T::mf_int ), j ) );
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), [ j ]( T const& i )
     {
         i.mf_int( j );
     } );
-    
-    
-    
     adobe::for_each( v_T, std::bind( &T::mf_int, _1, j ) );
-    
-    
-    
     adobe::for_each( v_T, std::bind2nd( std::mem_fun_ref( &T::mf_int ), j ) );
-    
-    
-    
     adobe::for_each( v_T, [ j ]( T const& i )
     {
         i.mf_int( j );
     } );
-    
-    
-    
     for( T const& i : v_T )
     {
         i.mf_int( j );
     }
-    
 
 * * *
 
 ## Call a function on each element in a sequence with the element as an
 argument
 
-    
-    
     for( std::vector< T >::iterator i( begin( v_T ) ); i != end( v_T ); ++i )
     {
         i->mf_T( *i );
     }
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), std::bind( &T::mf_T, _1, _1 ) );
-    
-    
-    
     std::for_each( begin( v_T ), end( v_T ), []( T const& t )
     {
         t.mf_T( t );
     } );
-    
-    
-    
     adobe::for_each( v_T, std::bind( &T::mf_T, _1, _1 ) );
-    
-    
-    
     adobe::for_each( v_T, []( T const& t )
     {
         t.mf_T( t );
     } );
-    
-    
-    
     for( T const& i : v_T )
     {
         i.mf_T( i );
     }
-    
 
 * * *
 
 ## Find the first element which has a function returning a particular value
-
-    
     
     std::vector< T >::iterator i;
     for( i = begin( v_T ); i != end( v_T ); ++i )
@@ -243,9 +146,6 @@ argument
         if( i->value() == 3 )
             break;
     }
-    
-    
-    
     i = std::find_if( 
         begin( v_T ), 
         end( v_T ), 
@@ -255,19 +155,13 @@ argument
                 &T::value,
                 _1 ),
                 3 ) );
-    
-    
-    
     i = std::find_if( 
         begin( v_T ), 
         end( v_T ), 
         []( T const& t )
     {
         return t.value() == 3;
-    } );
-    
-    
-    
+    } );    
     i = adobe::find_if( 
         v_T, 
         std::bind(
@@ -276,9 +170,6 @@ argument
                 &T::value,
                 _1 ),
                 3 ) );
-    
-    
-    
     i = adobe::find_if( 
         v_T, 
         []( T const& t )
@@ -291,29 +182,18 @@ argument
 
 ## Sum all of the elements in a sequence
 
-    
-    
     int n = 0;
     for( std::vector< int >::iterator i( begin( v_int ) ); i != end( v_int ); ++i )
     {
         n += *i;
     }
-    
-    
-    
     n = std::accumulate( 
         begin( v_int ), 
         end( v_int ),
         0 );
-    
-    
-    
     n = adobe::accumulate( 
         v_int,
         0 );
-    
-    
-    
     n = 0;
     for( int i : v_int )
     {
@@ -325,24 +205,16 @@ argument
 
 ## Get the product of the elements in a sequence
 
-    
-    
     int n = 1;
     for( std::vector< int >::iterator i( begin( v_int ) ); i != end( v_int ); ++i )
     {
         n *= *i;
     }
-    
-    
-    
     n = std::accumulate( 
         begin( v_int ), 
         end( v_int ), 
         1,
         std::multiplies< int >() );
-    
-    
-    
     n = std::accumulate( 
         begin( v_int ), 
         end( v_int ), 
@@ -350,25 +222,16 @@ argument
         []( int i, int elem ) {
             return i * elem;
         } );
-    
-    
-    
     n = adobe::accumulate( 
         v_int,
         1,
         std::multiplies< int >() );
-    
-    
-    
     n = adobe::accumulate( 
         v_int,
         1,
         []( int i, int elem ) {
             return i * elem;
         } );
-    
-    
-    
     n = 1;
     for( int i : v_int )
     {
@@ -380,17 +243,12 @@ argument
 
 ## Sum the results of calling a function of each element in a sequence
 
-    
-    
     int n;
     n = 0;
     for( std::vector< T >::iterator i( begin( v_T ) ); i != end( v_T ); ++i )
     {
         n += i->value();
     }
-    
-    
-    
     n = std::accumulate( 
         begin( v_T ), 
         end( v_T ), 
@@ -399,9 +257,6 @@ argument
             std::plus< int >(), 
             _1, 
             std::bind( &T::value, _2 ) ) );
-    
-    
-    
     n = std::accumulate( 
         begin( v_T ), 
         end( v_T ), 
@@ -409,9 +264,6 @@ argument
         []( int i, T const& t ) {
             return i + t.value();
         } );
-    
-    
-    
     n = adobe::accumulate( 
         v_T,
         0, 
@@ -419,39 +271,27 @@ argument
             std::plus< int >(), 
             _1, 
             std::bind( &T::value, _2 ) ) );
-    
-    
-    
     n = adobe::accumulate( 
         v_T,
         0, 
         []( int i, T const& t ) {
             return i + t.value();
         } );
-    
-    
-    
     n = 0;
     for( T const& t : v_int )
     {
         n += t.value();
     }
-    
 
 * * *
 
 ## Copy the keys of a map to a vector
 
-    
-    
     std::vector< std::string > vs;
     for( std::map< std::string, T >::iterator i( begin( m_str_T ) ); i != end( m_str_T ); ++i )
     {
         vs.push_back( i->first );
     }
-    
-    
-    
     std::transform( 
         begin( m_str_T ), 
         end( m_str_T ), 
@@ -459,17 +299,11 @@ argument
         std::bind( 
             &std::map< std::string, T >::value_type::first, 
             _1 ) );
-    
-    
-    
     std::transform( 
         begin( m_str_T ), 
         end( m_str_T ), 
         std::back_inserter( vs ), 
         select1st< std::map< std::string, T >::value_type >() );
-    
-    
-    
     std::transform( 
         begin( m_str_T ), 
         end( m_str_T ), 
@@ -477,39 +311,26 @@ argument
         []( std::map< std::string, T >::value_type const& v ) {
             return v.first;
         } );
-    
-    
-    
     adobe::transform( 
         m_str_T,
         std::back_inserter( vs ), 
         std::bind( 
             &std::map< std::string, T >::value_type::first, 
             _1 ) );
-    
-    
-    
     adobe::transform( 
         m_str_T, 
         std::back_inserter( vs ), 
         select1st< std::map< std::string, T >::value_type >() );
-    
-    
-    
     adobe::transform( 
         m_str_T, 
         std::back_inserter( vs ), 
         []( std::map< std::string, T >::value_type const& v ) {
             return v.first;
         } );
-    
-    
-    
     for( std::map< std::string, T >::value_type const& v : m_str_T )
     {
         vs.push_back( v.first );
     }
-    
 
 * * *
 
@@ -521,9 +342,6 @@ argument
     {
         v_T.push_back( i->second );
     }
-    
-    
-    
     std::transform( 
         begin( m_str_T ), 
         end( m_str_T ), 
@@ -531,17 +349,11 @@ argument
         std::bind( 
             &std::map< std::string, T >::value_type::second, 
             _1 ) );
-    
-    
-    
     std::transform( 
         begin( m_str_T ), 
         end( m_str_T ), 
         std::back_inserter( v_T ), 
         select2nd< std::map< std::string, T >::value_type >() );
-    
-    
-    
     std::copy( 
         boost::make_transform_iterator( 
             begin( m_str_T ), 
@@ -550,81 +362,54 @@ argument
             end( m_str_T ), 
             select2nd< std::map< std::string, T >::value_type >() ),
         std::back_inserter( v_T ) );
-    
-    
-    
     adobe::transform( 
         m_str_T,
         std::back_inserter( v_T ), 
         select2nd< std::map< std::string, T >::value_type >() );
-    
-    
-    
     adobe::transform( 
         m_str_T,
         std::back_inserter( v_T ), 
         std::bind( 
             &std::map< std::string, T >::value_type::second, 
             _1 ) );
-    
-    
-    
     adobe::transform( 
         m_str_T,
         std::back_inserter( v_T ), 
         []( std::map< std::string, T >::value_type const& v ){ return v.second; } );
-    
-    
-    
     for( std::map< std::string, T >::value_type const& v : m_str_T )
     {
         v_T.push_back( v.second );
     }
-    
 
 * * *
 
 ## Write the elements of a sequence to a stream
 
-    
-    
     std::ostringstream ostr;
     for( std::vector< T >::iterator i( begin( v_T ) ); i != end( v_T ); ++i )
     {
         ostr << *i << "\n";
     }
-    
-    
-    
     std::copy( 
         begin( v_T ), 
         end( v_T ), 
         std::ostream_iterator< T >( 
             ostr, 
             "\n" ) );
-    
-    
-    
     adobe::copy( 
         v_T, 
         std::ostream_iterator< T >( 
             ostr, 
             "\n" ) );
-    
-    
-    
     for( T const& t : v_T )
     {
         ostr << t << "\n";
     }
-    
 
 * * *
 
 ## Read a file into a string
 
-    
-    
     std::string fileAsString;
     std::ifstream istr( fileName.c_str(), std::ios::binary );
     do
@@ -633,42 +418,27 @@ argument
         if( istr )
             fileAsString.push_back( ch );
     } while( istr );
-    
-    
-    
     fileAsString = std::string(
         std::istreambuf_iterator< char >( istr ), 
         std::istreambuf_iterator< char >() );
-    
-    
-    
     std::copy( 
         std::istreambuf_iterator< char >( istr ), 
         std::istreambuf_iterator< char >(), 
         std::back_inserter( fileAsString ) );
-    
 
 * * *
 
 ## Transform each element of a vector by putting it through one function
 
-    
-    
     for( std::vector< T >::iterator i( begin( v_T ) ); i != end( v_T ); ++i )
     {
         v_int.push_back( f_int_T( *i ) );
     }
-    
-    
-    
     std::transform( 
         begin( v_T ), 
         end( v_T ), 
         std::back_inserter( v_int ), 
         f_int_T );
-    
-    
-    
     std::transform( 
         begin( v_T ), 
         end( v_T ), 
@@ -676,44 +446,29 @@ argument
         []( T const& t ) {
             return f_int_T( t );
         } );
-    
-    
-    
     adobe::transform( 
         v_T, 
         std::back_inserter( v_int ), 
         f_int_T );
-    
-    
-    
     adobe::transform( 
         v_T, 
         std::back_inserter( v_int ), 
         []( T const& t ) {
             return f_int_T( t );
         } );
-    
-    
-    
     for( T const& t : v_T )
     {
         v_int.push_back( f_int_T( t ) );
     }
-    
 
 * * *
 
 ## Transform each element of a vector by putting it through two functions
 
-    
-    
     for( std::vector< T >::iterator i( begin( v_T ) ); i != end( v_T ); ++i )
     {
         v_str.push_back( f_str_int( f_int_T( *i ) ) );
     }
-    
-    
-    
     std::transform( 
         begin( v_T ), 
         end( v_T ), 
@@ -723,9 +478,6 @@ argument
                 std::ptr_fun( f_str_int ), 
                 std::ptr_fun( f_int_T ) ), 
             _1 ) );
-    
-    
-    
     std::transform( 
         begin( v_T ), 
         end( v_T ), 
@@ -735,9 +487,6 @@ argument
             std::bind( 
                 f_int_T,
                 _1 ) ) );
-    
-    
-    
     std::transform( 
         begin( v_T ), 
         end( v_T ), 
@@ -745,9 +494,6 @@ argument
         []( T const& t ) {
             return f_str_int( f_int_T( t ) );
         } );
-    
-    
-    
     adobe::transform( 
         v_T, 
         std::back_inserter( v_str ), 
@@ -756,9 +502,6 @@ argument
                 std::ptr_fun( f_str_int ), 
                 std::ptr_fun( f_int_T ) ), 
             _1 ) );
-    
-    
-    
     adobe::transform( 
         v_T, 
         std::back_inserter( v_str ), 
@@ -767,37 +510,25 @@ argument
             std::bind( 
                 f_int_T,
                 _1 ) ) );
-    
-    
-    
     adobe::transform( 
         v_T, 
         std::back_inserter( v_str ), 
         []( T const& t ) {
             return f_str_int( f_int_T( t ) );
         } );
-    
-    
-    
     for( T const& t : v_T )
     {
         v_str.push_back( f_str_int( f_int_T( t ) ) );
     }
-    
 
 * * *
 
 ## Call a function with each value in a map with no additional arguments
 
-    
-    
     for( std::map< std::string, T >::iterator i( begin( m_str_T ) ); i != end( m_str_T ); ++i )
     {
         f_T( i->second );
     }
-    
-    
-    
     std::for_each( 
         begin( m_str_T ), 
         end( m_str_T ), 
@@ -806,18 +537,12 @@ argument
             std::bind( 
                 select2nd< std::map< std::string, T >::value_type >(), 
                 _1 ) ) );
-    
-    
-    
     std::for_each( 
         begin( m_str_T ), 
         end( m_str_T ), 
         []( std::map< std::string, T >::value_type const& v ) {
             f_T( v.second );
         } );
-    
-    
-    
     adobe::for_each( 
         m_str_T, 
         std::bind( 
@@ -825,22 +550,15 @@ argument
             std::bind(
                 select2nd< std::map< std::string, T >::value_type >(),
                 _1 ) ) );
-    
-    
-    
     adobe::for_each( 
         m_str_T, 
         []( std::map< std::string, T >::value_type const& v ) {
             f_T( v.second );
         } );
-    
-    
-    
     for( std::map< std::string, T >::value_type const& v : m_str_T )
     {
         f_T( v.second );
     }
-    
 
 * * *
 
@@ -848,15 +566,10 @@ argument
 
 (Only works when calling a const function)
 
-    
-    
     for( std::map< std::string, T >::iterator i( begin( m_str_T ) ); i != end( m_str_T ); ++i )
     {
         i->second.mf_int( 7 );
     }
-    
-    
-    
     std::for_each( 
         begin( m_str_T ), 
         end( m_str_T ), 
@@ -866,18 +579,12 @@ argument
                 &std::map< std::string, T >::value_type::second, 
                 _1 ),
              7 ) );
-    
-    
-    
     std::for_each( 
         begin( m_str_T ), 
         end( m_str_T ), 
         []( std::map< std::string, T >::value_type const& v ) {
             v.second.mf_int( 7 );
         } );
-    
-    
-    
     adobe::for_each( 
         m_str_T, 
         std::bind( 
@@ -886,22 +593,15 @@ argument
                 select2nd< std::map< std::string, T >::value_type >(),
                 _1 ),
             7 ) );
-    
-    
-    
     adobe::for_each( 
         m_str_T, 
         []( std::map< std::string, T >::value_type const& v ) {
             v.second.mf_int( 7 );
         } );
-    
-    
-    
     for( std::map< std::string, T >::value_type const& v : m_str_T )
     {
         v.second.mf_int( 7 );
     }
-    
 
 * * *
 
@@ -938,8 +638,6 @@ correspondance between input and output values.
 
 On the other hand, when I see code like this:
 
-    
-    
     std::transform( v_T.begin(), v_T.end(), std::back_inserter( v_str ), boost::bind( f_str_int, boost::bind( f_int_T, _1 ) ) );
 
 I have to work pretty hard to work out what's going on. My usual limit is one
@@ -998,8 +696,6 @@ C++ idioms_files/ir\(1\))
 
 ### Definitions required for the above code examples
 
-    
-    
     class T
     {
     public:
@@ -1044,9 +740,6 @@ C++ idioms_files/ir\(1\))
         { return x.second; }
     };
     
-    
-    
-
 * * *
 
 This page last modified 11 February 2014
