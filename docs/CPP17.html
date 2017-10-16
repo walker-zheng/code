@@ -1,0 +1,999 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-cn" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CPP17 · 个人日志</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="walker.zheng<mykulou@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="CppCoreGuidelines.html" />
+    
+    
+    <link rel="prev" href="CPP14.html" />
+    
+
+    
+        <link rel="shortcut icon" href='img/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='img/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='img/icon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="img/120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="img/180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://walker-zheng.github.io/wiki" target="_blank" class="custom-link">walker's日志</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="SUMMARY.html">
+            
+                <a href="SUMMARY.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="code.html">
+            
+                <a href="code.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CPP11.html">
+            
+                <a href="CPP11.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    CPP11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="CPP14.html">
+            
+                <a href="CPP14.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    CPP14
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="CPP17.html">
+            
+                <a href="CPP17.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    CPP17
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CppCoreGuidelines.html">
+            
+                <a href="CppCoreGuidelines.html">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    CppCoreGuidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    faq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Gif图.html">
+            
+                <a href="Gif图.html">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    Gif图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="git-tips.html">
+            
+                <a href="git-tips.html">
+            
+                    
+                        <b>1.10.</b>
+                    
+                    git-tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="git.html">
+            
+                <a href="git.html">
+            
+                    
+                        <b>1.11.</b>
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="google_C++_Sytle_Guide.html">
+            
+                <a href="google_C++_Sytle_Guide.html">
+            
+                    
+                        <b>1.12.</b>
+                    
+                    google_C++_Sytle_Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="Guidelines.html">
+            
+                <a href="Guidelines.html">
+            
+                    
+                        <b>1.13.</b>
+                    
+                    Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="idioms.html">
+            
+                <a href="idioms.html">
+            
+                    
+                        <b>1.14.</b>
+                    
+                    idioms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="iptv.html">
+            
+                <a href="iptv.html">
+            
+                    
+                        <b>1.15.</b>
+                    
+                    iptv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="markdown.html">
+            
+                <a href="markdown.html">
+            
+                    
+                        <b>1.16.</b>
+                    
+                    markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="modern-cpp-features.html">
+            
+                <a href="modern-cpp-features.html">
+            
+                    
+                        <b>1.17.</b>
+                    
+                    modern-cpp-features
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="python速查.html">
+            
+                <a href="python速查.html">
+            
+                    
+                        <b>1.18.</b>
+                    
+                    python速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="sourcetree.html">
+            
+                <a href="sourcetree.html">
+            
+                    
+                        <b>1.19.</b>
+                    
+                    sourcetree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="usefull_c++_idioms.html">
+            
+                <a href="usefull_c++_idioms.html">
+            
+                    
+                        <b>1.20.</b>
+                    
+                    usefull_c++_idioms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="work.html">
+            
+                <a href="work.html">
+            
+                    
+                        <b>1.21.</b>
+                    
+                    work
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="一天学会.html">
+            
+                <a href="一天学会.html">
+            
+                    
+                        <b>1.22.</b>
+                    
+                    一天学会
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="图解.html">
+            
+                <a href="图解.html">
+            
+                    
+                        <b>1.23.</b>
+                    
+                    图解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="工作截图.html">
+            
+                <a href="工作截图.html">
+            
+                    
+                        <b>1.24.</b>
+                    
+                    工作截图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="工具.html">
+            
+                <a href="工具.html">
+            
+                    
+                        <b>1.25.</b>
+                    
+                    工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="计划.html">
+            
+                <a href="计划.html">
+            
+                    
+                        <b>1.26.</b>
+                    
+                    计划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="配置.html">
+            
+                <a href="配置.html">
+            
+                    
+                        <b>1.27.</b>
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >CPP17</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#c17"><b>1.6.1. </b>C++17</a></li><ul><li><span class="title-icon "></span><a href="#overview"><b>1.6.1.1. </b>Overview</a></li><li><span class="title-icon "></span><a href="#c17-language-features"><b>1.6.1.2. </b>C++17 Language Features</a></li><ul><li><span class="title-icon "></span><a href="#template-argument-deduction-for-class-templates"><b>1.6.1.2.1. </b>Template argument deduction for class templates</a></li><li><span class="title-icon "></span><a href="#declaring-non-type-template-parameters-with-auto"><b>1.6.1.2.2. </b>Declaring non-type template parameters with auto</a></li><li><span class="title-icon "></span><a href="#folding-expressions"><b>1.6.1.2.3. </b>Folding expressions</a></li><li><span class="title-icon "></span><a href="#new-rules-for-auto-deduction-from-braced-init-list"><b>1.6.1.2.4. </b>New rules for auto deduction from braced-init-list</a></li><li><span class="title-icon "></span><a href="#constexpr-lambda"><b>1.6.1.2.5. </b>constexpr lambda</a></li><li><span class="title-icon "></span><a href="#lambda-capture-this-by-value"><b>1.6.1.2.6. </b>Lambda capture this by value</a></li><li><span class="title-icon "></span><a href="#inline-variables"><b>1.6.1.2.7. </b>Inline variables</a></li><li><span class="title-icon "></span><a href="#nested-namespaces"><b>1.6.1.2.8. </b>Nested namespaces</a></li><li><span class="title-icon "></span><a href="#structured-bindings"><b>1.6.1.2.9. </b>Structured bindings</a></li><li><span class="title-icon "></span><a href="#selection-statements-with-initializer"><b>1.6.1.2.10. </b>Selection statements with initializer</a></li><li><span class="title-icon "></span><a href="#constexpr-if"><b>1.6.1.2.11. </b>constexpr if</a></li><li><span class="title-icon "></span><a href="#utf-8-character-literals"><b>1.6.1.2.12. </b>UTF-8 Character Literals</a></li><li><span class="title-icon "></span><a href="#direct-list-initialization-of-enums"><b>1.6.1.2.13. </b>Direct List Initialization of Enums</a></li></ul><li><span class="title-icon "></span><a href="#c17-library-features"><b>1.6.1.3. </b>C++17 Library Features</a></li><ul><li><span class="title-icon "></span><a href="#stdvariant"><b>1.6.1.3.1. </b>std::variant</a></li><li><span class="title-icon "></span><a href="#stdoptional"><b>1.6.1.3.2. </b>std::optional</a></li><li><span class="title-icon "></span><a href="#stdany"><b>1.6.1.3.3. </b>std::any</a></li><li><span class="title-icon "></span><a href="#stdstringview"><b>1.6.1.3.4. </b>std::string_view</a></li><li><span class="title-icon "></span><a href="#stdinvoke"><b>1.6.1.3.5. </b>std::invoke</a></li><li><span class="title-icon "></span><a href="#stdapply"><b>1.6.1.3.6. </b>std::apply</a></li><li><span class="title-icon "></span><a href="#splicing-for-maps-and-sets"><b>1.6.1.3.7. </b>Splicing for maps and sets</a></li></ul><li><span class="title-icon "></span><a href="#acknowledgements"><b>1.6.1.4. </b>Acknowledgements</a></li><li><span class="title-icon "></span><a href="#author"><b>1.6.1.5. </b>Author</a></li><li><span class="title-icon "></span><a href="#content-contributors"><b>1.6.1.6. </b>Content Contributors</a></li><li><span class="title-icon "></span><a href="#license"><b>1.6.1.7. </b>License</a></li></ul></ul></div><a href="#c17" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="c17"><a name="c17" class="anchor-navigation-ex-anchor" href="#c17"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1. C++17</h1>
+<h2 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.1. Overview</h2>
+<p>Many of these descriptions and examples come from various resources (see <a href="#acknowledgements">Acknowledgements</a> section), summarized in my own words.</p>
+<p>C++17 includes the following new language features:</p>
+<ul>
+<li><a href="#template-argument-deduction-for-class-templates">template argument deduction for class templates</a></li>
+<li><a href="#declaring-non-type-template-parameters-with-auto">declaring non-type template parameters with auto</a></li>
+<li><a href="#folding-expressions">folding expressions</a></li>
+<li><a href="#new-rules-for-auto-deduction-from-braced-init-list">new rules for auto deduction from braced-init-list</a></li>
+<li><a href="#constexpr-lambda">constexpr lambda</a></li>
+<li><a href="#lambda-capture-this-by-value">lambda capture this by value</a></li>
+<li><a href="#inline-variables">inline variables</a></li>
+<li><a href="#nested-namespaces">nested namespaces</a></li>
+<li><a href="#structured-bindings">structured bindings</a></li>
+<li><a href="#selection-statements-with-initializer">selection statements with initializer</a></li>
+<li><a href="#constexpr-if">constexpr if</a></li>
+<li><a href="#utf-8-character-literals">utf-8 character literals</a></li>
+<li><a href="#direct-list-initialization-of-enums">direct-list-initialization of enums</a></li>
+</ul>
+<p>C++17 includes the following new library features:</p>
+<ul>
+<li><a href="#stdvariant">std::variant</a></li>
+<li><a href="#stdoptional">std::optional</a></li>
+<li><a href="#stdany">std::any</a></li>
+<li><a href="#stdstring_view">std::string_view</a></li>
+<li><a href="#stdinvoke">std::invoke</a></li>
+<li><a href="#stdapply">std::apply</a></li>
+<li><a href="#splicing-for-maps-and-sets">splicing for maps and sets</a></li>
+</ul>
+<h2 id="c17-language-features"><a name="c17-language-features" class="anchor-navigation-ex-anchor" href="#c17-language-features"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2. C++17 Language Features</h2>
+<h3 id="template-argument-deduction-for-class-templates"><a name="template-argument-deduction-for-class-templates" class="anchor-navigation-ex-anchor" href="#template-argument-deduction-for-class-templates"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.1. Template argument deduction for class templates</h3>
+<p>Automatic template argument deduction much like how it&apos;s done for functions, but now including class constructors.</p>
+<pre><code class="lang-c++">template &lt;typename T = float&gt;
+struct MyContainer {
+  T val;
+  MyContainer() : val() {}
+  MyContainer(T val) : val(val) {}
+  // ...
+};
+MyContainer c1{ 1 }; // OK MyContainer&lt;int&gt;
+MyContainer c2; // OK MyContainer&lt;float&gt;
+</code></pre>
+<h3 id="declaring-non-type-template-parameters-with-auto"><a name="declaring-non-type-template-parameters-with-auto" class="anchor-navigation-ex-anchor" href="#declaring-non-type-template-parameters-with-auto"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.2. Declaring non-type template parameters with auto</h3>
+<p>Following the deduction rules of <code>auto</code>, while respecting the non-type template parameter list of allowable types[*], template arguments can be deduced from the types of its arguments:</p>
+<pre><code class="lang-c++">template &lt;auto ... seq&gt;
+struct my_integer_sequence {
+  // Implementation here ...
+};
+
+// Explicitly pass type `int` as template argument.
+auto seq = std::integer_sequence&lt;int, 0, 1, 2&gt;();
+// Type is deduced to be `int`.
+auto seq2 = my_integer_sequence&lt;0, 1, 2&gt;();
+</code></pre>
+<p>* - For example, you cannot use a <code>double</code> as a template parameter type, which also makes this an invalid deduction using <code>auto</code>.</p>
+<h3 id="folding-expressions"><a name="folding-expressions" class="anchor-navigation-ex-anchor" href="#folding-expressions"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.3. Folding expressions</h3>
+<p>A fold expression performs a fold of a template parameter pack over a binary operator.</p>
+<ul>
+<li>An expression of the form <code>(... op e)</code> or <code>(e op ...)</code>, where <code>op</code> is a fold-operator and <code>e</code> is an unexpanded parameter pack, are called <em>unary folds</em>.</li>
+<li>An expression of the form <code>(e1 op ... op e2)</code>, where <code>op</code> are fold-operators, is called a <em>binary fold</em>. Either <code>e1</code> or <code>e2</code> are unexpanded parameter packs, but not both.<pre><code class="lang-c++">template&lt;typename... Args&gt;
+bool logicalAnd(Args... args) {
+  // Binary folding.
+  return (true &amp;&amp; ... &amp;&amp; args);
+}
+bool b = true;
+bool&amp; b2 = b;
+logicalAnd(b, b2, true); // == true
+</code></pre>
+<pre><code class="lang-c++">template&lt;typename... Args&gt;
+auto sum(Args... args) {
+  // Unary folding.
+  return (... + args);
+}
+sum(1.0, 2.0f, 3); // == 6.0
+</code></pre>
+</li>
+</ul>
+<h3 id="new-rules-for-auto-deduction-from-braced-init-list"><a name="new-rules-for-auto-deduction-from-braced-init-list" class="anchor-navigation-ex-anchor" href="#new-rules-for-auto-deduction-from-braced-init-list"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.4. New rules for auto deduction from braced-init-list</h3>
+<p>Changes to <code>auto</code> deduction when used with the uniform initialization syntax. Previously, <code>auto x{ 3 };</code> deduces a <code>std::initializer_list&lt;int&gt;</code>, which now deduces to <code>int</code>.</p>
+<pre><code class="lang-c++">auto x1{ 1, 2, 3 }; // error: not a single element
+auto x2 = { 1, 2, 3 }; // decltype(x2) is std::initializer_list&lt;int&gt;
+auto x3{ 3 }; // decltype(x3) is int
+auto x4{ 3.0 }; // decltype(x4) is double
+</code></pre>
+<h3 id="constexpr-lambda"><a name="constexpr-lambda" class="anchor-navigation-ex-anchor" href="#constexpr-lambda"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.5. constexpr lambda</h3>
+<p>Compile-time lambdas using <code>constexpr</code>.</p>
+<pre><code class="lang-c++">auto identity = [] (int n) constexpr { return n; };
+static_assert(identity(123) == 123);
+</code></pre>
+<pre><code class="lang-c++">constexpr auto add = [] (int x, int y) {
+  auto L = [=] { return x; };
+  auto R = [=] { return y; };
+  return [=] { return L() + R(); };
+};
+
+static_assert(add(1, 2)() == 3);
+</code></pre>
+<pre><code class="lang-c++">constexpr int addOne(int n) {
+  return [n] { return n + 1; }();
+}
+
+static_assert(addOne(1) == 2);
+</code></pre>
+<h3 id="lambda-capture-this-by-value"><a name="lambda-capture-this-by-value" class="anchor-navigation-ex-anchor" href="#lambda-capture-this-by-value"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.6. Lambda capture this by value</h3>
+<p>Capturing <code>this</code> in a lambda&apos;s environment was previously reference-only. An example of where this is problematic is asynchronous code using callbacks that require an object to be available, potentially past its lifetime. <code>*this</code> (C++17) will now make a copy of the current object, while <code>this</code> (C++11) continues to capture by reference.</p>
+<pre><code class="lang-c++">struct MyObj {
+  int value{ 123 };
+  auto getValueCopy() {
+    return [*this] { return value; };
+  }
+  auto getValueRef() {
+    return [this] { return value; };
+  }
+};
+MyObj mo;
+auto valueCopy = mo.getValueCopy();
+auto valueRef = mo.getValueRef();
+mo.value = 321;
+valueCopy(); // 123
+valueRef(); // 321
+</code></pre>
+<h3 id="inline-variables"><a name="inline-variables" class="anchor-navigation-ex-anchor" href="#inline-variables"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.7. Inline variables</h3>
+<p>The inline specifier can be applied to variables as well as to functions. A variable declared inline has the same semantics as a function declared inline.</p>
+<pre><code class="lang-c++">// Disassembly example using compiler explorer.
+struct S { int x; };
+inline S x1 = S{321}; // mov esi, dword ptr [x1]
+                      // x1: .long 321
+
+S x2 = S{123};        // mov eax, dword ptr [.L_ZZ4mainE2x2]
+                      // mov dword ptr [rbp - 8], eax
+                      // .L_ZZ4mainE2x2: .long 123
+</code></pre>
+<h3 id="nested-namespaces"><a name="nested-namespaces" class="anchor-navigation-ex-anchor" href="#nested-namespaces"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.8. Nested namespaces</h3>
+<p>Using the namespace resolution operator to create nested namespace definitions.</p>
+<pre><code class="lang-c++">namespace A {
+  namespace B {
+    namespace C {
+      int i;
+    }
+  }
+}
+// vs.
+namespace A::B::C {
+  int i;
+}
+</code></pre>
+<h3 id="structured-bindings"><a name="structured-bindings" class="anchor-navigation-ex-anchor" href="#structured-bindings"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.9. Structured bindings</h3>
+<p>A proposal for de-structuring initialization, that would allow writing <code>auto [ x, y, z ] = expr;</code> where the type of <code>expr</code> was a tuple-like object, whose elements would be bound to the variables <code>x</code>, <code>y</code>, and <code>z</code> (which this construct declares). <em>Tuple-like objects</em> include <code>std::tuple</code>, <code>std::pair</code>, <code>std::array</code>, and aggregate structures.</p>
+<pre><code class="lang-c++">using Coordinate = std::pair&lt;int, int&gt;;
+Coordinate origin() {
+  return Coordinate{0, 0};
+}
+
+const auto [ x, y ] = origin();
+x; // == 0
+y; // == 0
+</code></pre>
+<h3 id="selection-statements-with-initializer"><a name="selection-statements-with-initializer" class="anchor-navigation-ex-anchor" href="#selection-statements-with-initializer"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.10. Selection statements with initializer</h3>
+<p>New versions of the <code>if</code> and <code>switch</code> statements which simplify common code patterns and help users keep scopes tight.</p>
+<pre><code class="lang-c++">{
+  std::lock_guard&lt;std::mutex&gt; lk(mx);
+  if (v.empty()) v.push_back(val);
+}
+// vs.
+if (std::lock_guard&lt;std::mutex&gt; lk(mx); v.empty()) {
+  v.push_back(val);
+}
+</code></pre>
+<pre><code class="lang-c++">Foo gadget(args);
+switch (auto s = gadget.status()) {
+  case OK: gadget.zip(); break;
+  case Bad: throw BadFoo(s.message());
+}
+// vs.
+switch (Foo gadget(args); auto s = gadget.status()) {
+  case OK: gadget.zip(); break;
+  case Bad: throw BadFoo(s.message());
+}
+</code></pre>
+<h3 id="constexpr-if"><a name="constexpr-if" class="anchor-navigation-ex-anchor" href="#constexpr-if"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.11. constexpr if</h3>
+<p>Write code that is instantiated depending on a compile-time condition.</p>
+<pre><code class="lang-c++">template &lt;typename T&gt;
+constexpr bool isIntegral() {
+  if constexpr (std::is_integral&lt;T&gt;::value) {
+    return true;
+  } else {
+    return false;
+  }
+}
+static_assert(isIntegral&lt;int&gt;() == true);
+static_assert(isIntegral&lt;char&gt;() == true);
+static_assert(isIntegral&lt;double&gt;() == false);
+struct S {};
+static_assert(isIntegral&lt;S&gt;() == false);
+</code></pre>
+<h3 id="utf-8-character-literals"><a name="utf-8-character-literals" class="anchor-navigation-ex-anchor" href="#utf-8-character-literals"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.12. UTF-8 Character Literals</h3>
+<p>A character literal that begins with <code>u8</code> is a character literal of type <code>char</code>. The value of a UTF-8 character literal is equal to its ISO 10646 code point value.</p>
+<pre><code class="lang-c++">char x = u8&apos;x&apos;;
+</code></pre>
+<h3 id="direct-list-initialization-of-enums"><a name="direct-list-initialization-of-enums" class="anchor-navigation-ex-anchor" href="#direct-list-initialization-of-enums"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.2.13. Direct List Initialization of Enums</h3>
+<p>Enums can now be initialized using braced syntax.</p>
+<pre><code class="lang-c++">enum byte : unsigned char {};
+byte b{0}; // OK
+byte c{-1}; // ERROR
+byte d = byte{1}; // OK
+byte e = byte{256}; // ERROR
+</code></pre>
+<h2 id="c17-library-features"><a name="c17-library-features" class="anchor-navigation-ex-anchor" href="#c17-library-features"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.3. C++17 Library Features</h2>
+<h3 id="stdvariant"><a name="stdvariant" class="anchor-navigation-ex-anchor" href="#stdvariant"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.3.1. std::variant</h3>
+<p>The class template <code>std::variant</code> represents a type-safe <code>union</code>. An instance of <code>std::variant</code> at any given time holds a value of one of its alternative types (it&apos;s also possible for it to be valueless).</p>
+<pre><code class="lang-c++">std::variant&lt;int, double&gt; v{ 12 };
+std::get&lt;int&gt;(v); // == 12
+std::get&lt;0&gt;(v); // == 12
+v = 12.0;
+std::get&lt;double&gt;(v); // == 12.0
+std::get&lt;1&gt;(v); // == 12.0
+</code></pre>
+<h3 id="stdoptional"><a name="stdoptional" class="anchor-navigation-ex-anchor" href="#stdoptional"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.3.2. std::optional</h3>
+<p>The class template <code>std::optional</code> manages an optional contained value, i.e. a value that may or may not be present. A common use case for optional is the return value of a function that may fail.</p>
+<pre><code class="lang-c++">std::optional&lt;std::string&gt; create(bool b) {
+  if (b) {
+    return &quot;Godzilla&quot;;
+  } else {
+    return {};
+  }
+}
+
+create(false).value_or(&quot;empty&quot;); // == &quot;empty&quot;
+create(true).value(); // == &quot;Godzilla&quot;
+// optional-returning factory functions are usable as conditions of while and if
+if (auto str = create(true)) {
+  // ...
+}
+</code></pre>
+<h3 id="stdany"><a name="stdany" class="anchor-navigation-ex-anchor" href="#stdany"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.3.3. std::any</h3>
+<p>A type-safe container for single values of any type.</p>
+<pre><code class="lang-c++">std::any x{ 5 };
+x.has_value() // == true
+std::any_cast&lt;int&gt;(x) // == 5
+std::any_cast&lt;int&amp;&gt;(x) = 10;
+std::any_cast&lt;int&gt;(x) // == 10
+</code></pre>
+<h3 id="stdstringview"><a name="stdstringview" class="anchor-navigation-ex-anchor" href="#stdstringview"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.3.4. std::string_view</h3>
+<p>A non-owning reference to a string. Useful for providing an abstraction on top of strings (e.g. for parsing).</p>
+<pre><code class="lang-c++">// Regular strings.
+std::string_view cppstr{ &quot;foo&quot; };
+// Wide strings.
+std::wstring_view wcstr_v{ L&quot;baz&quot; };
+// Character arrays.
+char array[3] = {&apos;b&apos;, &apos;a&apos;, &apos;r&apos;};
+std::string_view array_v(array, sizeof array);
+</code></pre>
+<pre><code class="lang-c++">std::string str{ &quot;   trim me&quot; };
+std::string_view v{ str };
+v.remove_prefix(std::min(v.find_first_not_of(&quot; &quot;), v.size()));
+str; //  == &quot;   trim me&quot;
+v; // == &quot;trim me&quot;
+</code></pre>
+<h3 id="stdinvoke"><a name="stdinvoke" class="anchor-navigation-ex-anchor" href="#stdinvoke"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.3.5. std::invoke</h3>
+<p>Invoke a <code>Callable</code> object with parameters. Examples of <code>Callable</code> objects are <code>std::function</code> or <code>std::bind</code> where an object can be called similarly to a regular function.</p>
+<pre><code class="lang-c++">template &lt;typename Callable&gt;
+class Proxy {
+    Callable c;
+public:
+    Proxy(Callable c): c(c) {}
+    template &lt;class... Args&gt;
+    decltype(auto) operator()(Args&amp;&amp;... args) {
+        // ...
+        return std::invoke(c, std::forward&lt;Args&gt;(args)...);
+    }
+};
+auto add = [] (int x, int y) {
+  return x + y;
+};
+Proxy&lt;decltype(add)&gt; p{ add };
+p(1, 2); // == 3
+</code></pre>
+<h3 id="stdapply"><a name="stdapply" class="anchor-navigation-ex-anchor" href="#stdapply"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.3.6. std::apply</h3>
+<p>Invoke a <code>Callable</code> object with a tuple of arguments.</p>
+<pre><code class="lang-c++">auto add = [] (int x, int y) {
+  return x + y;
+};
+std::apply(add, std::make_tuple( 1, 2 )); // == 3
+</code></pre>
+<h3 id="splicing-for-maps-and-sets"><a name="splicing-for-maps-and-sets" class="anchor-navigation-ex-anchor" href="#splicing-for-maps-and-sets"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.3.7. Splicing for maps and sets</h3>
+<p>Moving nodes and merging containers without the overhead of expensive copies, moves, or heap allocations/deallocations.</p>
+<p>Moving elements from one map to another:</p>
+<pre><code class="lang-c++">std::map&lt;int, string&gt; src{ { 1, &quot;one&quot; }, { 2, &quot;two&quot; }, { 3, &quot;buckle my shoe&quot; } };
+std::map&lt;int, string&gt; dst{ { 3, &quot;three&quot; } };
+dst.insert(src.extract(src.find(1))); // Cheap remove and insert of { 1, &quot;one&quot; } from `src` to `dst`.
+dst.insert(src.extract(2)); // Cheap remove and insert of { 2, &quot;two&quot; } from `src` to `dst`.
+// dst == { { 1, &quot;one&quot; }, { 2, &quot;two&quot; }, { 3, &quot;three&quot; } };
+</code></pre>
+<p>Inserting an entire set:</p>
+<pre><code class="lang-c++">std::set&lt;int&gt; src{1, 3, 5};
+std::set&lt;int&gt; dst{2, 4, 5};
+dst.merge(src);
+// src == { 5 }
+// dst == { 1, 2, 3, 4, 5 }
+</code></pre>
+<p>Inserting elements which outlive the container:</p>
+<pre><code class="lang-c++">auto elementFactory() {
+  std::set&lt;...&gt; s;
+  s.emplace(...);
+  return s.extract(s.begin());
+}
+s2.insert(elementFactory());
+</code></pre>
+<p>Changing the key of a map element:</p>
+<pre><code class="lang-c++">std::map&lt;int, string&gt; m{ { 1, &quot;one&quot; }, { 2, &quot;two&quot; }, { 3, &quot;three&quot; } };
+auto e = m.extract(2);
+e.key() = 4;
+m.insert(std::move(e));
+// m == { { 1, &quot;one&quot; }, { 3, &quot;three&quot; }, { 4, &quot;two&quot; } }
+</code></pre>
+<h2 id="acknowledgements"><a name="acknowledgements" class="anchor-navigation-ex-anchor" href="#acknowledgements"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.4. Acknowledgements</h2>
+<ul>
+<li><a href="http://en.cppreference.com/w/cpp" target="_blank">cppreference</a> - especially useful for finding examples and documentation of new library features.</li>
+<li><a href="http://thbecker.net/articles/rvalue_references/section_01.html" target="_blank">C++ Rvalue References Explained</a> - a great introduction I used to understand rvalue references, perfect forwarding, and move semantics.</li>
+<li><a href="http://clang.llvm.org/cxx_status.html" target="_blank">clang</a> and <a href="https://gcc.gnu.org/projects/cxx-status.html" target="_blank">gcc</a>&apos;s standards support pages. Also included here are the proposals for language/library features that I used to help find a description of, what it&apos;s meant to fix, and some examples.</li>
+<li><a href="https://godbolt.org/" target="_blank">Compiler explorer</a></li>
+<li><a href="https://www.amazon.com/Effective-Modern-Specific-Ways-Improve/dp/1491903996" target="_blank">Scott Meyers&apos; Effective Modern C++</a> - highly recommended book!</li>
+<li><a href="https://www.youtube.com/channel/UCxHAlbZQNFU2LgEtiqd2Maw" target="_blank">Jason Turner&apos;s C++ Weekly</a> - nice collection of C++-related videos.</li>
+<li><a href="http://stackoverflow.com/questions/7027523/what-can-i-do-with-a-moved-from-object" target="_blank">What can I do with a moved-from object?</a></li>
+<li><a href="http://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto" target="_blank">What are some uses of decltype(auto)?</a></li>
+<li>And many more SO posts I&apos;m forgetting...</li>
+</ul>
+<h2 id="author"><a name="author" class="anchor-navigation-ex-anchor" href="#author"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.5. Author</h2>
+<p>Anthony Calandra</p>
+<h2 id="content-contributors"><a name="content-contributors" class="anchor-navigation-ex-anchor" href="#content-contributors"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.6. Content Contributors</h2>
+<p>See: <a href="https://github.com/AnthonyCalandra/modern-cpp-features/graphs/contributors" target="_blank">https://github.com/AnthonyCalandra/modern-cpp-features/graphs/contributors</a></p>
+<h2 id="license"><a name="license" class="anchor-navigation-ex-anchor" href="#license"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1.7. License</h2>
+<p>MIT</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; walker.zheng 2017 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4FEE;&#x6539;:
+2017-10-16 16:37:45
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CPP14.html" class="navigation navigation-prev " aria-label="Previous page: CPP14">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="CppCoreGuidelines.html" class="navigation navigation-next " aria-label="Next page: CppCoreGuidelines">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CPP17","level":"1.6","depth":1,"next":{"title":"CppCoreGuidelines","level":"1.7","depth":1,"path":"CppCoreGuidelines.md","ref":"CppCoreGuidelines.md","articles":[]},"previous":{"title":"CPP14","level":"1.5","depth":1,"path":"CPP14.md","ref":"CPP14.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","-highlight","search-plus","fontsettings","tbfed-pagefooter","splitter","advanced-emoji","emphasize","anchor-navigation-ex","favicon","todo"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy walker.zheng 2017","modify_label":"最近修改:","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"favicon":{"shortcut":"img/favicon.ico","bookmark":"img/favicon.ico","appleTouch":"img/icon.png","appleTouchMore":{"120x120":"img/120.png","180x180":"img/180.png"}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"walker.zheng<mykulou@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人日志","language":"zh-cn","output.name":"site","links":{"sidebar":{"walker's日志":"http://walker-zheng.github.io/wiki"}},"gitbook":"*","description":"记录工作"},"file":{"path":"CPP17.md","mtime":"2017-10-16T07:37:45.348Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-16T08:19:57.581Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+
