@@ -327,6 +327,15 @@ int main()
         }
     })"_json;
     // std::cout << dev.dump(4) << std::endl;
+    nlohmann::json hello = R"({
+        "boolean": true,
+        "integer": 5,
+        "floatpoint": 3.0,
+        "doublepoint": 4.0,
+        "str": "hehe",
+        "v_str": [ "哇哈哈", "哟呵呵" ]
+    })"_json;
+    std::cout << hello.dump(4) << std::endl;
     std::list<std::string> newdump = to_redis(dev, "");
     std::vector<std::string> other(newdump.begin(), newdump.end());
     int count{0};
