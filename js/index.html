@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>game</title>
+  <style media="screen">
+    canvas {
+      border: 1px black solid;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="id-canvas" width="800" height="600"></canvas>
+  <script>
+    var log = console.log.bind(console)
+    var toLeft = false
+    var toRight = false
+    var faster = false
+    var slower = false
+    var ballSpeed = 5
+    var paddleSpeed = 10
+    var blockWidth = 33
+    var blockHeight = 18
+    var BreakCount = 0
+    var isWin = false
+    var canvas = document.querySelector('#id-canvas')
+    var context = canvas.getContext('2d')
+
+    var imageFromPath = function(path) {
+      var img = new Image()
+      img.src = path
+      return img
+    }
+    var Ball = function() {
+      var image = imageFromPath('ball.png')
+      // width/height 77 20
+      var o = {
+        x: canvas.width / 2,
+        y: canvas.height / 10 * 9,
+        speed: ballSpeed,
+        speedX: 1,
+        speedY: -1,
+        img: image,
+      }
+      o.fly = function() {
+        if (o.speedX < o.speedY) {
+          log('↙')
+        } else if (o.speedX > o.speedY) {
+          log('↗')
+        } else if (o.speedX > 0) {
+          log('↘')
+        } else {
+          log('↖')
+        }
+      }
+      o.draw = function() {
+        //if (o.y > canvas.height){alert('game over, refresh to retry!')}
+        //else
+        {
+          if (isWin) {
+            o.speed = 0
+          } else {
+            if (o.x <= 0 || o.x + o.img.width >= canvas.width) {
+              o.speedX *= -1
+            }
+            if (o.y <= 0 ||
+              o.y >= canvas.height
+            ) {
+              o.speedY *= -1
+            }
+            if (o.x < 0) o.x = 0
+            if (o.x + o.img.width > canvas.width) o.x = canvas.width - o.img.width
+            if (o.y < 0) o.y = 0
+            o.x += o.speedX * o.speed
+            o.y += o.speedY * o.speed
+            if (faster) {
+              o.speed += 0.2
+              if (o.speed > 24) {o.speed = 24}
+            } else if (slower) {
+              o.speed -= 0.2
+              if (o.speed < -24) {o.speed = -24}
+            }
+            context.drawImage(o.img, o.x, o.y)
+            //o.fly()
+          }
+        }
+      }
+      return o
+    }
+    var Paddle = function(ball) {
+      var image = imageFromPath('paddle.png')
+      // width/height 77 20
+      var _x = canvas.width / 2 - 77 / 2
+      var _y = canvas.height * 9 / 10 + 20
+      var o = {
+        x: _x,
+        y: _y,
+        speed: paddleSpeed,
+        img: image,
+      }
+      o.isHit = function() {
+        return Math.abs(ball.y + ball.img.height / 2 - o.y - o.img.height / 2) < (o.img.height + ball.img.height) / 2 &&
+          Math.abs(ball.x + ball.img.width / 2 - o.x - o.img.width / 2) < (o.img.width + ball.img.width) / 2
+      }
+      o.update = function() {
+        if (o.isHit()) {
+          ball.speedY *= -1
+          if (toLeft == true) {
+            ball.x -= ball.img.width
+          }
+          if (toRight == true) {
+            ball.x += ball.img.width
+          }
+        }
+        if (toLeft == true) {
+          o.x -= o.speed
+          if (o.x < 0) o.x = 0
+        } else if (toRight == true) {
+          if (o.x + o.img.width + o.speed <= canvas.width)
+            o.x += o.speed
+        }
+      }
+      o.draw = function() {
+        o.update()
+        context.drawImage(o.img, o.x, o.y)
+      }
+      return o
+    }
+    var Block = function(ball, x, y) {
+      var image = imageFromPath('block.png')
+      // width/height 33 18
+      var o = {
+        x: x,
+        y: y,
+        alive: true,
+        img: image,
+      }
+      o.draw = function() {
+        if (o.alive) {
+          o.update()
+          context.drawImage(o.img, o.x, o.y)
+          return true
+        }
+        return false
+      }
+      o.isHit = function() {
+        return Math.abs(ball.y + ball.img.height / 2 - o.y - o.img.height / 2) < (o.img.height + ball.img.height) / 2 &&
+          Math.abs(ball.x + ball.img.width / 2 - o.x - o.img.width / 2) < (o.img.width + ball.img.width) / 2
+      }
+      o.isHitX = function() {
+        var _x = (o.img.height + ball.img.height) / 2 - Math.abs(ball.y + ball.img.height / 2 - o.y - o.img.height / 2) / ball.img.height
+        var _y = (o.img.width + ball.img.width) / 2 - Math.abs(ball.x + ball.img.width / 2 - o.x - o.img.width / 2) / ball.img.width
+        //log(_x, _y)
+        return (Math.abs(ball.y + ball.img.height / 2 - o.y - o.img.height / 2) - (o.img.height + ball.img.height) / 2) <
+          (Math.abs(ball.x + ball.img.width / 2 - o.x - o.img.width / 2) - (o.img.width + ball.img.width) / 2)
+      }
+      o.update = function() {
+        if (o.isHit()) {
+          BreakCount++
+          o.alive = false
+          if (o.isHitX()) {
+            ball.speedX *= -1
+          } else {
+            ball.speedY *= -1
+          }
+        }
+      }
+      return o
+    }
+    var __main = function() {
+      // elem
+      var ball = Ball()
+      var paddle = Paddle(ball)
+      var bricks = new Array()
+      bricksCount = 0
+      for (var i = 0; i < canvas.width / (blockWidth + 5) - 1; i++) {
+        bricks[i] = new Array()
+        for (var j = 0; j < canvas.height / (blockHeight + 3) - 8; j++) {
+          bricks[i][j] = Block(ball, i * (blockWidth + 5), j * (blockHeight + 3))
+          bricksCount++
+        }
+      }
+      // events
+      window.addEventListener('keydown', function(event) {
+        if (event.key == 'a') {
+          toLeft = true
+        } else if (event.key == 'd') {
+          toRight = true
+        } else if (event.key == 'w') {
+          faster = true
+        } else if (event.key == 's') {
+          slower = true
+        }
+      })
+      window.addEventListener('keyup', function(event) {
+        if (event.key == 'a') {
+          toLeft = false
+        } else if (event.key == 'd') {
+          toRight = false
+        } else if (event.key == 'w') {
+          faster = false
+        } else if (event.key == 's') {
+          slower = false
+        }
+      })
+      setInterval(function() {
+        // draw
+        if (BreakCount == bricksCount) {
+          alert('Oh yeah! You win!')
+          BreakCount++
+          isWin = true
+          return
+        }
+        context.clearRect(0, 0, canvas.width, canvas.height)
+        paddle.draw()
+        ball.draw()
+        bricks.forEach(function(value) {
+          value.forEach(function(b) {
+            b.draw()
+          })
+        })
+      }, 1000 / 60)
+    }
+    __main()
+  </script>
+</body>
+
+</html>
