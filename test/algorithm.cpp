@@ -4,6 +4,7 @@
 #include <iterator>
 #include <iostream>
 #include <functional>
+#include <string>
 
 struct DivisibleBy
 {
@@ -63,7 +64,7 @@ int test_none_modify()
         std::cout << "true";
     }
     std::cout << "\n\tany >=20:\t";
-    if (std::any_of(v.cbegin(), v.cend(), [](int i){ return i >= 20; })) {
+    if (std::any_of(v.cbegin(), v.cend(), [=](int i){ return i >= 20; })) {
         std::cout << "true";
     }
     std::cout << "\n\tany div by 7:\t";
