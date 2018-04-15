@@ -191,10 +191,45 @@ int test_arithmetic_op()
 	results.clear();
 
 }
-
+enum class Sex {
+    Male_E,
+    Female_E
+};
+enum class CardType {
+    Silver_E,
+    Golden_E
+};
+std::string today() { return std::string("2018-03-08"); }
+std::string day38() { return std::string("2018-03-08"); }
+struct Person {
+    Sex sex;
+    CardType card_type; 
+    Person(Sex s, CardType ct) : sex(s), card_type(ct) {}
+};
+int discount_38_female_gold(Sex sex, CardType card_type)
+{
+	std::vector<bool> rules;
+	rules.push_back(sex == Sex::Female_E);
+	rules.push_back(today() == day38());
+	rules.push_back(card_type == CardType::Golden_E);
+    return std::all_of(rules.begin(), rules.end(), [](auto el) { return el == true; });
+}
+int discount_38_female_gold(Person p)
+{
+    return discount_38_female_gold(p.sex, p.card_type);
+}
 int test_logical_op()
 {
 	std::cout << "test_logical_op:\n\t";
+    Person lily(Sex::Female_E, CardType::Silver_E);
+    Person lucy(Sex::Female_E, CardType::Golden_E);
+    Person jack(Sex::Male_E, CardType::Silver_E);
+    Person tom(Sex::Male_E, CardType::Golden_E);
+    std::cout << discount_38_female_gold(lily) << std::endl;
+    std::cout << discount_38_female_gold(lucy) << std::endl;
+    std::cout << discount_38_female_gold(jack) << std::endl;
+    std::cout << discount_38_female_gold(tom) << std::endl;
+    std::cout << discount_38_female_gold(Sex::Female_E, CardType::Golden_E) << std::endl;
 	std::cout << "\n";
 }
 int test_comparison_op()

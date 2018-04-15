@@ -44,6 +44,22 @@
 <node CREATED="1523453612803" ID="ID_493210479" MODIFIED="1523453614700" TEXT="v-model">
 <node CREATED="1523453628034" ID="ID_289736995" MODIFIED="1523453631450" TEXT="&lt;div id=&quot;app&quot;&gt;&#xa;    &lt;p&gt;{{ message }}&lt;/p&gt;&#xa;    &lt;input type=&quot;text&quot; v-model=&quot;message&quot;/&gt;&#xa;&lt;/div&gt;"/>
 </node>
+<node CREATED="1523526679939" ID="ID_1805408204" MODIFIED="1523526680981" TEXT="&#x51e0;&#x79cd;&#x5b9e;&#x73b0;&#x53cc;&#x5411;&#x7ed1;&#x5b9a;&#x7684;&#x505a;&#x6cd5;">
+<node CREATED="1523526690202" ID="ID_805470697" MODIFIED="1523526691068" TEXT="&#x53d1;&#x5e03;&#x8005;-&#x8ba2;&#x9605;&#x8005;&#x6a21;&#x5f0f;&#xff08;backbone.js&#xff09;  "/>
+<node CREATED="1523526695785" ID="ID_73614851" MODIFIED="1523526696460" TEXT="&#x810f;&#x503c;&#x68c0;&#x67e5;&#xff08;angular.js&#xff09; "/>
+<node CREATED="1523526701120" ID="ID_204541384" MODIFIED="1523526703208" TEXT="&#x6570;&#x636e;&#x52ab;&#x6301;&#xff08;vue.js&#xff09;"/>
+<node CREATED="1523526855693" ID="ID_917659421" MODIFIED="1523526855693">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="vue_1522005562666786127.jpeg" />
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
 </node>
 <node CREATED="1523453447769" ID="ID_712381289" MODIFIED="1523453657148" TEXT="2. &#x5e38;&#x7528;&#x6307;&#x4ee4;">
 <node CREATED="1523453452242" ID="ID_954640215" MODIFIED="1523453506048" TEXT="v-if&#x6307;&#x4ee4;&#xa;v-show&#x6307;&#x4ee4;&#xa;v-else&#x6307;&#x4ee4;&#xa;v-for&#x6307;&#x4ee4;&#xa;v-bind&#x6307;&#x4ee4;&#xa;v-on&#x6307;&#x4ee4;">
@@ -115,8 +131,7 @@
   <body>
     <img src="vue_1182581268497228611.jpeg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
