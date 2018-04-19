@@ -1,4 +1,4 @@
-* [日志列表](README.md)
+* [日志列表](/)
   * [代码片段](code.md)
   * [git-tips](git-tips.md)
   * [命令](work.md)
@@ -13,4 +13,3 @@
   * [CPP14](CPP14.md)
   * [CPP17](CPP17.md)
   * [REST Guidelines](Guidelines.md)
-  
