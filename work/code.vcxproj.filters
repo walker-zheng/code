@@ -21,18 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="blocking_queue.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="lambda.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ref.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="thread.cpp">
       <Filter>源文件</Filter>
     </ClCompile>

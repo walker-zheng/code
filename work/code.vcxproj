@@ -514,10 +514,6 @@
     <ClCompile Include="..\git\recipes\tpc\TcpStream.cc" />
     <ClCompile Include="..\git\recipes\tpc\ttcp.cc" />
     <ClCompile Include="..\git\recipes\utility\cwc.cc" />
-    <ClCompile Include="blocking_queue.cpp" />
-    <ClCompile Include="lambda.cpp" />
-    <ClCompile Include="ref.cpp" />
-    <ClCompile Include="test.cpp" />
     <ClCompile Include="thread.cpp" />
   </ItemGroup>
   <ItemGroup>

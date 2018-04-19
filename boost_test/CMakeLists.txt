@@ -4,4 +4,4 @@ project (boost_test)
 include_directories(${BOOST_INCLUDE_DIR})
 
 
-add_executable(boost_test src/main.cpp)
+add_executable(boost_test src/main.cpp src/lambda_test.cpp src/regex_test.cpp)
