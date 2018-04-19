@@ -1,6 +1,5 @@
 ![哟](img/rock-sin.gif)
-# Rock it!
-> :memo: 工作日志 
+> :memo: 工作日志 Rock it! 
 
 ```mermaid
 sequenceDiagram
