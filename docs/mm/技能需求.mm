@@ -2666,7 +2666,7 @@
 <node CREATED="1397048056065" ID="ID_1655606688" MODIFIED="1397048061003" TEXT="&#x8fd1;&#x4f3c;&#x7b97;&#x6cd5;"/>
 </node>
 </node>
-<node CREATED="1395319819901" FOLDED="true" ID="ID_1478197136" MODIFIED="1521626631615" POSITION="right" TEXT="&#x6a21;&#x5f0f;">
+<node CREATED="1395319819901" ID="ID_1478197136" MODIFIED="1523773726269" POSITION="right" TEXT="&#x6a21;&#x5f0f;">
 <font NAME="Microsoft YaHei UI" SIZE="12"/>
 <node CREATED="1395912908351" FOLDED="true" ID="ID_1786433226" MODIFIED="1521626630930" TEXT="&#x4f53;&#x7cfb;&#x67b6;&#x6784;&#x7ea7;">
 <node CREATED="1395912916647" FOLDED="true" ID="ID_1606992979" MODIFIED="1521626630930" TEXT="&#x5206;&#x5c42;Layered">
@@ -2726,15 +2726,15 @@
 <node CREATED="1395913173763" ID="ID_976446398" MODIFIED="1395913198280" TEXT="&#x62bd;&#x8c61;&#x673a;&#x5668;abstract machine"/>
 <node CREATED="1395913199935" ID="ID_907869425" MODIFIED="1395913206405" TEXT="C/S"/>
 </node>
-<node CREATED="1395913715426" FOLDED="true" ID="ID_1883195492" MODIFIED="1521626630930" TEXT="&#x8bbe;&#x8ba1;&#x6a21;&#x5f0f;">
+<node CREATED="1395913715426" ID="ID_1883195492" MODIFIED="1523773734801" TEXT="&#x8bbe;&#x8ba1;&#x6a21;&#x5f0f;">
 <node CREATED="1395323040459" ID="ID_879769981" MODIFIED="1395913727314" TEXT="&#x89c2;&#x5bdf;&#x8005;">
 <font NAME="Microsoft YaHei UI" SIZE="12"/>
 </node>
-<node CREATED="1395913733554" FOLDED="true" ID="ID_1038423835" MODIFIED="1521626630930" TEXT="&#x53c2;&#x4e0e;&#x8005;/&#x4f9b;&#x5e94;&#x5546; actor-supplier">
+<node CREATED="1395913733554" ID="ID_1038423835" MODIFIED="1523773737285" TEXT="&#x53c2;&#x4e0e;&#x8005;/&#x4f9b;&#x5e94;&#x5546; actor-supplier">
 <node CREATED="1395913758450" ID="ID_1748722041" MODIFIED="1395913832293" TEXT="&#x9002;&#x7528;&#xff1a;&#x590d;&#x6742;&#x4efb;&#x52a1;&#x53ef;&#x4ee5;&#x5212;&#x5206;&#x4e3a;&#x591a;&#x4e2a;&#x7b80;&#x5355;&#x7684;&#x3001;&#x72ec;&#x7acb;&#x4e8e;&#x4e0a;&#x4e0b;&#x6587;&#x7684;&#x5b50;&#x4efb;&#x52a1;"/>
 <node CREATED="1395913838994" ID="ID_1906001318" MODIFIED="1395913866605" TEXT="&#x53d8;&#x4f53;&#xff1a;actor-agent-supplier &#x53c2;&#x4e0e;&#x8005;-&#x4ee3;&#x7406;&#x4eba;-&#x4f9b;&#x5e94;&#x5546;"/>
 </node>
-<node CREATED="1395913869548" FOLDED="true" ID="ID_1934706923" MODIFIED="1521626630930" TEXT="&#x590d;&#x5408;&#x6210;&#x5206; composite-part">
+<node CREATED="1395913869548" ID="ID_1934706923" MODIFIED="1523774123270" TEXT="&#x590d;&#x5408;&#x6210;&#x5206; composite-part">
 <node CREATED="1395913927293" ID="ID_105143410" MODIFIED="1395914048781" TEXT="&#x9002;&#x7528;&#xff1a;&#x7528;&#x4e8e;&#x4fdd;&#x62a4;&#x7ec4;&#x4ef6;&#xff0c;&#x53ef;&#x4ee5;&#x7528;&#x591a;&#x4e2a;&#x7ec4;&#x4ef6;&#x5408;&#x6210;&#x4e00;&#x9879;&#x590d;&#x6742;&#x529f;&#x80fd;&#xff0c;&#x6216;&#x5c06;&#x534f;&#x4f5c;&#x7684;&#x7ec4;&#x4ef6;&#x770b;&#x505a;&#x7cfb;&#x7edf;&#x7684;&#x4e00;&#x4e2a;&#x903b;&#x8f91;&#x5355;&#x5143;"/>
 <node CREATED="1395913894320" ID="ID_1615674572" MODIFIED="1395913925046" TEXT="&#x53d8;&#x4f53;&#xff1a;wrapper &#x5c01;&#x88c5;&#x5668;"/>
 </node>
@@ -2784,7 +2784,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1396747917340" FOLDED="true" ID="ID_1891641609" MODIFIED="1521626630930" TEXT="&#x8bbe;&#x8ba1;&#x6a21;&#x5f0f;&#x5206;&#x7c7b;">
+<node CREATED="1396747917340" ID="ID_1891641609" MODIFIED="1523774144739" TEXT="&#x8bbe;&#x8ba1;&#x6a21;&#x5f0f;&#x5206;&#x7c7b;">
 <node CREATED="1396747934566" ID="ID_1078025710" MODIFIED="1396750937316">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -3036,7 +3036,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1397127579531" FOLDED="true" ID="ID_152806910" MODIFIED="1521626630930" TEXT="UML">
+<node CREATED="1397127579531" FOLDED="true" ID="ID_152806910" MODIFIED="1523773733270" TEXT="UML">
 <node CREATED="1397127531603" FOLDED="true" ID="ID_1057825160" MODIFIED="1521626630930" TEXT="&#x5bf9;&#x8c61;&#x548c;&#x7c7b;&#x4e4b;&#x95f4;&#x76f8;&#x4e92;&#x5173;&#x7cfb;">
 <node CREATED="1397127535549" ID="ID_1100861139" MODIFIED="1397127568678" TEXT="&#x4f9d;&#x8d56;&#xff08;Dependency&#xff09;&#xff1a;&#x5143;&#x7d20;A&#x7684;&#x53d8;&#x5316;&#x4f1a;&#x5f71;&#x54cd;&#x5143;&#x7d20;B&#xff0c;&#x4f46;&#x53cd;&#x4e4b;&#x4e0d;&#x6210;&#x7acb;&#xff0c;&#x90a3;&#x4e48;B&#x548c;A&#x7684;&#x5173;&#x7cfb;&#x662f;&#x4f9d;&#x8d56;&#x5173;&#x7cfb;&#xff0c;B&#x4f9d;&#x8d56;A&#xff1b;&#x7c7b;&#x5c5e;&#x5173;&#x7cfb;&#x548c;&#x5b9e;&#x73b0;&#x5173;&#x7cfb;&#x5728;&#x8bed;&#x4e49;&#x4e0a;&#x8bb2;&#x4e5f;&#x662f;&#x4f9d;&#x8d56;&#x5173;&#x7cfb;&#xff0c;&#x4f46;&#x7531;&#x4e8e;&#x5176;&#x6709;&#x66f4;&#x7279;&#x6b8a;&#x7684;&#x7528;&#x9014;&#xff0c;&#x6240;&#x4ee5;&#x88ab;&#x5355;&#x72ec;&#x63cf;&#x8ff0;&#x3002;uml&#x4e2d;&#x7528;&#x5e26;&#x7bad;&#x5934;&#x7684;&#x865a;&#x7ebf;&#x8868;&#x793a;Dependency&#x5173;&#x7cfb;&#xff0c;&#x7bad;&#x5934;&#x6307;&#x5411;&#x88ab;&#x4f9d;&#x8d56;&#x5143;&#x7d20;&#x3002;     "/>
 <node CREATED="1397127568689" ID="ID_1028077882" MODIFIED="1397127568690" TEXT="&#x6cdb;&#x5316;&#xff08;Generalization&#xff09;&#xff1a;&#x901a;&#x5e38;&#x6240;&#x8bf4;&#x7684;&#x7ee7;&#x627f;&#xff08;&#x7279;&#x6b8a;&#x4e2a;&#x4f53; is kind of &#x4e00;&#x822c;&#x4e2a;&#x4f53;&#xff09;&#x5173;&#x7cfb;&#xff0c;&#x4e0d;&#x5fc5;&#x591a;&#x89e3;&#x91ca;&#x4e86;&#x3002;uml&#x4e2d;&#x7528;&#x5e26;&#x7a7a;&#x5fc3;&#x7bad;&#x5934;&#x7684;&#x5b9e;&#x7ebf;&#x7ebf;&#x8868;&#x793a;Generalization&#x5173;&#x7cfb;&#xff0c;&#x7bad;&#x5934;&#x6307;&#x5411;&#x4e00;&#x822c;&#x4e2a;&#x4f53;&#x3002;     "/>
