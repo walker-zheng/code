@@ -1,9 +1,0 @@
-# -*- org -*-
-# -*- coding:utf-8 -*-
-
-# Time-stamp: <2016-07-22 10:12:10 walker-zheng(mykulou@gmail.com)>
-#+SETUPFILE: theme-bigblow-local.setup
-
-* org-mode学习
-** 
-* [[file:index.html][wiki]]
