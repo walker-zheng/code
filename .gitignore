@@ -20,3 +20,5 @@ docs/_book
 docs/node_modules
 boost_test/.vs/
 boost_test/build/
+*.db-shm
+*.db-wal
