@@ -14,10 +14,55 @@ void quicksort(ForwardIt first, ForwardIt last)
     quicksort(first, middle1);
     quicksort(middle2, last);
 }
-
+struct Print
+{
+    template <typename T>
+    static T && apply(T && v)
+    {
+        for(auto & i : v) {
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
+        return v;
+    }
+} print;
+struct Sort
+{
+    template <typename T>
+    static T && apply(T && v)
+    {
+        std::sort(v.begin(), v.end());
+        return v;
+    }
+} sort;
+struct Reverse
+{
+    template <typename T>
+    static T && apply(T && v)
+    {
+        std::reverse(v.begin(), v.end());
+        return v;
+    }
+} reverse;
+struct Double
+{
+    template <typename T>
+    static T && apply(T && v)
+    {
+        std::for_each(v.begin(), v.end(), [&](auto & e) { e = e * 2; });
+        return v;
+    }
+} double_;
+template <typename T, typename U>
+T && operator|(T && v, U fn)
+{
+    U::apply(v);
+    return v;
+}
 int main()
 {
-    std::vector<int> v = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    std::vector<int> v = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    v | double_ | reverse | print;
     std::cout << "Original vector:\n    ";
     for(int elem : v) {std::cout << elem << ' ';}
     auto it = std::partition(v.begin(), v.end(), [](int i) {return i % 2 == 0;});

@@ -22,3 +22,8 @@ boost_test/.vs/
 boost_test/build/
 *.db-shm
 *.db-wal
+*.iobj
+*.ipdb
+*.tlog
+*.class
+*.opendb

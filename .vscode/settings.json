@@ -74,7 +74,13 @@
         "xmemory": "cpp",
         "xmemory0": "cpp",
         "xstddef": "cpp",
-        "xtr1common": "cpp"
+        "xtr1common": "cpp",
+        "codecvt": "cpp",
+        "string_view": "cpp",
+        "csignal": "cpp",
+        "cstdarg": "cpp",
+        "cwctype": "cpp",
+        "*.ipp": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled"
 }

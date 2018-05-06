@@ -17,6 +17,7 @@ int sum_all(int n)
     }
     return sum;
 }
+
 int main()
 {
     std::vector<std::future<int>> fut;
