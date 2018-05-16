@@ -80,7 +80,8 @@
         "csignal": "cpp",
         "cstdarg": "cpp",
         "cwctype": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "nn.h": "c"
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled"
 }

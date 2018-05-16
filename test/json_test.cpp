@@ -1,7 +1,8 @@
-#include "json.hpp"
+#include <nlohmann/json.hpp>
 #include <map>
 #include <list>
 #include <vector>
+#include <iostream>
 
 struct FacilityInfo
 {
@@ -38,10 +39,10 @@ struct AlarmData
 };
 struct TTaskInfo
 {
-    int                     taskid;
-    AlarmData    alarmInfo;
+    int taskid;
+    AlarmData alarmInfo;
 };
-void from_json(const nlohmann::json & j, FacilityInfo & data)
+void from_json(const nlohmann::json &j, FacilityInfo &data)
 {
     data = FacilityInfo{};
     data.facilityId = j.at("facilityId").get<int>();
@@ -62,39 +63,37 @@ void from_json(const nlohmann::json & j, FacilityInfo & data)
     data.dvrId = j.at("dvrId").get<int>();
     data.channelNo = j.at("channelNo").get<int>();
     std::vector<std::string> tmp = j.at("facilityRiskPoint").get<std::vector<std::string>>();
-    data.facilityRiskPoint  = std::move(tmp);
+    data.facilityRiskPoint = std::move(tmp);
 }
-void to_json(nlohmann::json & j, const FacilityInfo & data)
+void to_json(nlohmann::json &j, const FacilityInfo &data)
 {
-    j = nlohmann::json
-    {
-        { "facilityId", data.facilityId },
-        { "facilityCode", data.facilityCode },
-        { "facilityName", data.facilityName },
-        { "bankCode", data.bankCode },
-        { "installPosition", data.installPosition },
-        { "factory", data.factory },
-        { "cameraModel", data.cameraModel },
-        { "responsible", data.responsible },
-        { "contacts", data.contacts },
-        { "responsibleMail", data.responsibleMail },
-        { "contactTel", data.contactTel },
-        { "installDate", data.installDate },
-        { "ip", data.ip },
-        { "port", data.port },
-        { "counterNumber", data.counterNumber },
-        { "dvrId", data.dvrId },
-        { "channelNo", data.channelNo },
-        { "facilityRiskPoint", data.facilityRiskPoint }
-    };
+    j = nlohmann::json{
+        {"facilityId", data.facilityId},
+        {"facilityCode", data.facilityCode},
+        {"facilityName", data.facilityName},
+        {"bankCode", data.bankCode},
+        {"installPosition", data.installPosition},
+        {"factory", data.factory},
+        {"cameraModel", data.cameraModel},
+        {"responsible", data.responsible},
+        {"contacts", data.contacts},
+        {"responsibleMail", data.responsibleMail},
+        {"contactTel", data.contactTel},
+        {"installDate", data.installDate},
+        {"ip", data.ip},
+        {"port", data.port},
+        {"counterNumber", data.counterNumber},
+        {"dvrId", data.dvrId},
+        {"channelNo", data.channelNo},
+        {"facilityRiskPoint", data.facilityRiskPoint}};
 }
-bool initFacilityIPC(std::vector<FacilityInfo> const & vec)
+bool initFacilityIPC(std::vector<FacilityInfo> const &vec)
 {
     int count = 0;
     static std::map<int, FacilityInfo> m_mFacilityInfoIPC;
     m_mFacilityInfoIPC.clear();
 
-    for (auto const & dev : vec)
+    for (auto const &dev : vec)
     {
         m_mFacilityInfoIPC[dev.facilityId] = std::move(dev);
         count++;
@@ -103,13 +102,16 @@ bool initFacilityIPC(std::vector<FacilityInfo> const & vec)
     std::cout << u8"data read FacilityInfo IPC " + std::to_string(vec.size()) + ", insert " + std::to_string(count);
 }
 
-std::list<std::string> to_redis(nlohmann::json const & value, std::string prefix)
+std::list<std::string> to_redis(nlohmann::json const &value, std::string prefix)
 {
     std::list<std::string> args;
 
     if (value.is_object())
     {
-        if (!prefix.empty()) { prefix += ".";}
+        if (!prefix.empty())
+        {
+            prefix += ".";
+        }
 
         for (auto elem = value.begin(); elem != value.end(); ++elem)
         {
@@ -162,9 +164,9 @@ std::list<std::string> to_redis(nlohmann::json const & value, std::string prefix
     }
     else if (value.is_array())
     {
-        int count {0};
+        int count{0};
 
-        for (auto const & el : value)
+        for (auto const &el : value)
         {
             auto tmp_prefix = prefix + "[" + std::to_string(count) + "]";
             ++count;
@@ -219,7 +221,7 @@ std::list<std::string> to_redis(nlohmann::json const & value, std::string prefix
     return args;
 }
 
-std::vector<std::string> split(const std::string & s, char delim)
+std::vector<std::string> split(const std::string &s, char delim)
 {
     std::stringstream ss(s);
     std::string item;
@@ -232,7 +234,7 @@ std::vector<std::string> split(const std::string & s, char delim)
 
     return elems;
 }
-nlohmann::json from_redis(std::vector<std::string> const & values)
+nlohmann::json from_redis(std::vector<std::string> const &values)
 {
     nlohmann::json data;
 
