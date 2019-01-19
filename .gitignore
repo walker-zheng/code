@@ -4,6 +4,8 @@
 *.swp
 .deps/
 bin/
+.vs/
+.vscode/
 autom4te.cache/
 config/
 config.h.in
